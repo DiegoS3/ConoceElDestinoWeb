@@ -1,0 +1,11 @@
+@forward 'fonts';
+@use 'fonts' as *;
+@forward 'colors';
+@use 'colors' as *;
+
+$header-height: 56px;
+$navbar-width: 56px;
+$generic-header-height: 63px;
+
+$padding-top-table: 1em;
+$paginator-height: 56px;

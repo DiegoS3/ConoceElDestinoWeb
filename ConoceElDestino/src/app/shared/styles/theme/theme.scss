@@ -1,0 +1,23 @@
+@use './components/components' as *;
+@use 'vars' as *;
+
+.generic-header {
+  display: flex;
+  align-items: center;
+  height: $generic-header-height;
+  padding: 0 3em;
+  background-color: $white-color;
+  border-bottom: 1px solid $gray-color;
+  h2 {
+    font-size: 21px;
+    font-family: "Times New Roman", Times, serif;
+  }
+}
+
+.viewport {
+  width: calc(100vw - #{$navbar-width});
+  height: 100%;
+  max-height: calc(100vh - #{$navbar-width + $generic-header-height});
+  padding: 1.5em 3em;
+  overflow: auto;
+}
