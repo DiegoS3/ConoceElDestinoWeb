@@ -1,0 +1,170 @@
+// @use 'vars' as *;
+
+/* stylelint-disable */
+:host ::ng-deep .dropdown--header {
+  margin-right: 3em;
+  .p-dropdown {
+    background-color: transparent;
+    border-width: 0 0 1px;
+  }
+  .p-inputtext {
+    // color: $white-color;
+    color: #fff;
+  }
+  .p-dropdown .p-dropdown-trigger .p-dropdown-trigger-icon {
+    // color: $white-color;
+    color: #fff;
+  }
+}
+/* stylelint-enable */
+
+.header {
+  display: flex;
+  align-items: center;
+  // height: $header-height;
+  height: 56px;
+  padding: 0 1em;
+  color: #fff;
+  // background-color: $darkblue-color;
+  background-color: #004254;
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    padding-left: 1.5em;
+  }
+}
+
+.app {
+  padding: 0 0.5em;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+
+  &__main,
+  &__aux {
+    padding: 0.5em 2em;
+  }
+
+  &__main {
+    font-size: 16px;
+    // font-family: $primary-font;
+    font-family:  arial, helvetica, sans-serif;
+  }
+
+  &__aux {
+    display: flex;
+    flex-grow: 1;
+    font-size: 14px;
+    // font-family: $neosans-regular;
+    font-family: "NeoSansStd-Regular";
+    // border-color: $transparentgray-color;
+    border-color: #d6dde180;
+    border-style: solid;
+    border-left-width: 1px;
+  }
+}
+
+.notifications,
+.info,
+.logout,
+.user {
+  margin-right: 1.5em;
+  cursor: pointer;
+}
+
+.notifications {
+  $notification-bulb-size: 6px;
+
+  position: relative;
+  // span {
+  //   position: absolute;
+  //   top: 3px;
+  //   right: 1px;
+  //   display: none;
+  //   width: $notification-bulb-size;
+  //   height: $notification-bulb-size;
+  //   background-color: $yellow-color;
+  //   border-radius: 50%;
+  // }
+
+  &--pending span {
+    display: inline-block;
+  }
+}
+
+.search {
+  margin-right: 1.5em;
+
+  i::before {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    // background-image: url("../../../../assets/icons/search.svg");
+    background-size: 15px;
+    cursor: pointer;
+    content: "";
+  }
+
+  input {
+    min-width: 250px;
+    // color: $white-color;
+    color: #fff;
+    background-color: transparent;
+    border-width: 0 0 1px;
+    border-radius: 0;
+  }
+
+  input:focus,
+  input:hover {
+    // border-color: $white-color;
+    border-color: #fff;
+    box-shadow: none;
+  }
+
+  input::placeholder {
+    // color: $white-color;
+    color: #fff;
+    font-size: 14px;
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  // color: $darkblue-color;
+  // font-family: $neosans-regular;
+  // background-color: $white-color;
+  border-radius: 50%;
+  cursor: context-menu;
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  // font-family: $neosans-regular;
+  img {
+    padding-right: 0.5em;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  // border-left: 1px solid $white-color;
+  border-left: 1px solid #fff;
+  img {
+    display: flex;
+    align-items: center;
+    padding-left: 1.5em;
+  }
+}
+
+

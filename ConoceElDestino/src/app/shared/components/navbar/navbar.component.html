@@ -1,0 +1,48 @@
+<div class="header">
+  <!-- <img class="app" src="assets/icons/app.svg" alt="app" /> -->
+  <div class="breadcrumb">
+    <p class="breadcrumb__main">People+</p>
+  </div>
+  <div class="header__actions">
+    <p-menubar [model]="items"></p-menubar>
+    <!-- <p-dropdown
+      *ngIf="(userVisibilityOptions$ | async).length"
+      class="dropdown dropdown--header"
+      [formControl]="selectedVisibilityComboControl"
+      [options]="userVisibilityOptions$ | async"
+      (onChange)="onVisibilityComboChange($event.value)"
+    ></p-dropdown> -->
+    <!-- <div class="search p-input-icon-right">
+        <i class="pi pi-search"></i>
+        <input
+          type="text"
+          pInputText
+          placeholder="{{ 'header.search' | translate }}"
+        />
+      </div>
+      <div class="info">
+        <img src="assets/icons/info.svg" alt="info" />
+      </div> -->
+    <!-- <button
+      class="notifications"
+      [ngClass]="{
+        'notifications--pending': hasPendingNotifications$ | async
+      }"
+      (click)="showNotificationPanel()"
+      *ngIf="isProfileLogged$ | async"
+    >
+      <img src="assets/icons/notifications.svg" alt="notifications" />
+      <span></span>
+    </button> -->
+    <!-- <div class="user" [pTooltip]="userName$ | async">
+      <p>{{ initials$ | async }}</p>
+    </div>
+    <div class="logout" (click)="userLogOut()">
+      <img src="assets/icons/logout.svg" alt="logout" />
+      <p>{{ "header.logout" | translate }}</p>
+    </div>
+    <div class="logo">
+      <img src="assets/icons/logo.svg" alt="logo" />
+    </div> -->
+  </div>
+</div>

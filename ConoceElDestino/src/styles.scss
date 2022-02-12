@@ -1,1 +1,67 @@
-/* You can add global styles to this file, and also import other style files */
+// @use 'theme' as *;
+// @use 'vars' as *;
+
+.p-menubar {
+  padding: 0.5rem;
+  background: none !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 3px;
+}
+
+
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
+  color: #fff !important;
+}
+.p-menubar .p-menuitem-link .p-menuitem-text :hover{
+    color: #fff !important;
+    background: none !important;
+}
+// html {
+//   font-size: $text-font-size;
+//   font-family: $primary-font;
+// }
+
+// headers
+// body {
+//   h2,
+//   h3,
+//   h4 {
+//     margin: 1em 0;
+//     color: $darkblue-color;
+//     font-family: $neosans-medium;
+//   }
+//   h2 {
+//     font-size: 20px;
+//   }
+//   h3 {
+//     font-size: 18px;
+//   }
+//   h4 {
+//     font-size: 14px;
+//   }
+
+//   b {
+//     font-family: $neosans-medium;
+//   }
+
+//   ::-webkit-scrollbar {
+//     width: 9px;
+//     height: 9px;
+//   }
+
+//   ::-webkit-scrollbar-thumb {
+//     background-color: #d8d8d8;
+//     border-radius: 8px;
+//   }
+// }
+
+@font-face {
+  font-family: "NeoSansStd-Regular";
+  src: url("./assets/fonts/AM263.TTF");
+}
+
+@font-face {
+  font-family: "NeoSansStd-Medium";
+  src: url("./assets/fonts/AM265.TTF");
+}
