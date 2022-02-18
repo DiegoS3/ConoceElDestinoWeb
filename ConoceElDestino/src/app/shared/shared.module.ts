@@ -4,17 +4,21 @@ import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 import {MenubarModule} from 'primeng/menubar';
 import {CarouselModule} from 'primeng/carousel';
+import {CardModule} from 'primeng/card';
+import {ButtonModule} from 'primeng/button';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { GenericCardComponent } from './components/generic-card/generic-card.component';
 
 const COMPONENTS = [
   NavbarComponent,
-  CarouselComponent
+  CarouselComponent,
+  GenericCardComponent,
 ]
 
 @NgModule({
   declarations: [
-    ...COMPONENTS,
+    ...COMPONENTS,    
   ],
   imports: [
     CommonModule,
@@ -23,7 +27,9 @@ const COMPONENTS = [
     }),
     RouterModule,
     MenubarModule, 
-    CarouselModule
+    CarouselModule,
+    CardModule,
+    ButtonModule,
   ],
   providers: [DatePipe],
   exports: [...COMPONENTS]
