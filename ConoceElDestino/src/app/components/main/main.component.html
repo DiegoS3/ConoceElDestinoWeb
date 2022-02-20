@@ -1,1 +1,6 @@
 <app-carousel></app-carousel>
+<div class="cards">
+    <ng-container *ngFor="let product of products">
+        <app-generic-card [product]="product"></app-generic-card>
+    </ng-container>
+</div>
