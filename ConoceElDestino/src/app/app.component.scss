@@ -1,0 +1,16 @@
+// @use 'vars' as *;
+
+.content {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 56px);
+  background-color: #fafafa;
+
+  &__section {
+    width: 100%;
+    // padding-left: $navbar-width;
+    overflow: auto;
+  }
+}
+
+
