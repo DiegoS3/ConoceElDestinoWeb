@@ -1,0 +1,22 @@
+.card {
+    flex: 1 0 500px;
+    box-sizing: border-box;
+    margin: 1rem .5em;
+    width: 360px;
+    flex-basis: 33%;   /* <-- Added in lieu of the width */
+    max-width: 400px;
+}
+
+@media screen and (min-width: 40em) {    
+    .card {
+        flex: 0 1 calc(25% - 1em);
+        // max-width: calc(50% -  1em);
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .card {
+        flex: 0 1 calc(25% - 1em);
+        // max-width: calc(25% - 1em);
+    }
+}
