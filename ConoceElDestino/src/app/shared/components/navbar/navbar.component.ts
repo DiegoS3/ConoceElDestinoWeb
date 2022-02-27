@@ -18,23 +18,40 @@ export class NavbarComponent implements OnInit {
     this.items = [
       {
         label: 'Inicio',
-        routerLink: 'main'
+        routerLink: 'main',
+        routerLinkActiveOptions: {
+          exact: true
+        },
+        styleClass: 'menucus'
       },
       {
         label: 'Servicios',
-        routerLink: '/services'
+        routerLink: '/services',
+        routerLinkActiveOptions: {
+          exact: true
+        },
+        styleClass: 'menucus'
       },
       {
         label: 'Colaboradores',
-        routerLink: '/collaborators'
+        routerLink: '/collaborators',
+        routerLinkActiveOptions: {
+          exact: true
+        },
       },
       {
         label: 'Opiniones',
-        routerLink: '/opinions'
+        routerLink: '/opinions',
+        routerLinkActiveOptions: {
+          exact: true
+        },
       },
       {
         label: 'Contacto',
-        routerLink: '/contact'
+        routerLink: '/contact',
+        routerLinkActiveOptions: {
+          exact: true
+        },
       },
     ];
   }
