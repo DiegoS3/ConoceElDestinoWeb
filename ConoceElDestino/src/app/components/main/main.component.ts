@@ -10,11 +10,10 @@ export class MainComponent implements OnInit {
   products: any[] = [];
 
   constructor() {   
-    this.products.push({name: 'a', image: '29366.jpg'})
-    this.products.push({name: 'b', image: '29367.jpg'})
-    this.products.push({name: 'c', image: '29368.jpg'})
-    this.products.push({name: 'c', image: '29368.jpg'})
-    this.products.push({name: 'd', image: '29369.jpg'})
+    this.products.push({name: 'Visitas Guiadas', image: '29366.jpg'})
+    this.products.push({name: 'Georutas', image: '29367.jpg'})
+    this.products.push({name: 'Experiencias', image: '29368.jpg'})
+    this.products.push({name: 'Viajes', image: '29369.jpg'})
    }
 
   ngOnInit(): void {

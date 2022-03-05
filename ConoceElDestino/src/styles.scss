@@ -1,5 +1,5 @@
-// @use 'theme' as *;
-// @use 'vars' as *;
+@import 'theme';
+@import 'vars';
 
 .p-menubar {
   padding: 0.5rem;
@@ -56,12 +56,3 @@
 //   }
 // }
 
-@font-face {
-  font-family: "NeoSansStd-Regular";
-  src: url("./assets/fonts/AM263.TTF");
-}
-
-@font-face {
-  font-family: "NeoSansStd-Medium";
-  src: url("./assets/fonts/AM265.TTF");
-}

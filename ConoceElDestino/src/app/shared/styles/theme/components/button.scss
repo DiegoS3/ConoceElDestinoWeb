@@ -1,0 +1,119 @@
+@import '../colors';
+@import '../fonts';
+
+button {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+button,
+button:active {
+  padding: 0;
+}
+
+.primary-btn,
+.secondary-btn,
+.default-btn,
+.ternary-btn {
+  color: $darkblue-color;
+  font-size: $text-font-size;
+  font-family: $neosans-regular;
+  background-color: transparent;
+}
+
+.primary-btn {
+  border: 2px solid $yellow-color;
+
+  .counter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    color: $white-color;
+    font-size: 0.9rem;
+    background-color: $yellow-color;
+    border-radius: 50%;
+  }
+}
+
+.secondary-btn {
+  border: 2px solid transparent;
+}
+
+.ternary-btn,
+.ternary-btn:disabled:hover {
+  background-color: $lightblue-color;
+  color: $white-color;
+}
+
+.default-btn {
+  background-color: $gray-color;
+}
+
+.primary-btn,
+.primary-btn:active,
+.secondary-btn,
+.secondary-btn:active,
+.default-btn,
+.default-btn:active,
+.ternary-btn,
+.ternary-btn:active {
+  padding: 0.75em 3em;
+}
+
+.primary-btn--counter,
+.primary-btn--counter:active,
+.secondary-btn--counter,
+.secondary-btn--counter:active,
+.default-btn--counter,
+.default-btn--counter:active {
+  padding: 0.25em 2em;
+}
+
+.primary-btn:hover {
+  background-color: $yellow-color;
+}
+
+.secondary-btn:hover {
+  background-color: $gray-color;
+  border-color: $gray-color;
+  &:disabled {
+    border-color: transparent;
+  }
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 0.5;
+  &:hover {
+    background-color: initial;
+  }
+}
+
+::-webkit-file-upload-button {
+  display: inline-block;
+  padding: 0.75em;
+  color: $darkblue-color;
+  font-size: $text-font-size;
+  white-space: nowrap;
+  background-color: $gray-color;
+  border: 0;
+  cursor: pointer;
+}
+
+.icon-btn {
+  width: 32px;
+  height: 32px;
+  background-color: $gray-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--selected {
+    background-color: $darkblue-color;
+  }
+}
