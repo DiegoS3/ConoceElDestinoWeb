@@ -6,6 +6,7 @@ import {MenubarModule} from 'primeng/menubar';
 import {CarouselModule} from 'primeng/carousel';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import {ButtonModule} from 'primeng/button';
 
 const COMPONENTS = [
   NavbarComponent,
@@ -23,7 +24,8 @@ const COMPONENTS = [
     }),
     RouterModule,
     MenubarModule, 
-    CarouselModule
+    CarouselModule,
+    ButtonModule
   ],
   providers: [DatePipe],
   exports: [...COMPONENTS]
