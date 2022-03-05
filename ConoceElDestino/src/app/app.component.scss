@@ -1,4 +1,4 @@
-// @use 'vars' as *;
+@import 'vars';
 
 .content {
   display: flex;
@@ -8,7 +8,7 @@
 
   &__section {
     width: 100%;
-    // padding-left: $navbar-width;
+    padding-left: $navbar-width;
     overflow: auto;
   }
 }

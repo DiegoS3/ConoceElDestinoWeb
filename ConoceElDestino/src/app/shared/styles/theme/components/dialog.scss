@@ -1,0 +1,58 @@
+@import '../colors';
+@import '../fonts';
+/* stylelint-disable */
+body .p-dialog {
+  min-width: 300px;
+  max-width: 50vw;
+  max-height: 80vh;
+  box-shadow: none;
+
+  .p-dialog-header {
+    height: 54px;
+    color: $white-color;
+    background-color: $lightblue-color;
+    border-radius: 0;
+  }
+
+  .p-dialog-header .p-dialog-title {
+    font-size: 16px;
+    font-family: $neosans-medium;
+  }
+
+  .p-dialog-header .p-dialog-header-close-icon::before {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url("../../../../../assets/icons/close.svg");
+    background-size: 15px;
+    content: "";
+  }
+
+  .p-dialog-header .p-dialog-header-icon:enabled:hover,
+  .p-dialog-header .p-dialog-header-icon:enabled:active,
+  .p-dialog-header .p-dialog-header-icon:enabled:focus {
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .p-dialog-content {
+    padding: 2em 3em;
+  }
+
+  .p-dialog-footer {
+    border-radius: 0;
+    padding: 1em 1.5em;
+  }
+}
+
+body .p-dialog-mask {
+  background-color: #060e1480;
+  pointer-events: auto;
+}
+
+body .p-dialog .p-dropdown-panel {
+  width: 100%;
+}
+
+/* stylelint-enable */

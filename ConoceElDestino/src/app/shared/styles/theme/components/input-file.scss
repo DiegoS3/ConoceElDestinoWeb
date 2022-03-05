@@ -1,0 +1,12 @@
+@import '../vars';
+
+/* stylelint-disable */
+input[type="file"] {
+  border: 2px solid $gray-color;
+
+  &.ng-dirty.ng-invalid {
+    border: 1px solid red;
+    padding: 1px;
+  }
+}
+/* stylelint-enable */
