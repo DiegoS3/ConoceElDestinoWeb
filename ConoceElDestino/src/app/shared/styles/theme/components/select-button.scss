@@ -1,0 +1,35 @@
+@import '../vars';
+
+body .p-selectbutton {
+  font-family: $neosans-regular;
+}
+
+body .p-selectbutton .p-button {
+  height: 32px;
+  min-width: 100px;
+  box-shadow: none;
+}
+
+body .p-buttonset .p-button:last-of-type,
+body .p-buttonset .p-button:first-of-type {
+  border-radius: 0;
+}
+
+body .p-selectbutton .p-button.p-highlight:hover {
+  background-color: $white-color;
+  border-color: $lightblue-color;
+  color: $lightblue-color;
+  outline: 0;
+}
+
+body .p-selectbutton .p-button.p-highlight {
+  background-color: $blue-gray-color;
+  border-color: $lightblue-color;
+  border-width: 1px;
+  color: $lightblue-color;
+  font-family: $neosans-medium;
+}
+
+body .p-buttonset .p-button.p-highlight:not(:last-child) {
+  border-right: 1px solid $lightblue-color;
+}

@@ -1,0 +1,31 @@
+@import '../vars';
+
+/* stylelint-disable */
+
+body .p-confirm-dialog {
+  .p-dialog-header .p-dialog-header-close span.pi-times::before {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url("../../../../../assets/icons/close.svg");
+    background-size: 15px;
+    content: "";
+  }
+
+  .p-confirm-dialog-message {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+body .p-confirm-dialog.error {
+  .p-dialog-header {
+    background-color: $error-color;
+  }
+
+  .p-dialog-header-icon {
+    display: none;
+  }
+}
+
+/* stylelint-enable */

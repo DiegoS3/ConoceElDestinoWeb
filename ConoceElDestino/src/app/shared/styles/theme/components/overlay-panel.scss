@@ -1,0 +1,17 @@
+@import '../colors';
+
+body .p-overlaypanel {
+  margin-top: 0;
+  border: 1px solid $gray-color;
+  border-radius: 0;
+  box-shadow: none;
+
+  .p-overlaypanel-content {
+    padding: 0;
+  }
+}
+
+body .p-overlaypanel::before,
+body .p-overlaypanel::after {
+  display: none;
+}
