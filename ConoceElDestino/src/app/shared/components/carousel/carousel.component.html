@@ -1,20 +1,40 @@
 <p-carousel 
     [value]="products" 
-    styleClass="custom-carousel" 
     [numVisible]="1" 
     [numScroll]="1" 
+    [autoplayInterval]="3500"
     [circular]="true" 
-    [autoplayInterval]="4500" 
     [responsiveOptions]="responsiveOptions"
     [showNavigators]="false"
 >
     <ng-template let-product pTemplate="item">
         <div class="product-item">
             <div class="product-item-content">
-                <div class="mb-3">
-                    <img src="https://raw.githubusercontent.com/DiegoS3/ConoceElDestinoWeb/384bd13adac52dcf130108eea959d0e5aa7180b1/ConoceElDestino/src/assets/showcase/images/{{product.image}}" [alt]="product.name" class="product-image" />
-                </div>               
+                <div class="container">
+                    <img height="640px" 
+                    src="https://raw.githubusercontent.com/DiegoS3/ConoceElDestinoWeb/384bd13adac52dcf130108eea959d0e5aa7180b1/ConoceElDestino/src/assets/showcase/images/{{product.image}}" [alt]="product.name" class="product-image" />                    
+                    <div class="text-overlay">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat.</p>
+                        <div class="flex">
+                            <button pButton type="button">
+                                <span class="jsx-724418216 block type-xs font-semibold">
+                                    Conoce más
+                                </span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" class="jsx-3722123328 lm-icon jsx-724418216 chevronIcon -mt-2 ml-8">
+                                    <path d="M28.8 6.2l-12.8 12.8-12.8-12.8-3.2 3.2 16 16.4 16-16.4z" transform="rotate(-90 16 16)"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>      
+                <div>
+                    <h6 class="mt-0 mb-3">Precio</h6>
+                    <div class="car-buttons mt-5">
+                        <button>BOTON</button>
+                    </div>
+                </div>         
             </div>
         </div>
     </ng-template>
 </p-carousel>
+
