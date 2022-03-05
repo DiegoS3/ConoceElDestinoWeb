@@ -1,5 +1,5 @@
-@import '../colors';
-@import '../fonts';
+@import "../colors";
+@import "../fonts";
 
 button {
   padding: 0;
@@ -8,23 +8,17 @@ button {
   cursor: pointer;
 }
 
-button,
-button:active {
-  padding: 0;
-}
-
-.primary-btn,
-.secondary-btn,
-.default-btn,
-.ternary-btn {
-  color: $darkblue-color;
-  font-size: $text-font-size;
-  font-family: $neosans-regular;
+.prime-btn {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: $lightgray-color;
   background-color: transparent;
 }
 
-.primary-btn {
-  border: 2px solid $yellow-color;
+.prime-btn {
+  border: 2px solid $green-color;
+  border-radius: 2em;
+  padding: 0.75em 3em;
 
   .counter {
     display: inline-flex;
@@ -35,7 +29,7 @@ button:active {
     margin-right: 1rem;
     color: $white-color;
     font-size: 0.9rem;
-    background-color: $yellow-color;
+    background-color: $green-color;
     border-radius: 50%;
   }
 }
@@ -54,28 +48,9 @@ button:active {
   background-color: $gray-color;
 }
 
-.primary-btn,
-.primary-btn:active,
-.secondary-btn,
-.secondary-btn:active,
-.default-btn,
-.default-btn:active,
-.ternary-btn,
-.ternary-btn:active {
-  padding: 0.75em 3em;
-}
-
-.primary-btn--counter,
-.primary-btn--counter:active,
-.secondary-btn--counter,
-.secondary-btn--counter:active,
-.default-btn--counter,
-.default-btn--counter:active {
-  padding: 0.25em 2em;
-}
-
-.primary-btn:hover {
-  background-color: $yellow-color;
+.prime-btn:hover {
+  color: $white-color;
+  background-color: $green-color;
 }
 
 .secondary-btn:hover {
