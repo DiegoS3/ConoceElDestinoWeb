@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class GenericCardComponent implements OnInit {
 
   @Input() product: any;
+  @Input() header: any;
 
   constructor() { }
 

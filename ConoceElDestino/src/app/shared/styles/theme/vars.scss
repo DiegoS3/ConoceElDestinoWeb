@@ -1,7 +1,5 @@
-// @forward 'fonts';
-// @use 'fonts' as *;
-// @forward 'colors';
-// @use 'colors' as *;
+@import 'fonts';
+@import 'colors';
 
 $header-height: 56px;
 $navbar-width: 56px;

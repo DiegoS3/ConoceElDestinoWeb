@@ -1,5 +1,5 @@
-@use './components/components' as *;
-@use 'vars' as *;
+@import './components/components';
+@import 'vars';
 
 .generic-header {
   display: flex;
