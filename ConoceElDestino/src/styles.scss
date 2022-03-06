@@ -22,37 +22,50 @@
 //   font-family: $primary-font;
 // }
 
-// headers
-// body {
-//   h2,
-//   h3,
-//   h4 {
-//     margin: 1em 0;
-//     color: $darkblue-color;
-//     font-family: $neosans-medium;
-//   }
-//   h2 {
-//     font-size: 20px;
-//   }
-//   h3 {
-//     font-size: 18px;
-//   }
-//   h4 {
-//     font-size: 14px;
-//   }
+.font-semibold {
+  font-weight: 700;
+}
 
-//   b {
-//     font-family: $neosans-medium;
-//   }
+.uppercase {
+  text-transform: uppercase;
+}
 
-//   ::-webkit-scrollbar {
-//     width: 9px;
-//     height: 9px;
-//   }
+body {
+  h2,
+  h3,
+  h4 {
+    margin: 1em 0;
+    color: $darkgray-color;
+    font-family: $roboto-regular;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 18px;
+    
+  }
+  h4 {
+    font-size: 14px;
+  }
 
-//   ::-webkit-scrollbar-thumb {
-//     background-color: #d8d8d8;
-//     border-radius: 8px;
-//   }
-// }
+  b {
+    font-family: $roboto-regular;
+  }
+
+  ::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #d8d8d8;
+    border-radius: 8px;
+  }
+}
+
+@font-face {
+  font-family: "RobotoCondensed-Regular";
+  src: url("./assets/fonts/RobotoCondensed-Regular.ttf");
+}
 
