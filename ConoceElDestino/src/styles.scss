@@ -53,8 +53,12 @@ body {
     font-size: 14px;
   }
 
-  b {
+  b, p{
     font-family: $roboto-regular;
+  }
+
+  p {
+    font-size: 14px;
   }
 
   ::-webkit-scrollbar {

@@ -6,8 +6,13 @@
 }
 
 .footer {
-    background-color: black;
+    --tw-bg-opacity: 1;
+    background-color: rgb(18 18 18/var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255/var(--tw-text-opacity));
     height: $footer-height;
+    padding: 2rem;
+    justify-content: space-between;
 }
 
 .separator {
