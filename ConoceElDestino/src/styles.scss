@@ -46,19 +46,22 @@ body {
     font-size: 20px;
   }
   h3 {
-    font-size: 18px;
-    
+    font-size: 18px;    
   }
   h4 {
     font-size: 14px;
   }
 
-  b, p{
+  b, p, a{
     font-family: $roboto-regular;
   }
 
   p {
     font-size: 14px;
+  }
+
+  a {
+    text-decoration: inherit;
   }
 
   ::-webkit-scrollbar {
@@ -70,6 +73,10 @@ body {
     background-color: #d8d8d8;
     border-radius: 8px;
   }
+}
+
+.center-content {
+  justify-content: center;
 }
 
 @font-face {

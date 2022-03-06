@@ -1,25 +1,33 @@
-
 <div class="separator"></div>
 <div class="info-footer">
-    <div class="flex">
-        <div>
-            <img src="https://github.com/DiegoS3/ConoceElDestinoWeb/blob/feature/footer/ConoceElDestino/src/assets/showcase/images/logo.jpeg?raw=true">
-            <h3 class="font-semibold uppercase">Siguenos</h3>     
-            <app-social-networks></app-social-networks>       
+    <div class="flex center-content">
+        <div class="margin__right">
+            <img
+                src="https://github.com/DiegoS3/ConoceElDestinoWeb/blob/feature/footer/ConoceElDestino/src/assets/showcase/images/logo.jpeg?raw=true">
+            <h3 class="font-semibold uppercase">Siguenos</h3>
+            <app-social-networks></app-social-networks>
         </div>
-        <p-divider layout="vertical" ></p-divider>
-
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-            voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.</p>
-        
-        <p-divider layout="vertical" ></p-divider>
-
-        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
-            cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
-            Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.</p>
+        <p-divider layout="vertical"></p-divider>
+        <div class="margin">
+            <h3 class="font-semibold uppercase margin__bottom">Servicios</h3>
+            <ul *ngFor="let service of services">
+                <li>
+                    <a href="{{service.navigate}}">{{service.label}}</a>
+                </li>
+            </ul>
+        </div>
+        <p-divider layout="vertical"></p-divider>
+        <div class="margin__left">
+            <h3 class="font-semibold uppercase margin__bottom">Sobre nosotros</h3>
+            <ul *ngFor="let about of aboutUs">
+                <li>
+                    <a href="{{about.navigate}}">{{about.label}}</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 <div class="footer container">
-    <p style="color: white;">© 2022 Conoce El Destino. All rights reserved. No part of this site may be reproduced without our written permission.</p>
+    <p>© 2022 Conoce El Destino. All rights reserved. No part of this site may be reproduced without our written
+        permission.</p>
 </div>
