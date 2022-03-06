@@ -11,6 +11,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { GenericCardComponent } from './components/generic-card/generic-card.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SocialNetworksComponent } from './components/social-networks/social-networks.component';
 
 
 const COMPONENTS = [
@@ -18,11 +19,12 @@ const COMPONENTS = [
   CarouselComponent,
   GenericCardComponent,
   FooterComponent,
+  SocialNetworksComponent,   
 ]
 
 @NgModule({
   declarations: [
-    ...COMPONENTS,    
+    ...COMPONENTS, 
   ],
   imports: [
     CommonModule,
