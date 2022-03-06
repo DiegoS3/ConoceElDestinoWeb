@@ -9,6 +9,7 @@ import {ButtonModule} from 'primeng/button';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { GenericCardComponent } from './components/generic-card/generic-card.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 const COMPONENTS = [
@@ -19,7 +20,8 @@ const COMPONENTS = [
 
 @NgModule({
   declarations: [
-    ...COMPONENTS,    
+    ...COMPONENTS,
+    FooterComponent,    
   ],
   imports: [
     CommonModule,
