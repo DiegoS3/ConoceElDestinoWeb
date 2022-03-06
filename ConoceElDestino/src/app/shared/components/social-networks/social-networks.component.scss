@@ -1,0 +1,19 @@
+.social {
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+}
+
+@media (min-width: 1024px) {
+    .lg\:mx-1 {
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+    }
+}
+.mx-2 ul:not(:first-child)  {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.text-2xl {
+    font-size: 32px;
+}

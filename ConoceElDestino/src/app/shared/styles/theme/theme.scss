@@ -14,6 +14,12 @@
   }
 }
 
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .viewport {
   width: calc(100vw - #{$navbar-width});
   height: 100%;

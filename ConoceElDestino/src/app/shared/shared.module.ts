@@ -6,20 +6,25 @@ import {MenubarModule} from 'primeng/menubar';
 import {CarouselModule} from 'primeng/carousel';
 import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
+import {DividerModule} from 'primeng/divider';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { GenericCardComponent } from './components/generic-card/generic-card.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { SocialNetworksComponent } from './components/social-networks/social-networks.component';
 
 
 const COMPONENTS = [
   NavbarComponent,
   CarouselComponent,
   GenericCardComponent,
+  FooterComponent,
+  SocialNetworksComponent,   
 ]
 
 @NgModule({
   declarations: [
-    ...COMPONENTS,    
+    ...COMPONENTS, 
   ],
   imports: [
     CommonModule,
@@ -31,6 +36,7 @@ const COMPONENTS = [
     CarouselModule,
     CardModule,
     ButtonModule,
+    DividerModule,
   ],
   providers: [DatePipe],
   exports: [...COMPONENTS]
