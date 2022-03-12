@@ -12,6 +12,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { GenericCardComponent } from './components/generic-card/generic-card.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SocialNetworksComponent } from './components/social-networks/social-networks.component';
+import { GenericCarouselProductsComponent } from './components/generic-carousel-products/generic-carousel-products.component';
 
 
 const COMPONENTS = [
@@ -20,11 +21,12 @@ const COMPONENTS = [
   GenericCardComponent,
   FooterComponent,
   SocialNetworksComponent,   
+  GenericCarouselProductsComponent,
 ]
 
 @NgModule({
   declarations: [
-    ...COMPONENTS, 
+    ...COMPONENTS,
   ],
   imports: [
     CommonModule,

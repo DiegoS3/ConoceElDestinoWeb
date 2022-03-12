@@ -19,6 +19,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
+import {DividerModule} from 'primeng/divider';
 
 registerLocaleData(localeEs, 'es');
 @NgModule({
@@ -34,6 +35,7 @@ registerLocaleData(localeEs, 'es');
     BrowserModule,
     SharedModule,
     CarouselModule,
+    DividerModule,
     HttpClientModule,
     AppRoutingModule,
     TranslateModule.forRoot({
