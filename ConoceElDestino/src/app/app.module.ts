@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -10,7 +10,17 @@ import { CollaboratorsComponent } from './components/collaborators/collaborators
 import { OpinionsComponent } from './components/opinions/opinions.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { MainComponent } from './components/main/main.component';
+import {
+  HttpBackend,
+  HttpClient,
+  HttpClientModule,
+} from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import localeEs from '@angular/common/locales/es';
+import { registerLocaleData } from '@angular/common';
 
+registerLocaleData(localeEs, 'es');
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,9 +34,22 @@ import { MainComponent } from './components/main/main.component';
     BrowserModule,
     SharedModule,
     CarouselModule,
+    HttpClientModule,
     AppRoutingModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (handler: HttpBackend) => {
+          const http = new HttpClient(handler);
+          return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+        },
+        deps: [HttpBackend],
+      },
+    }),
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'es' },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
