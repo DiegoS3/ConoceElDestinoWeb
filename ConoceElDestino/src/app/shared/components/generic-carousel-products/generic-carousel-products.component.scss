@@ -1,16 +1,61 @@
+@import "../../styles/theme/vars.scss";
+
 .product-item {
+    width: 100%;
     .product-item-content {
-        // border: 1px solid var(--surface-d);
-        // border-radius: 3px;
-        // margin: 0.6rem;
-        text-align: center;
-        // padding: 2rem 0;
+        border-radius: 15px;
+        --tw-shadow: 0px 4px 15px 2px rgba(70, 70, 70, 0.4);
+        box-shadow: 0 0 transparent, 0 0 transparent, var(--tw-shadow);
         height: 100%;
+        margin: 1rem;
     }
 
     .product-image {
-        width: 266px;
-        height: 119px;
-        // box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+        width: 100%;
+        height: 219px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
     }
+}
+
+.text-data {
+    margin: 0.7rem 0 0 0.4rem;
+
+    &__title {
+        font-size: 14px;
+        color: $font-gray-color;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    &__description {
+        font-size: 20px;
+        color: $font-dark-color;
+        font-family: $roboto-bold;
+    }
+}
+
+.footer-section {
+    margin-top: 2rem;
+    padding: 0 0 1rem 0.4rem;
+
+    &__content {
+        position: relative;
+        width: 100%;
+    }
+
+    &__title {
+        position: relative;
+        color: $font-dark-color;
+        font-family: $roboto-bold;
+        font-size: 14px;
+    }
+}
+
+.p-carousel {
+    width: 100%;
+}
+
+.test {
+    margin: 0 2rem;
 }

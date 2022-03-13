@@ -1,8 +1,9 @@
 {
-    "titles":{
+    "titles": {
         "find_experience": "Encuentra tu experiencia"
     },
-    "sections":{
-
+    "sections": {},
+    "carousel": {
+        "prize": "Precio"
     }
 }
