@@ -1,4 +1,4 @@
-<p-carousel [value]="carouselData" styleClass="custom-carousel" [numVisible]="5" [numScroll]="1" [circular]="true"
+<p-carousel [value]="carouselData" [numVisible]="5" [numScroll]="1" [circular]="true"
     [showIndicators]="false" [responsiveOptions]="responsiveOptions">
 
     <ng-template pTemplate="header">
@@ -16,14 +16,18 @@
                     </div>
                 </div>
                 <div class="footer-section">
-                    <div class="footer-section__content">
+                    <!-- <div class="footer-section__content"> -->
                         <span>
                             <span class="footer-section__title">{{"carousel.prize" | translate}}</span>
-                            <span>{{item.price}}</span>
+                            <span class="footer-section__price">{{item.price |
+                                currency:'EUR':'symbol':'1.2-2':'es'}}</span>
                         </span>
+                        <button class="secondary-btn" style="margin-right: 1rem;">
+                            {{"button.reserve" | translate | uppercase}}
+                        </button>
                     </div>
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
     </ng-template>
 </p-carousel>

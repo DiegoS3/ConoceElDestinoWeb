@@ -5,5 +5,9 @@
     "sections": {},
     "carousel": {
         "prize": "Precio"
+    },
+    "button": {
+        "reserve": "Reservar",
+        "access": "Acceder"
     }
 }

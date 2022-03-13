@@ -35,7 +35,13 @@ button {
 }
 
 .secondary-btn {
-  border: 2px solid transparent;
+  border-radius: 0.9rem;
+  width: 100px;
+  height: 40px;
+  font-size: 15px;
+  color: $white-color;
+  font-family: $roboto-bold;
+  background-color: $purple-color;
 }
 
 .ternary-btn,
@@ -54,8 +60,8 @@ button {
 }
 
 .secondary-btn:hover {
-  background-color: $gray-color;
-  border-color: $gray-color;
+  background-color: $purple-color;
+  border-color: none;
   &:disabled {
     border-color: transparent;
   }

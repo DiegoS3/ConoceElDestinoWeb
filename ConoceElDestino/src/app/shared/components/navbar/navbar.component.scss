@@ -1,4 +1,4 @@
-// @import 'vars';
+@import 'vars';
 
 /* stylelint-disable */
 // ::ng-deep .p-menu,.p-menu .p-menu-child{
@@ -27,7 +27,7 @@
 ::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover {
   background: none !important;
   border-bottom: solid;
-  border-bottom-color: #a3d217;
+  border-bottom-color: $lima-color;
   border-radius: 0.5em;
 }
 
