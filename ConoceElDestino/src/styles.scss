@@ -35,6 +35,12 @@
 }
 
 body {
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: $darkgray-color;
+    font-family: $roboto-bold;
+  }
   h2,
   h3,
   h4 {
@@ -82,5 +88,10 @@ body {
 @font-face {
   font-family: "RobotoCondensed-Regular";
   src: url("./assets/fonts/RobotoCondensed-Regular.ttf");
+}
+
+@font-face {
+  font-family: "RobotoCondensed-Bold";
+  src: url("./assets/fonts/RobotoCondensed-Bold.ttf");
 }
 

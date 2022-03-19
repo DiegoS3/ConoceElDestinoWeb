@@ -12,6 +12,8 @@
     line-height: $footer-height;
     text-align: center;
     vertical-align: middle;
+    width: 100%;
+    overflow: auto;
     
     > p {
         --tw-text-opacity: 1;

@@ -1,0 +1,65 @@
+@import "../../shared/styles/theme/colors.scss";
+
+hr {
+    border-top: 3px solid $separator-color;
+    width: 100px;
+    border-radius: 5px;
+    margin-top: 0.8rem;
+}
+
+.header {
+    text-align: center;
+
+    &__title {
+        margin: 1rem 0;
+    }
+
+    &__description {
+        width: calc(100% - 1100px);
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+        margin-bottom: 3rem;
+    }
+
+    > p {
+        font-size: 20px;
+    }
+}
+
+.carousel {    
+    margin-top: 3rem;
+    .first {
+        margin-top: 0;
+    }
+}
+
+.carousel:last-child {
+    margin-bottom: 3rem;
+}
+
+@media only screen and (max-width: 576px) {
+    .header {
+        text-align: center;
+
+        &__description {
+            width: calc(100vh - 576px);
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .header {
+        text-align: center;
+
+        &__description {
+            width: calc(576px + 100vh - 576px);
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+        }
+    }
+}
