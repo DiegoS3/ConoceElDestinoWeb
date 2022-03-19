@@ -27,10 +27,21 @@ hr {
     }
 }
 
+.carousel {    
+    margin-top: 3rem;
+    .first {
+        margin-top: 0;
+    }
+}
+
+.carousel:last-child {
+    margin-bottom: 3rem;
+}
+
 @media only screen and (max-width: 576px) {
     .header {
         text-align: center;
-    
+
         &__description {
             width: calc(100vh - 576px);
             margin-left: auto;
@@ -38,13 +49,12 @@ hr {
             box-sizing: border-box;
         }
     }
-    
 }
 
 @media only screen and (min-width: 576px) {
     .header {
         text-align: center;
-    
+
         &__description {
             width: calc(576px + 100vh - 576px);
             margin-left: auto;

@@ -14,8 +14,10 @@
                     sapien dui mattis dui, non pulvinar lorem felis nec erat
                 </p>
             </div>
-            <div>
-                <app-generic-carousel-products [carouselData]="products"></app-generic-carousel-products>
+            <div *ngFor="let carousel of services; index as i; first as isFirst">
+                <div [ngClass]="isFirst ? 'carousel.first' : 'carousel' ">
+                    <app-generic-carousel-products [carouselData]="carousel"></app-generic-carousel-products>
+                </div>
             </div>
         </div>
     </div>
