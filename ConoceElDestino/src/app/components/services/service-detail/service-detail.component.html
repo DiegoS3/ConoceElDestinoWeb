@@ -1,1 +1,12 @@
-<p>service-detail works!</p>
+<div *ngIf="service$ | async as service" class="content">
+  <div class="header">
+    <h1>{{ service.name }}</h1>
+    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+  </div>
+  <div class="body">
+    <img src="https://raw.githubusercontent.com/DiegoS3/ConoceElDestinoWeb/384bd13adac52dcf130108eea959d0e5aa7180b1/ConoceElDestino/src/assets/showcase/images/{{service.image}}"
+                        [alt]="service.name" class="service-image" />
+  </div>
+</div>
+
+<!--https://www.lonelyplanet.com/usa/washington-dc/activities/smithsonian-national-air-and-space-museum-guided-small-group-tour/a/pa-act/v-40048P12/362241-->

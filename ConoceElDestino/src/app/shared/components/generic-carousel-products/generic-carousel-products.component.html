@@ -20,7 +20,7 @@
                         <span class="footer-section__price">{{content.price |
                             currency:'EUR':'symbol':'1.2-2':'es'}}</span>
                     </span>
-                    <button class="secondary-btn" style="margin-right: 1rem;">
+                    <button class="secondary-btn" style="margin-right: 1rem;" (click)="onClick(content)">
                         {{"button.reserve" | translate | uppercase}}
                     </button>
                 </div>

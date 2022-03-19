@@ -4,6 +4,7 @@ export interface GenericCarouselData {
 }
 
 export interface GenericCarouselItemData {
+    id: string;
     name: string;
     image: string;
     description: string; 
