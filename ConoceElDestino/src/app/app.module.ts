@@ -20,6 +20,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
 import {DividerModule} from 'primeng/divider';
+import { ServiceDetailComponent } from './components/services/service-detail/service-detail.component';
 
 registerLocaleData(localeEs, 'es');
 @NgModule({
@@ -29,7 +30,8 @@ registerLocaleData(localeEs, 'es');
     CollaboratorsComponent,
     OpinionsComponent,
     ContactComponent,
-    MainComponent
+    MainComponent,
+    ServiceDetailComponent
   ],
   imports: [
     BrowserModule,
