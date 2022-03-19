@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { GenericCarouselData } from '../../models/generic-carousel.model';
 
 @Component({
   selector: 'app-generic-carousel-products',
@@ -11,6 +12,7 @@ export class GenericCarouselProductsComponent implements OnInit {
   @Input() carouselData: any;
 
   responsiveOptions;
+  header: string = '';
 
   constructor() {
     this.responsiveOptions = [
@@ -42,7 +44,9 @@ export class GenericCarouselProductsComponent implements OnInit {
     ];
   }
   ngOnInit(): void {
-
+    this.carouselData.forEach((item: GenericCarouselData)=> {
+      this.header = item.header!
+    });
   }
 
 }

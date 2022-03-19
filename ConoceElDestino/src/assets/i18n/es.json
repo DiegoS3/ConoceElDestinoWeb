@@ -2,7 +2,14 @@
     "titles": {
         "find_experience": "Encuentra tu experiencia"
     },
-    "sections": {},
+    "sections": {
+        "services": {
+            "headers_carousel": {
+                "new": "Nuevas",
+                "more_choosen": "Más elegidas"
+            }
+        }
+    },
     "carousel": {
         "prize": "Precio"
     },
