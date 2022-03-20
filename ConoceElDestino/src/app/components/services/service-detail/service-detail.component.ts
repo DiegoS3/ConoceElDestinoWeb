@@ -12,6 +12,7 @@ import { GenericCarouselItemData } from 'src/app/shared/models/generic-carousel.
 export class ServiceDetailComponent implements OnInit {
 
   service$: Observable<GenericCarouselItemData>;
+  readOnly = true;
 
   constructor(
     private servicesService: ServicesService

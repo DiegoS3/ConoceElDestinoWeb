@@ -1,3 +1,5 @@
+@import '../../styles/theme/vars.scss';
+
 .product-item {
     .product-item-content {
         text-align: center;
@@ -86,6 +88,7 @@
 .type-xs {
     font-size: 1.5rem;
     line-height: 1.5;
+    color: $white-color;
 }
 
 .font-semibold {

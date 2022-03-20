@@ -27,7 +27,7 @@
 }
 
 .flex {
-  display: flex;    
+  display: flex;
 }
 
 .uppercase {
@@ -52,7 +52,7 @@ body {
     font-size: 20px;
   }
   h3 {
-    font-size: 18px;    
+    font-size: 18px;
   }
   h4 {
     font-size: 14px;
@@ -68,6 +68,11 @@ body {
 
   a {
     text-decoration: inherit;
+  }
+
+  span {
+    font-family: $roboto-regular;
+    color: $darkgray-color;
   }
 
   ::-webkit-scrollbar {

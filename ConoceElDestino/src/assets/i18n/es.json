@@ -15,6 +15,18 @@
     },
     "button": {
         "reserve": "Reservar",
-        "access": "Acceder"
+        "access": "Acceder",
+        "check_availability": "Comprobar precio y disponibilidad"
+    },
+    "generic": {
+      "from": "Desde",
+      "details": "Detalles",
+      "duration": "Duración",
+      "departs": "Salida",
+      "returns": "Vuelta",
+      "same_return": "Vuelta al lugar original de salida",
+      "tour_description": "Descripción visita",
+      "whats_included": "¿Qué incluye?",
+      "whats_not_included": "¿Qué no incluye?"
     }
 }

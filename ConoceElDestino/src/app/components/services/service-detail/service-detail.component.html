@@ -1,11 +1,103 @@
 <div *ngIf="service$ | async as service" class="content">
   <div class="header">
     <h1>{{ service.name }}</h1>
-    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+    <h3 class="italic">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </h3>
   </div>
   <div class="body">
-    <img src="https://raw.githubusercontent.com/DiegoS3/ConoceElDestinoWeb/384bd13adac52dcf130108eea959d0e5aa7180b1/ConoceElDestino/src/assets/showcase/images/{{service.image}}"
-                        [alt]="service.name" class="service-image" />
+    <div style="width: 66%">
+      <img
+        src="https://raw.githubusercontent.com/DiegoS3/ConoceElDestinoWeb/384bd13adac52dcf130108eea959d0e5aa7180b1/ConoceElDestino/src/assets/showcase/images/{{
+          service.image
+        }}"
+        [alt]="service.name"
+        class="service-image"
+      />
+      <section class="section">
+        <h3 class="section__title_section">
+          {{ "generic.tour_description" | translate }}
+        </h3>
+        <p class="section__desc_section">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at enim at
+          ipsum pretium convallis. Aenean aliquet nibh sit amet justo viverra,
+          sed scelerisque ante mattis. Phasellus congue dapibus feugiat. Cras
+          tincidunt dui quis arcu finibus, in finibus erat venenatis. Duis
+          laoreet augue eget lectus tincidunt, vitae ultricies velit
+          sollicitudin. Proin molestie sagittis semper. Nam orci lorem,
+          elementum non maximus id, auctor at lectus. Sed mollis tristique
+          sapien at mollis. Fusce malesuada non sem sed ultrices. Sed dapibus
+          elit magna, condimentum blandit quam eleifend luctus. In dignissim
+          ultrices nulla, scelerisque faucibus massa. Suspendisse potenti.
+        </p>
+      </section>
+      <section class="section">
+        <h3 class="section__title_section">
+          {{ "generic.whats_included" | translate }}
+        </h3>
+        <ul class="section__desc_section">
+          <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at enim
+            at ipsum pretium convallis
+          </li>
+          <li>Fusce malesuada non sem sed ultrices</li>
+        </ul>
+      </section>
+      <section class="section">
+        <h3 class="section__title_section">
+          {{ "generic.whats_not_included" | translate }}
+        </h3>
+        <ul class="section__desc_section">
+          <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at enim
+            at ipsum pretium convallis
+          </li>
+          <li>Fusce malesuada non sem sed ultrices</li>
+          <li>
+            Sed dapibus elit magna, condimentum blandit quam eleifend luctus
+          </li>
+        </ul>
+      </section>
+    </div>
+    <div style="width: 33%">
+      <div style="margin-bottom: 2.5rem; margin-top: 2.5rem">
+        <div class="content-right">
+          <div class="text-price">
+            <span class="mr-1 text-size-1">
+              {{ "generic.from" | translate }}
+            </span>
+            <span class="text-green text-size-2 weight-500 robotopo-bold"
+              >{{ service.price | currency: "EUR":"symbol":"1.2-2":"es" }}
+            </span>
+          </div>
+          <button class="secondary-btn availability-btn">
+            {{ "button.check_availability" | translate | uppercase }}
+          </button>
+          <p-rating
+            [ngModel]="service.rating"
+            [cancel]="false"
+            [readonly]="readOnly"
+          ></p-rating>
+        </div>
+      </div>
+      <hr />
+      <div class="details">
+        <h3 class="bold">{{ "generic.details" | translate }}</h3>
+        <div class="details__child">
+          <span style="width: 4rem">{{ "generic.duration" | translate }}:</span>
+          <span>2 horas</span>
+        </div>
+        <div class="details__child">
+          <span style="width: 4rem">{{ "generic.departs" | translate }}:</span>
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        </div>
+        <div class="details__child">
+          <span style="width: 4rem">{{ "generic.returns" | translate }}:</span>
+          <span>{{ "generic.same_return" | translate }}</span>
+        </div>
+      </div>
+      <hr />
+    </div>
   </div>
 </div>
 

@@ -1,31 +1,118 @@
+@import "../../../shared/styles/theme/vars.scss";
+
 .content {
   margin-top: 2rem;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 8rem;
-  padding-right: 8rem;
-  max-width: 180rem;
+  padding-left: 12rem;
+  padding-right: 12rem;
+  max-width: 120rem;
   display: flow-root;
 }
 
-h3 {
+.content-right {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-align: center;
+}
+
+.details {
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+
+  &__child {
+    margin-top: 2rem;
+    font-size: 1rem;
+    display: flex;
+  }
+}
+
+.section {
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+  width: 840px;
+
+  &__title_section {
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: $roboto-bold;
+  }
+
+  &__desc_section {
+    margin-top: 1.5rem;
+    line-height: 2;
+    font-size: 1.1rem;
+  }
+}
+
+li {
+  line-height: 1.625;
+  font-size: 1.1rem;
+  font-family: $roboto-regular;
+}
+
+.italic {
   font-weight: 300;
   font-style: italic;
   margin: 0.5rem 0;
 }
 
+.availability-btn {
+  width: 100%;
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
+  font-size: 1rem;
+}
+
 .service-image {
   height: 560px;
   width: 840px;
+  border-radius: 0.5rem;
 }
 
 .body {
   margin: 2.5rem 0;
+  display: flex;
+}
+
+.text-price {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.bold {
+  font-family: $roboto-bold;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+::ng-deep .p-rating .p-rating-icon {
+  cursor: default;
+}
+
+::ng-deep .p-rating {
+  margin-top: 1.5rem;
+}
+
+::ng-deep .p-rating .p-rating-icon.pi-star-fill {
+  color: $green-color;
+}
+
+::ng-deep .p-rating .p-rating-icon.pi-star {
+  color: $light-purple-opacity-color;
+}
+
+@media (min-width: 960px) {
+  .content {
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
 }
 
 @media (min-width: 480px) {
   .content {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 12rem;
+    padding-right: 12rem;
   }
 }

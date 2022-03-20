@@ -7,6 +7,8 @@ import { OpinionsComponent } from './components/opinions/opinions.component';
 import { ServiceDetailComponent } from './components/services/service-detail/service-detail.component';
 import { ServicesComponent } from './components/services/services.component';
 
+const scrollPositionRestoration = true;
+
 const routes: Routes = [
   {
     path: 'services',
@@ -37,7 +39,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

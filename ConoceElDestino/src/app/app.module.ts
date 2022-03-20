@@ -4,7 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
-import {CarouselModule} from 'primeng/carousel';
+import { CarouselModule } from 'primeng/carousel';
+import { RatingModule } from 'primeng/rating';
 import { ServicesComponent } from './components/services/services.component';
 import { CollaboratorsComponent } from './components/collaborators/collaborators.component';
 import { OpinionsComponent } from './components/opinions/opinions.component';
@@ -19,8 +20,9 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
-import {DividerModule} from 'primeng/divider';
+import { DividerModule } from 'primeng/divider';
 import { ServiceDetailComponent } from './components/services/service-detail/service-detail.component';
+import { FormsModule } from '@angular/forms';
 
 registerLocaleData(localeEs, 'es');
 @NgModule({
@@ -37,6 +39,8 @@ registerLocaleData(localeEs, 'es');
     BrowserModule,
     SharedModule,
     CarouselModule,
+    RatingModule,
+    FormsModule,
     DividerModule,
     HttpClientModule,
     AppRoutingModule,
