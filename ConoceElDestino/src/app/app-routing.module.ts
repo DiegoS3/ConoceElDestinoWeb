@@ -4,13 +4,17 @@ import { CollaboratorsComponent } from './components/collaborators/collaborators
 import { ContactComponent } from './components/contact/contact.component';
 import { MainComponent } from './components/main/main.component';
 import { OpinionsComponent } from './components/opinions/opinions.component';
+import { ServiceDetailComponent } from './components/services/service-detail/service-detail.component';
 import { ServicesComponent } from './components/services/services.component';
+
+const scrollPositionRestoration = true;
 
 const routes: Routes = [
   {
     path: 'services',
     component: ServicesComponent
   },
+  { path: 'services/:serviceName/:serviceCode', component: ServiceDetailComponent },
   {
     path: 'collaborators',
     component: CollaboratorsComponent
@@ -35,7 +39,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

@@ -60,7 +60,8 @@ button {
 }
 
 .secondary-btn:hover {
-  background-color: $purple-color;
+  background-color: $purple-opacity-color;
+  color: $white-color;
   border-color: none;
   &:disabled {
     border-color: transparent;

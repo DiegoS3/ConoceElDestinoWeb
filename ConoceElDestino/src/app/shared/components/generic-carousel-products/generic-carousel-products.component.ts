@@ -1,5 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
-import { GenericCarouselData } from '../../models/generic-carousel.model';
+import { Router } from '@angular/router';
+import { ServicesService } from 'src/app/services/services.service';
+import { GenericCarouselData, GenericCarouselItemData } from '../../models/generic-carousel.model';
 
 @Component({
   selector: 'app-generic-carousel-products',
@@ -13,7 +15,10 @@ export class GenericCarouselProductsComponent implements OnInit {
 
   responsiveOptions;
 
-  constructor() {
+  constructor(
+    private router: Router,
+    private servicesService: ServicesService
+  ) {
     this.responsiveOptions = [
       {
         breakpoint: '1920px',
@@ -43,6 +48,11 @@ export class GenericCarouselProductsComponent implements OnInit {
     ];
   }
   ngOnInit(): void {
+  }
+
+  onClick(content: GenericCarouselItemData) {
+    this.servicesService.setSelectedService(content);
+    this.router.navigate([`services/${content.name}/${content.id}`]);
   }
 
 }
