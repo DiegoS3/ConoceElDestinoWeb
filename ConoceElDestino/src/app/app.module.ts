@@ -22,7 +22,11 @@ import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
 import { DividerModule } from 'primeng/divider';
 import { ServiceDetailComponent } from './components/services/service-detail/service-detail.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InputTextModule } from 'primeng/inputtext';
+import { DropdownModule } from 'primeng/dropdown';
+import { EditorModule } from 'primeng/editor';
+import { CaptchaModule } from 'primeng/captcha';
 
 registerLocaleData(localeEs, 'es');
 @NgModule({
@@ -43,7 +47,12 @@ registerLocaleData(localeEs, 'es');
     FormsModule,
     DividerModule,
     HttpClientModule,
+    InputTextModule,
     AppRoutingModule,
+    EditorModule,
+    CaptchaModule,
+    ReactiveFormsModule,
+    DropdownModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

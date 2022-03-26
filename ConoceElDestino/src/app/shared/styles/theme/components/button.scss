@@ -44,10 +44,14 @@ button {
   background-color: $purple-color;
 }
 
-.ternary-btn,
-.ternary-btn:disabled:hover {
-  background-color: $lightblue-color;
+.ternary-btn {
+  border-radius: 0.9rem;
+  width: 100px;
+  height: 40px;
+  font-size: 15px;
   color: $white-color;
+  font-family: $roboto-bold;
+  background-color: $lightgreen-color;
 }
 
 .default-btn {
@@ -61,6 +65,15 @@ button {
 
 .secondary-btn:hover {
   background-color: $purple-opacity-color;
+  color: $white-color;
+  border-color: none;
+  &:disabled {
+    border-color: transparent;
+  }
+}
+
+.ternary-btn:hover {
+  background-color: $lightgreen-opacity-color;
   color: $white-color;
   border-color: none;
   &:disabled {

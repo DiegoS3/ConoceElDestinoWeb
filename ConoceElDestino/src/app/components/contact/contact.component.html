@@ -1,1 +1,55 @@
-<p>contact works!</p>
+<div class="header header__title">
+  <label>
+    <h1>{{ "titles.contact" | translate | uppercase }}</h1>
+    <hr />
+  </label>
+</div>
+<div class="form">
+  <form [formGroup]="contactForm">
+    <label class="field">
+      <span class="form__field">{{ "sections.contact.case" | translate }}</span>
+      <input
+        class="form__field"
+        type="text"
+        pInputText
+        formControlName="case"
+      />
+    </label>
+
+    <label class="field">
+      <span class="form__field">{{
+        "sections.contact.reason" | translate
+      }}</span>
+      <p-dropdown
+        class="dropdown"
+        formControlName="reason"
+        placeholder="{{ 'sections.contact.select_reason' | translate }}"
+        appendTo="body"
+      ></p-dropdown>
+    </label>
+
+    <label class="field">
+      <span class="form__field">{{ "generic.email" | translate }}</span>
+      <input
+        class="form__field"
+        type="email"
+        pInputText
+        formControlName="email"
+      />
+    </label>
+
+    <label class="field">
+      <span class="form__field">{{
+        "sections.contact.description" | translate
+      }}</span>
+    </label>
+  </form>
+  <div class="actions">
+    <button class="secondary-btn">
+      {{ "generic.send" | translate | uppercase }}
+    </button>
+    <button class="ternary-btn">
+      {{ "generic.clean" | translate | uppercase }}
+    </button>
+  </div>
+</div>

@@ -1,6 +1,7 @@
 {
     "titles": {
-        "find_experience": "Encuentra tu experiencia"
+        "find_experience": "Encuentra tu experiencia",
+        "contact": "Contacta con nuestro equipo"
     },
     "sections": {
         "services": {
@@ -8,6 +9,12 @@
                 "new": "Nuevas",
                 "more_choosen": "Más elegidas"
             }
+        },
+        "contact": {
+          "case": "Asunto",
+          "reason": "Razón del Contacto",
+          "description": "Descripción",
+          "select_reason": "Selecciona una razón"
         }
     },
     "carousel": {
@@ -27,6 +34,10 @@
       "same_return": "Vuelta al lugar original de salida",
       "tour_description": "Descripción visita",
       "whats_included": "¿Qué incluye?",
-      "whats_not_included": "¿Qué no incluye?"
+      "whats_not_included": "¿Qué no incluye?",
+      "email": "Email",
+      "send": "Enviar",
+      "cancel": "Cancelar",
+      "clean": "Limpiar"
     }
 }
