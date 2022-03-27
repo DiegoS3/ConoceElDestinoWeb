@@ -34,7 +34,8 @@ button {
   }
 }
 
-.secondary-btn {
+.secondary-btn,
+.secondary-btn:hover:disabled {
   border-radius: 0.9rem;
   width: 100px;
   height: 40px;
@@ -45,9 +46,14 @@ button {
 }
 
 .ternary-btn,
-.ternary-btn:disabled:hover {
-  background-color: $lightblue-color;
+.ternary-btn:hover:disabled {
+  border-radius: 0.9rem;
+  width: 100px;
+  height: 40px;
+  font-size: 15px;
   color: $white-color;
+  font-family: $roboto-bold;
+  background-color: $lightgreen-color;
 }
 
 .default-btn {
@@ -63,9 +69,12 @@ button {
   background-color: $purple-opacity-color;
   color: $white-color;
   border-color: none;
-  &:disabled {
-    border-color: transparent;
-  }
+}
+
+.ternary-btn:hover {
+  background-color: $lightgreen-opacity-color;
+  color: $white-color;
+  border-color: none;
 }
 
 button:disabled {

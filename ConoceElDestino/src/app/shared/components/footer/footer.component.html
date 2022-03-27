@@ -1,33 +1,38 @@
 <div class="separator"></div>
 <div class="info-footer">
-    <div class="flex center-content">
-        <div class="margin__right">
-            <img
-                src="https://github.com/DiegoS3/ConoceElDestinoWeb/blob/feature/footer/ConoceElDestino/src/assets/showcase/images/logo.jpeg?raw=true">
-            <h3 class="font-semibold uppercase">Siguenos</h3>
-            <app-social-networks></app-social-networks>
-        </div>
-        <p-divider layout="vertical"></p-divider>
-        <div class="margin">
-            <h3 class="font-semibold uppercase margin__bottom">Servicios</h3>
-            <ul *ngFor="let service of services">
-                <li>
-                    <a href="{{service.navigate}}">{{service.label}}</a>
-                </li>
-            </ul>
-        </div>
-        <p-divider layout="vertical"></p-divider>
-        <div class="margin__left">
-            <h3 class="font-semibold uppercase margin__bottom">Sobre nosotros</h3>
-            <ul *ngFor="let about of aboutUs">
-                <li>
-                    <a href="{{about.navigate}}">{{about.label}}</a>
-                </li>
-            </ul>
-        </div>
+  <div class="info-footer__child">
+    <div class="margin__right">
+      <img
+        src="https://github.com/DiegoS3/ConoceElDestinoWeb/blob/feature/footer/ConoceElDestino/src/assets/showcase/images/logo.jpeg?raw=true"
+      />
+      <h3 class="font-semibold uppercase">Siguenos</h3>
+      <app-social-networks></app-social-networks>
     </div>
+    <p-divider layout="vertical" class="divider__vertical"></p-divider>
+    <!-- <p-divider layout="horizontal" class="divider__horizontal"></p-divider> -->
+    <div class="margin">
+      <h3 class="font-semibold uppercase margin__bottom">Servicios</h3>
+      <ul *ngFor="let service of services">
+        <li>
+          <a href="{{ service.navigate }}">{{ service.label }}</a>
+        </li>
+      </ul>
+    </div>
+    <p-divider layout="vertical" class="divider__vertical"></p-divider>
+    <!-- <p-divider layout="horizontal" class="divider__horizontal"></p-divider> -->
+    <div class="margin__left">
+      <h3 class="font-semibold uppercase margin__bottom">Sobre nosotros</h3>
+      <ul *ngFor="let about of aboutUs">
+        <li>
+          <a href="{{ about.navigate }}">{{ about.label }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 <div class="footer container">
-    <p>© 2022 Conoce El Destino. All rights reserved. No part of this site may be reproduced without our written
-        permission.</p>
+  <p>
+    © 2022 Conoce El Destino. All rights reserved. No part of this site may be
+    reproduced without our written permission.
+  </p>
 </div>

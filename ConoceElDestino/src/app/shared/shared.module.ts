@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule, DatePipe } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
-import {MenubarModule} from 'primeng/menubar';
-import {CarouselModule} from 'primeng/carousel';
-import {CardModule} from 'primeng/card';
-import {ButtonModule} from 'primeng/button';
-import {DividerModule} from 'primeng/divider';
+import { MenubarModule } from 'primeng/menubar';
+import { CarouselModule } from 'primeng/carousel';
+import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
+import { DividerModule } from 'primeng/divider';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { GenericCardComponent } from './components/generic-card/generic-card.component';
@@ -20,7 +20,7 @@ const COMPONENTS = [
   CarouselComponent,
   GenericCardComponent,
   FooterComponent,
-  SocialNetworksComponent,   
+  SocialNetworksComponent,
   GenericCarouselProductsComponent,
 ]
 
@@ -34,7 +34,7 @@ const COMPONENTS = [
       extend: true,
     }),
     RouterModule,
-    MenubarModule, 
+    MenubarModule,
     CarouselModule,
     CardModule,
     ButtonModule,
@@ -43,4 +43,4 @@ const COMPONENTS = [
   providers: [DatePipe],
   exports: [...COMPONENTS]
 })
-export class SharedModule {}
+export class SharedModule { }

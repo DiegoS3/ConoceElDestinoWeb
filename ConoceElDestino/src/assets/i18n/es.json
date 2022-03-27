@@ -1,6 +1,7 @@
 {
     "titles": {
-        "find_experience": "Encuentra tu experiencia"
+        "find_experience": "Encuentra tu experiencia",
+        "contact": "Contacta con nuestro equipo"
     },
     "sections": {
         "services": {
@@ -8,6 +9,15 @@
                 "new": "Nuevas",
                 "more_choosen": "Más elegidas"
             }
+        },
+        "contact": {
+          "case": "Asunto",
+          "reason": "Razón del contacto",
+          "description": "Descripción",
+          "select_reason": "Selecciona una razón",
+          "send_success": "¡Gracias por el mensaje! ¡Me pondré en contacto contigo pronto!",
+          "send_error": "¡UPS! Algo salió mal... Vuelve a cargar la página e inténtalo de nuevo.",
+          "form_not_valid": "Debes rellenar todos los campos obligatorios."
         }
     },
     "carousel": {
@@ -27,6 +37,11 @@
       "same_return": "Vuelta al lugar original de salida",
       "tour_description": "Descripción visita",
       "whats_included": "¿Qué incluye?",
-      "whats_not_included": "¿Qué no incluye?"
+      "whats_not_included": "¿Qué no incluye?",
+      "email": "Email",
+      "send": "Enviar",
+      "cancel": "Cancelar",
+      "clean": "Limpiar",
+      "fullname": "Nombre completo"
     }
 }
