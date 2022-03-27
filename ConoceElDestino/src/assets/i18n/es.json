@@ -12,9 +12,12 @@
         },
         "contact": {
           "case": "Asunto",
-          "reason": "Razón del Contacto",
+          "reason": "Razón del contacto",
           "description": "Descripción",
-          "select_reason": "Selecciona una razón"
+          "select_reason": "Selecciona una razón",
+          "send_success": "¡Gracias por el mensaje! ¡Me pondré en contacto contigo pronto!",
+          "send_error": "¡UPS! Algo salió mal... Vuelve a cargar la página e inténtalo de nuevo.",
+          "form_not_valid": "Debes rellenar todos los campos obligatorios."
         }
     },
     "carousel": {
@@ -38,6 +41,7 @@
       "email": "Email",
       "send": "Enviar",
       "cancel": "Cancelar",
-      "clean": "Limpiar"
+      "clean": "Limpiar",
+      "fullname": "Nombre completo"
     }
 }

@@ -24,9 +24,11 @@ import { DividerModule } from 'primeng/divider';
 import { ServiceDetailComponent } from './components/services/service-detail/service-detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 import { DropdownModule } from 'primeng/dropdown';
 import { EditorModule } from 'primeng/editor';
 import { CaptchaModule } from 'primeng/captcha';
+import { MarkAsteriskDirective } from './directive/mark-asterisk.directive';
 
 registerLocaleData(localeEs, 'es');
 @NgModule({
@@ -37,7 +39,8 @@ registerLocaleData(localeEs, 'es');
     OpinionsComponent,
     ContactComponent,
     MainComponent,
-    ServiceDetailComponent
+    ServiceDetailComponent,
+    MarkAsteriskDirective
   ],
   imports: [
     BrowserModule,
@@ -52,6 +55,7 @@ registerLocaleData(localeEs, 'es');
     EditorModule,
     CaptchaModule,
     ReactiveFormsModule,
+    InputTextareaModule,
     DropdownModule,
     TranslateModule.forRoot({
       loader: {
