@@ -8,12 +8,74 @@
       class="experience-img"
     />
   </div>
-  <div>
-    <span>
-      {{ experience.name }}
-    </span>
-    <p>
-      {{ experience.description }}
-    </p>
+  <div class="content">
+    <div class="content__section">
+      <div class="header header__title">
+        <label>
+          <h1>{{ experience.name | uppercase }}</h1>
+          <hr />
+        </label>
+      </div>
+      <div class="header header__description">
+        <p>
+          {{ experience.description }}
+        </p>
+      </div>
+      <div class="grid justify-content-center">
+        <div class="flex col-8 block-image">
+          <div class="col-7">
+            <img
+              alt="{{ experience.name }}"
+              src="https://raw.githubusercontent.com/DiegoS3/ConoceElDestinoWeb/384bd13adac52dcf130108eea959d0e5aa7180b1/ConoceElDestino/src/assets/showcase/images/{{
+                experience.image
+              }}"
+              class="experience-img__detail"
+            />
+            <div class="text-overlay">
+              <p>Image by Pedro Picapiedra</p>
+            </div>
+          </div>
+          <div class="col-5">
+            <img
+              alt="{{ experience.name }}"
+              src="https://raw.githubusercontent.com/DiegoS3/ConoceElDestinoWeb/384bd13adac52dcf130108eea959d0e5aa7180b1/ConoceElDestino/src/assets/showcase/images/{{
+                experience.image
+              }}"
+              class="experience-img__detail"
+            />
+            <div class="text-overlay">
+              <p>Image by Pedro Picapiedra</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex col-8 block-image">
+          <div class="col-5">
+            <img
+              alt="{{ experience.name }}"
+              src="https://raw.githubusercontent.com/DiegoS3/ConoceElDestinoWeb/384bd13adac52dcf130108eea959d0e5aa7180b1/ConoceElDestino/src/assets/showcase/images/{{
+                experience.image
+              }}"
+              class="experience-img__detail"
+            />
+            <div class="text-overlay">
+              <p>Image by Pedro Picapiedra</p>
+            </div>
+          </div>
+          <div class="col-7">
+            <img
+              alt="{{ experience.name }}"
+              src="https://raw.githubusercontent.com/DiegoS3/ConoceElDestinoWeb/384bd13adac52dcf130108eea959d0e5aa7180b1/ConoceElDestino/src/assets/showcase/images/{{
+                experience.image
+              }}"
+              class="experience-img__detail"
+            />
+            <div class="text-overlay">
+              <p>Image by Pedro Picapiedra</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+<!-- https://www.lonelyplanet.com/usa/activities -->
