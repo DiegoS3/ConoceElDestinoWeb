@@ -1,14 +1,20 @@
 <div class="card">
-    <p-card header="{{header}}">
-        <ng-template pTemplate="header">
-            <img alt="Card" src="https://raw.githubusercontent.com/DiegoS3/ConoceElDestinoWeb/384bd13adac52dcf130108eea959d0e5aa7180b1/ConoceElDestino/src/assets/showcase/images/{{product.image}}">
-        </ng-template>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt.</p>
-        <ng-template pTemplate="footer">
-            <button class="prime-btn">
-                <span>Acceder</span>
-            </button>
-        </ng-template>
-    </p-card>   
+  <p-card header="{{ header }}">
+    <ng-template pTemplate="header">
+      <img
+        alt="{{ header }}"
+        src="https://raw.githubusercontent.com/DiegoS3/ConoceElDestinoWeb/384bd13adac52dcf130108eea959d0e5aa7180b1/ConoceElDestino/src/assets/showcase/images/{{
+          product.image
+        }}"
+      />
+    </ng-template>
+    <p>
+      {{ product.shortDescription }}
+    </p>
+    <ng-template pTemplate="footer">
+      <button class="prime-btn" (click)="onAccess()">
+        <span>Acceder</span>
+      </button>
+    </ng-template>
+  </p-card>
 </div>
-

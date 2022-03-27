@@ -29,6 +29,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { EditorModule } from 'primeng/editor';
 import { CaptchaModule } from 'primeng/captcha';
 import { MarkAsteriskDirective } from './directive/mark-asterisk.directive';
+import { ExperiencesComponent } from './components/experiences/experiences.component';
 
 registerLocaleData(localeEs, 'es');
 @NgModule({
@@ -40,7 +41,8 @@ registerLocaleData(localeEs, 'es');
     ContactComponent,
     MainComponent,
     ServiceDetailComponent,
-    MarkAsteriskDirective
+    MarkAsteriskDirective,
+    ExperiencesComponent
   ],
   imports: [
     BrowserModule,

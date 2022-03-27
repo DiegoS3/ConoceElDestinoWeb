@@ -1,0 +1,12 @@
+.experience-img {
+  height: 300px;
+  width: 490px;
+}
+
+@media (min-width: 1024px) {
+  .experience-img {
+    height: 100vh;
+    max-height: 700px;
+    width: 100%;
+  }
+}
