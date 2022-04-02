@@ -1,0 +1,100 @@
+@import "../../shared/styles/theme/vars.scss";
+.experience-img {
+  height: 300px;
+  width: 100vw;
+
+  &__detail {
+    height: 200px;
+    width: 100%;
+  }
+}
+
+.block-image {
+  margin: -15px;
+}
+
+.col-5,
+.col-7 {
+  padding: 0.4rem 0.1rem;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 18px;
+  left: 22px;
+  text-align: start;
+  background-color: $darkgray-color;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+
+  p {
+    font-size: 12px;
+    font-weight: 700;
+  }
+}
+
+hr {
+  border-top: 3px solid $separator-color;
+  width: 100px;
+  border-radius: 5px;
+  margin-top: 0.8rem;
+}
+
+.header {
+  text-align: center;
+
+  &__title {
+    margin: 1rem 0;
+  }
+
+  &__description {
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    margin-bottom: 3rem;
+  }
+
+  > p {
+    font-size: 20px;
+  }
+}
+
+.container-title {
+  padding: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    text-align: center;
+
+    &__title {
+      margin: 1rem 0;
+    }
+
+    &__description {
+      width: calc(100% - 1100px);
+      margin-left: auto;
+      margin-right: auto;
+      box-sizing: border-box;
+      margin-bottom: 3rem;
+    }
+
+    > p {
+      font-size: 20px;
+    }
+  }
+
+  .experience-img {
+    height: 100vh;
+    max-height: 700px;
+    width: 100vw;
+
+    &__detail {
+      height: 400px;
+      width: 100%;
+    }
+  }
+}
