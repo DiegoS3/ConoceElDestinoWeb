@@ -1,10 +1,10 @@
 @import "../../shared/styles/theme/vars.scss";
 .experience-img {
   height: 300px;
-  width: 490px;
+  width: 100vw;
 
   &__detail {
-    height: 400px;
+    height: 200px;
     width: 100%;
   }
 }
@@ -90,6 +90,11 @@ hr {
   .experience-img {
     height: 100vh;
     max-height: 700px;
-    width: 100%;
+    width: 100vw;
+
+    &__detail {
+      height: 400px;
+      width: 100%;
+    }
   }
 }
