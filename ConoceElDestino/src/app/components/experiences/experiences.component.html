@@ -75,6 +75,20 @@
           </div>
         </div>
       </div>
+      <div
+        style="margin-top: 4rem; margin-bottom: -3rem"
+        class="header header__title"
+      >
+        <label>
+          <h1>{{ "sections.experiences.title" | translate | uppercase }}</h1>
+          <hr />
+        </label>
+      </div>
+      <div class="listCards">
+        <div style="padding: 1rem" *ngFor="let experience of experinces">
+          <app-card-experience [experience]="experience"></app-card-experience>
+        </div>
+      </div>
     </div>
   </div>
 </div>
