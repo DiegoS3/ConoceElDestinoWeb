@@ -16,6 +16,7 @@
 .listCards {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .col-5,

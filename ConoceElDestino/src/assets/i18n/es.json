@@ -20,7 +20,8 @@
           "form_not_valid": "Debes rellenar todos los campos obligatorios."
         },
         "experiences": {
-          "conoce_experience": "Experiencias Conoce el Destino"
+          "conoce_experience": "Experiencias Conoce el Destino",
+          "title": "Experiencias"
         }
     },
     "carousel": {
