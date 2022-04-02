@@ -45,23 +45,16 @@
 
   p {
     font-size: 2.5rem;
-    width: 100%;
+    width: calc(100vm - 25em);
+    max-width: 25em;
     font-weight: 700;
     padding-bottom: 0.25rem;
+    line-height: 1;
   }
 }
 
 .chevronIcon.jsx-724418216 {
   transition: transform 200ms ease-out 0s, -webkit-transform 200ms ease-out 0s;
-}
-
-.lm-icon.jsx-3722123328 {
-  fill: currentcolor;
-  height: 1rem;
-  width: 1rem;
-  line-height: 1;
-  margin-left: 0.6rem;
-  margin-top: 0.3rem;
 }
 
 .p-button {
@@ -97,24 +90,32 @@
   display: block;
 }
 
-::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator button {
-  background-color: #e9ecef;
-  width: 10em;
-  height: 0.2rem;
-  transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
-  border-radius: 0;
+.btn-carousel {
+  align-items: center;
+  display: flex;
 }
 
-::ng-deep
-  .p-carousel
-  .p-carousel-indicators
-  .p-carousel-indicator.p-highlight
-  button {
-  background-color: #4c1e80;
+.pi.pi-angle-right {
+  font-size: 1.5rem;
 }
 
-::ng-deep .p-link:focus {
-  outline: 0 none;
-  outline-offset: 0;
-  box-shadow: none;
+::ng-deep {
+  .p-carousel .p-carousel-indicators .p-carousel-indicator button {
+    background-color: #e9ecef;
+    width: calc((100vw - 10em) / 4);
+    max-width: 10em;
+    height: 0.2rem;
+    transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
+    border-radius: 0;
+  }
+
+  .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+    background-color: #4c1e80;
+  }
+
+  .p-link:focus {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: none;
+  }
 }
