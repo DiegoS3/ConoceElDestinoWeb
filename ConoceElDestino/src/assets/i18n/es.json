@@ -22,6 +22,9 @@
         "experiences": {
           "conoce_experience": "Experiencias Conoce el Destino",
           "title": "Experiencias"
+        },
+        "collaborators": {
+          "title": "Colaboradores"
         }
     },
     "carousel": {

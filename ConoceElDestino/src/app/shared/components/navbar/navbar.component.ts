@@ -10,7 +10,7 @@ import { MenuItem } from 'primeng/api';
 export class NavbarComponent implements OnInit {
   items!: MenuItem[];
 
-  constructor(private router: Router){
+  constructor(private router: Router) {
 
   }
 
@@ -39,13 +39,13 @@ export class NavbarComponent implements OnInit {
           exact: true
         },
       },
-      {
-        label: 'Opiniones',
-        routerLink: '/opinions',
-        routerLinkActiveOptions: {
-          exact: true
-        },
-      },
+      // {
+      //   label: 'Opiniones',
+      //   routerLink: '/opinions',
+      //   routerLinkActiveOptions: {
+      //     exact: true
+      //   },
+      // },
       {
         label: 'Contacto',
         routerLink: '/contact',
