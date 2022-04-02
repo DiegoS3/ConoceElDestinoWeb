@@ -1,0 +1,55 @@
+@import "../../styles/theme/vars.scss";
+.image {
+  width: 170px;
+  height: 170px;
+  border-radius: 8px;
+}
+
+.image-content {
+  margin-right: 2rem;
+}
+
+.price {
+  font-size: 2rem;
+  color: $green-color;
+  font-family: $roboto-bold;
+  margin-bottom: 1rem;
+}
+
+:host {
+  ::ng-deep {
+    .card-experience {
+      border-radius: 8px;
+      margin-top: 4rem;
+      width: 40em;
+      min-height: 170px;
+    }
+
+    .p-card {
+      box-shadow: none;
+      background-color: transparent;
+    }
+
+    .p-card:hover {
+      --tw-shadow: 0px 4px 25px 2px rgba(70, 70, 70, 0.2);
+      box-shadow: 0 0 transparent, 0 0 transparent, var(--tw-shadow);
+      cursor: pointer;
+    }
+
+    .p-card .p-card-content {
+      padding: 0;
+      display: flex;
+    }
+
+    h3 {
+      margin-top: 0;
+      color: $lightpurple-color;
+    }
+
+    .experience-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+}

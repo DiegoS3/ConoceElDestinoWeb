@@ -23,12 +23,12 @@ const COMPONENTS = [
   FooterComponent,
   SocialNetworksComponent,
   GenericCarouselProductsComponent,
+  CardExperienceComponent,
 ]
 
 @NgModule({
   declarations: [
     ...COMPONENTS,
-    CardExperienceComponent,
   ],
   imports: [
     CommonModule,

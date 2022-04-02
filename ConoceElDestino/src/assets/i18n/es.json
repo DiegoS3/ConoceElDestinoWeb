@@ -18,6 +18,9 @@
           "send_success": "¡Gracias por el mensaje! ¡Me pondré en contacto contigo pronto!",
           "send_error": "¡UPS! Algo salió mal... Vuelve a cargar la página e inténtalo de nuevo.",
           "form_not_valid": "Debes rellenar todos los campos obligatorios."
+        },
+        "experiences": {
+          "conoce_experience": "Experiencias Conoce el Destino"
         }
     },
     "carousel": {
@@ -43,6 +46,7 @@
       "cancel": "Cancelar",
       "clean": "Limpiar",
       "fullname": "Nombre completo",
-      "know_more": "Conoce más"
+      "know_more": "Conoce más",
+      "title": "Conoce el Destino"
     }
 }
