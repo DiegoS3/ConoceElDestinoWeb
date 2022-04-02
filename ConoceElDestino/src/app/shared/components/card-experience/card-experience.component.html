@@ -1,0 +1,27 @@
+<p-card styleClass="card-experience" (click)="onClick(experience)">
+  <div class="image-content">
+    <img
+      alt="{{ experience.name }}"
+      src="https://raw.githubusercontent.com/DiegoS3/ConoceElDestinoWeb/384bd13adac52dcf130108eea959d0e5aa7180b1/ConoceElDestino/src/assets/showcase/images/{{
+        experience.image
+      }}"
+      class="image"
+    />
+  </div>
+  <div>
+    <h3>{{ "generic.title" | translate }}</h3>
+    <h2>{{ header }}</h2>
+    <div class="experience-content">
+      <div style="width: 75%">
+        <p style="font-size: 1rem">{{ experience.description }}</p>
+      </div>
+      <div style="text-align: center">
+        <span class="price">{{
+          experience.price | currency: "EUR":"symbol":"1.0":"es"
+        }}</span>
+        <!-- <span>{{ experience.duration }}</span> -->
+        <p style="margin-top: 0.3rem">2 horas</p>
+      </div>
+    </div>
+  </div>
+</p-card>
