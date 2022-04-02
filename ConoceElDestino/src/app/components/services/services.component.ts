@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { GenericCarouselData } from 'src/app/shared/models/generic-carousel.model';
@@ -10,10 +11,7 @@ import { GenericCarouselData } from 'src/app/shared/models/generic-carousel.mode
 export class ServicesComponent implements OnInit {
   services: GenericCarouselData[] = [];
 
-  private lastPoppedUrl: string | undefined;
-  private yScrollStack: number[] = [];
-
-  constructor(private router: Router) {
+  constructor() {
     this.services = [
       {
         header: 'sections.services.headers_carousel.new',
@@ -39,12 +37,6 @@ export class ServicesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.router.events.subscribe((evt: any) => {
-      if (!(evt instanceof NavigationEnd)) {
-        return;
-      }
-      window.scrollTo(0, 0)
-    });
   }
 
 }

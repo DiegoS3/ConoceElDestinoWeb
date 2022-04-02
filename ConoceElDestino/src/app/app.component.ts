@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -10,9 +11,14 @@ export class AppComponent {
   title = 'ConoceElDestino';
   private activeLang = 'es';
 
-  constructor(private translate: TranslateService){
-    
+  constructor(private translate: TranslateService, private vps: ViewportScroller) {
+
     this.translate.setDefaultLang(this.activeLang);
+  }
+
+  onActivate() {
+    this.vps.scrollToPosition([0, 0]);
+    this.vps.getScrollPosition();
   }
 
 }
