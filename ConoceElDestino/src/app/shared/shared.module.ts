@@ -13,6 +13,7 @@ import { GenericCardComponent } from './components/generic-card/generic-card.com
 import { FooterComponent } from './components/footer/footer.component';
 import { SocialNetworksComponent } from './components/social-networks/social-networks.component';
 import { GenericCarouselProductsComponent } from './components/generic-carousel-products/generic-carousel-products.component';
+import { CardExperienceComponent } from './components/card-experience/card-experience.component';
 
 
 const COMPONENTS = [
@@ -27,6 +28,7 @@ const COMPONENTS = [
 @NgModule({
   declarations: [
     ...COMPONENTS,
+    CardExperienceComponent,
   ],
   imports: [
     CommonModule,
