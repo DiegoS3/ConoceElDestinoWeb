@@ -1,0 +1,73 @@
+@import "../../styles/theme/vars.scss";
+
+.card-content {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  padding: 0px 1.5rem;
+}
+
+.collaborator-image {
+  border: 2px solid #dbdbdb;
+  height: 16.8rem;
+  width: 16.8rem;
+  min-height: 105px;
+  min-width: 105px;
+  max-height: 230px;
+  max-width: 230px;
+  background-size: cover;
+  border-radius: 50%;
+  background-position: center center;
+  margin: 0.8rem auto;
+}
+
+:host {
+  ::ng-deep {
+    .card-collaborator {
+      margin-top: 4rem;
+      width: 25rem;
+      height: 27rem;
+      max-width: 310px;
+      max-height: 340px;
+      min-height: 340px;
+    }
+
+    .p-card {
+      box-shadow: rgba(10, 16, 20, 0.24) 0px 2px 2px,
+        rgba(10, 16, 20, 0.12) 0px 0px 2px;
+      margin: 8px;
+      border-radius: 4px;
+    }
+
+    .p-card:hover {
+      transform: translateY(-3px);
+      box-shadow: rgba(10, 16, 20, 0.24) 0px 8px 8px,
+        rgba(10, 16, 20, 0.12) 0px 0px 8px;
+      cursor: pointer;
+    }
+
+    .p-card .p-card-content {
+      padding: 0;
+      display: flex;
+    }
+
+    h3 {
+      color: $lightpurple-color;
+      text-align: center;
+      font-size: 1.4rem;
+      margin: 0.8rem 0px;
+    }
+
+    .experience-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+}

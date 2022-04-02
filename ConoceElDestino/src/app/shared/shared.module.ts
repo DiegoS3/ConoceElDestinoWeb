@@ -14,6 +14,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SocialNetworksComponent } from './components/social-networks/social-networks.component';
 import { GenericCarouselProductsComponent } from './components/generic-carousel-products/generic-carousel-products.component';
 import { CardExperienceComponent } from './components/card-experience/card-experience.component';
+import { CardCollaboratorComponent } from './components/card-collaborator/card-collaborator.component';
 
 
 const COMPONENTS = [
@@ -24,6 +25,7 @@ const COMPONENTS = [
   SocialNetworksComponent,
   GenericCarouselProductsComponent,
   CardExperienceComponent,
+  CardCollaboratorComponent,
 ]
 
 @NgModule({

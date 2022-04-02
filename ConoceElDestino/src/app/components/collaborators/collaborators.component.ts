@@ -7,6 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CollaboratorsComponent implements OnInit {
 
+  collaborators = [
+    { name: "Lonely", image: '29366.jpg' },
+    { name: "Lonely", image: '29367.jpg' },
+    { name: "Lonely", image: '29368.jpg' },
+    { name: "Lonely", image: '29369.jpg' },
+    { name: "Lonely", image: '29368.jpg' },
+    { name: "Lonely", image: '29366.jpg' },
+    { name: "Lonely", image: '29367.jpg' },
+    { name: "Lonely", image: '29369.jpg' },
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
