@@ -1,7 +1,8 @@
 {
     "titles": {
         "find_experience": "Encuentra tu experiencia",
-        "contact": "Contacta con nuestro equipo"
+        "contact": "Contacta con nuestro equipo",
+        "web": "Conoce El Destino"
     },
     "sections": {
         "services": {
@@ -52,5 +53,22 @@
       "fullname": "Nombre completo",
       "know_more": "Conoce más",
       "title": "Conoce el Destino"
+    },
+    "footer": {
+      "guided_visits": "Visitas Guiadas",
+      "georoutes": "Georutas",
+      "experiences": "Experiencias",
+      "travels": "Viajes",
+      "about": "Sobre Conoce El Destino",
+      "contact_us": "Contactanos",
+      "privacy_policy": "Politica Privacidad",
+      "terms_conditions": "Términos y Condiciones",
+      "work_us": "Trabaja Con Nosotros",
+      "rights_reserved": "Todos los derechos reservados. Ninguna parte de este sitio puede ser reproducido sin nuestro permiso por escrito",
+      "titles": {
+        "follow_us": "Siguenos",
+        "services": "Servicios",
+        "about_us": "Sobre nosotros"
+      }
     }
 }
