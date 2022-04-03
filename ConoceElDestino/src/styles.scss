@@ -1,26 +1,17 @@
-@import 'theme';
-@import 'vars';
+@import "theme";
+@import "vars";
 
-.p-menubar {
-  padding: 0.5rem;
-  background: none !important;
-  color: #fff !important;
-  border: none !important;
-  border-radius: 3px;
-}
+.content {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 56px);
+  background-color: #fafafa;
 
-
-.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
-  color: #fff !important;
+  &__section {
+    width: 100%;
+    overflow: auto;
+  }
 }
-.p-menubar .p-menuitem-link .p-menuitem-text :hover{
-    color: #fff !important;
-    background: none !important;
-}
-// html {
-//   font-size: $text-font-size;
-//   font-family: $primary-font;
-// }
 
 .font-semibold {
   font-weight: 700;
@@ -58,7 +49,9 @@ body {
     font-size: 14px;
   }
 
-  b, p, a{
+  b,
+  p,
+  a {
     font-family: $roboto-regular;
   }
 
@@ -99,4 +92,3 @@ body {
   font-family: "RobotoCondensed-Bold";
   src: url("./assets/fonts/RobotoCondensed-Bold.ttf");
 }
-

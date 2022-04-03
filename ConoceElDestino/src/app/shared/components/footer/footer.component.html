@@ -1,46 +1,21 @@
-<div class="separator"></div>
 <div class="info-footer">
-  <div class="info-footer__child">
-    <div class="margin__right">
-      <img
-        src="https://github.com/DiegoS3/ConoceElDestinoWeb/blob/feature/footer/ConoceElDestino/src/assets/showcase/images/logo.jpeg?raw=true"
-      />
-      <h3 class="font-semibold uppercase">
-        {{ "footer.titles.follow_us" | translate }}
-      </h3>
-      <app-social-networks></app-social-networks>
-    </div>
-    <p-divider layout="vertical" class="divider__vertical"></p-divider>
-    <!-- <p-divider layout="horizontal" class="divider__horizontal"></p-divider> -->
-    <div class="margin">
-      <h3 class="font-semibold uppercase margin__bottom">
-        {{ "footer.titles.services" | translate }}
-      </h3>
-      <ul *ngFor="let service of services">
-        <li>
-          <a href="{{ service.navigate }}">{{ service.label | translate }}</a>
-        </li>
-      </ul>
-    </div>
-    <p-divider layout="vertical" class="divider__vertical"></p-divider>
-    <!-- <p-divider layout="horizontal" class="divider__horizontal"></p-divider> -->
-    <div class="margin__left">
-      <h3 class="font-semibold uppercase margin__bottom">
-        {{ "footer.titles.about_us" | translate }}
-      </h3>
-      <ul *ngFor="let about of aboutUs">
-        <li>
-          <a href="{{ about.navigate }}">{{ about.label | translate }}</a>
-        </li>
-      </ul>
-    </div>
+  <div>
+    <img
+      src="https://github.com/DiegoS3/ConoceElDestinoWeb/blob/feature/footer/ConoceElDestino/src/assets/showcase/images/logo.jpeg?raw=true"
+    />
+    <h3 class="font-semibold uppercase">
+      {{ "footer.titles.follow_us" | translate }}
+    </h3>
+    <app-social-networks></app-social-networks>
+  </div>
+  <div class="info-footer__child" *ngFor="let section of footer">
+    <h3 class="font-semibold uppercase">{{ section.title | translate }}</h3>
+    <ul>
+      <li *ngFor="let subsection of section.sections">
+        <a href="{{ subsection.navigate }}">{{
+          subsection.label | translate
+        }}</a>
+      </li>
+    </ul>
   </div>
 </div>
-<div class="footer container">
-  <p>
-    © {{ currentYear }} {{ "titles.web" | translate }}.
-    {{ "footer.rights_reserved" | translate }}.
-  </p>
-</div>
-
-<!-- https://angular.io/about?group=Collaborators -->

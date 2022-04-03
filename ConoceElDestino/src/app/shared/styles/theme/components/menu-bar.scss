@@ -1,0 +1,21 @@
+@import "../vars.scss";
+
+.p-menubar {
+  padding: 0.5rem;
+  background: none !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 3px;
+}
+
+.p-menubar
+  .p-menubar-root-list
+  > .p-menuitem
+  > .p-menuitem-link
+  .p-menuitem-text {
+  color: #fff !important;
+}
+.p-menubar .p-menuitem-link .p-menuitem-text :hover {
+  color: #fff !important;
+  background: none !important;
+}
