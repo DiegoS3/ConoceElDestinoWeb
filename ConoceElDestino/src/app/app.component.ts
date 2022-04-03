@@ -11,6 +11,8 @@ export class AppComponent {
   title = 'ConoceElDestino';
   private activeLang = 'es';
 
+  currentYear = new Date().getFullYear();
+
   constructor(private translate: TranslateService, private vps: ViewportScroller) {
 
     this.translate.setDefaultLang(this.activeLang);

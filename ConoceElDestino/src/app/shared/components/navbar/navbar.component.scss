@@ -1,29 +1,4 @@
 @import "vars";
-
-/* stylelint-disable */
-// ::ng-deep .p-menu,.p-menu .p-menu-child{
-//     border: 0px;
-//     background:#5393bc!important;
-// }
-// ::ng-deep .p-menu .p-menuitem .p-menuitem-link:hover{
-//     background-color: #5393bc;
-// }
-// ::ng-deep .p-menu .p-menuitem .p-state-active{
-//     background-color: #5393bc;
-// }
-// ::ng-deep .p-menu .p-menuitem .p-menuitem-link:active{
-//   border: none !important;
-// }
-// ::ng-deep .p-menu .p-menuitem.p-menuitem-active>.p-menuitem-link,
-// .p-menu .p-menuitem .p-menuitem-link:hover{
-//     background-color:#186ba0;
-// }
-// ::ng-deep .menucus{
-//     // background: #5393bc !important;
-//     // border-color: yellow !important;
-//     // border-bottom: solid;
-//     // padding: 2em;
-// }
 ::ng-deep
   .p-menubar
   .p-menubar-root-list
@@ -47,13 +22,11 @@
 .header {
   display: flex;
   align-items: center;
-  // height: $header-height;
   height: 56px;
   padding: 0 1em;
   justify-content: center;
-  color: #fff;
-  // background-color: $darkblue-color;
-  background-color: #4c1e80;
+  color: $white-color;
+  background-color: $purple-color;
 
   &__actions {
     display: flex;
@@ -67,31 +40,14 @@
   padding: 0 0.5em;
 }
 
-.breadcrumb {
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
-
-  &__main,
-  &__aux {
-    padding: 0.5em 2em;
+@media screen and (max-width: 960px) {
+  .header {
+    justify-content: start;
   }
 
-  &__main {
-    font-size: 16px;
-    // font-family: $primary-font;
-    font-family: arial, helvetica, sans-serif;
-  }
-
-  &__aux {
-    display: flex;
-    flex-grow: 1;
-    font-size: 14px;
-    // font-family: $neosans-regular;
-    font-family: "NeoSansStd-Regular";
-    // border-color: $transparentgray-color;
-    border-color: #d6dde180;
-    border-style: solid;
-    border-left-width: 1px;
+  ::ng-deep .p-menubar .p-menubar-root-list {
+    background: $purple-color;
+    padding: 0.25rem 0.5rem;
+    width: fit-content;
   }
 }

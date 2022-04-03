@@ -8,47 +8,59 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  services = [
+  currentYear = new Date().getFullYear();
+
+  footer = [
     {
-      label: 'Visitas Guiadas',
-      navigate: ''
+      title: 'footer.titles.services',
+      sections:
+        [
+          {
+            label: 'footer.guided_visits',
+            navigate: ''
+          },
+          {
+            label: 'footer.georoutes',
+            navigate: ''
+          },
+          {
+            label: 'footer.experiences',
+            navigate: ''
+          },
+          {
+            label: 'footer.travels',
+            navigate: ''
+          },
+        ]
     },
     {
-      label: 'Georutas',
-      navigate: ''
-    },
-    {
-      label: 'Experiencias',
-      navigate: ''
-    },
-    {
-      label: 'Viajes',
-      navigate: ''
+      title: 'footer.titles.about_us',
+      sections:
+        [
+          {
+            label: 'footer.about',
+            navigate: ''
+          },
+          {
+            label: 'footer.contact_us',
+            navigate: ''
+          },
+          {
+            label: 'footer.work_us',
+            navigate: ''
+          },
+          {
+            label: 'footer.privacy_policy',
+            navigate: ''
+          },
+          {
+            label: 'footer.terms_conditions',
+            navigate: ''
+          },
+        ]
+
     },
   ];
-
-  aboutUs = [
-    {
-      label: 'Sobre Conoce El Destino',
-      navigate: ''
-    },
-    {
-      label: 'Contactanos',
-      navigate: ''
-    },
-    {
-      label: 'Politica Privacidad',
-      navigate: ''
-    },
-    {
-      label: 'Terminos y Condiciones',
-      navigate: ''
-    },
-    {
-      label: 'Trabaja Con Nosotros',
-      navigate: ''
-    },
-  ]
 
   constructor() { }
 

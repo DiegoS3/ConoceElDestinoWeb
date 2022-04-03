@@ -3,7 +3,16 @@
   <div class="content">
     <div class="content__section">
       <router-outlet (activate)="onActivate()"></router-outlet>
-      <app-footer></app-footer>
+      <div class="separator"></div>
+      <footer>
+        <app-footer></app-footer>
+      </footer>
+      <div class="footer container">
+        <p>
+          © {{ currentYear }} {{ "titles.web" | translate }}.
+          {{ "footer.rights_reserved" | translate }}.
+        </p>
+      </div>
     </div>
   </div>
 </div>
