@@ -1,7 +1,7 @@
 @import "../../shared/styles/theme/vars.scss";
 .experience-img {
   height: 300px;
-  width: 100vw;
+  width: calc(100vw - 9px);
 
   &__detail {
     height: 200px;
@@ -11,6 +11,11 @@
 
 .block-image {
   margin: -15px;
+}
+
+.grid {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .listCards {
@@ -96,7 +101,7 @@ hr {
   .experience-img {
     height: 100vh;
     max-height: 700px;
-    width: 100vw;
+    width: calc(100vw - 9px);
 
     &__detail {
       height: 400px;
