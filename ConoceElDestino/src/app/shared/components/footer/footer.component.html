@@ -12,9 +12,12 @@
     <h3 class="font-semibold uppercase">{{ section.title | translate }}</h3>
     <ul>
       <li *ngFor="let subsection of section.sections">
-        <a href="{{ subsection.navigate }}">{{
-          subsection.label | translate
-        }}</a>
+        <a
+          href="{{
+            navigate(subsection.label, section.navigate, subsection.navigate)
+          }}"
+          >{{ subsection.label | translate }}</a
+        >
       </li>
     </ul>
   </div>

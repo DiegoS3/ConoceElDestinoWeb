@@ -1,4 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
@@ -13,6 +15,7 @@ export class FooterComponent implements OnInit {
   footer = [
     {
       title: 'footer.titles.services',
+      navigate: '/details',
       sections:
         [
           {
@@ -39,15 +42,15 @@ export class FooterComponent implements OnInit {
         [
           {
             label: 'footer.about',
-            navigate: ''
+            navigate: 'about'
           },
           {
             label: 'footer.contact_us',
-            navigate: ''
+            navigate: 'contact'
           },
           {
             label: 'footer.work_us',
-            navigate: ''
+            navigate: 'collaborators'
           },
           {
             label: 'footer.privacy_policy',
@@ -62,9 +65,14 @@ export class FooterComponent implements OnInit {
     },
   ];
 
-  constructor() { }
+  constructor(private translate: TranslateService) { }
 
   ngOnInit(): void {
+  }
+
+  navigate(label: string, navigate?: string, navigate2?: string): string {
+    const label_translate = this.translate.instant(label);
+    return navigate ? label_translate + navigate : navigate2!;
   }
 
 }
