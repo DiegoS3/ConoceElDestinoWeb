@@ -67,6 +67,7 @@
     <div
       style="margin-top: 4rem; margin-bottom: -3rem"
       class="header header__title"
+      *ngIf="(productList$ | async).length > 0"
     >
       <label>
         <h1>{{ "sections.experiences.title" | translate | uppercase }}</h1>
@@ -74,8 +75,8 @@
       </label>
     </div>
     <div class="listCards">
-      <div style="padding: 1rem" *ngFor="let experience of experinces">
-        <app-card-experience [experience]="experience"></app-card-experience>
+      <div style="padding: 1rem" *ngFor="let product of productList$ | async">
+        <app-card-experience [experience]="product"></app-card-experience>
       </div>
     </div>
   </div>

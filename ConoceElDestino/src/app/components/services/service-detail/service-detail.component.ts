@@ -23,4 +23,8 @@ export class ServiceDetailComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  minuteToHour(time: number): string {
+    return (time / 60).toString();
+  }
+
 }

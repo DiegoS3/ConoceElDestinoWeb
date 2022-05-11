@@ -22,6 +22,7 @@ export class GenericCardComponent implements OnInit {
 
   onAccess(): void {
     this.servicesService.setSelectedExperience(this.product);
+    this.servicesService.getProductByCategory(this.product.name);
     this.router.navigate([`${this.header}/details`]);
   }
 
