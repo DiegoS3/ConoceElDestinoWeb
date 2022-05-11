@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://conoceeldestino-app.herokuapp.com',
+  apiUrl: 'http://localhost:8080',
 };
 
 /*
