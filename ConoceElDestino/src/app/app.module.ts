@@ -31,6 +31,7 @@ import { CaptchaModule } from 'primeng/captcha';
 import { MarkAsteriskDirective } from './directive/mark-asterisk.directive';
 import { ExperiencesComponent } from './components/experiences/experiences.component';
 import { MinutesToHoursPipe } from './pipes/minutes-to-hours';
+import { CoreModule } from './core/core.module';
 
 registerLocaleData(localeEs, 'es');
 @NgModule({
@@ -61,6 +62,7 @@ registerLocaleData(localeEs, 'es');
     ReactiveFormsModule,
     InputTextareaModule,
     DropdownModule,
+    CoreModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

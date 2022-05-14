@@ -1,6 +1,7 @@
 import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,9 @@ export class AppComponent {
 
   currentYear = new Date().getFullYear();
 
-  constructor(private translate: TranslateService, private vps: ViewportScroller) {
+  constructor(
+    private translate: TranslateService,
+    private vps: ViewportScroller,) {
 
     this.translate.setDefaultLang(this.activeLang);
   }
