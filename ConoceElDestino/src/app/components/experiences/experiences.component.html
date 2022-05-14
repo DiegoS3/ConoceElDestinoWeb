@@ -2,9 +2,7 @@
   <div>
     <img
       alt="{{ experience.name }}"
-      src="https://raw.githubusercontent.com/DiegoS3/ConoceElDestinoWeb/384bd13adac52dcf130108eea959d0e5aa7180b1/ConoceElDestino/src/assets/showcase/images/{{
-        experience.image
-      }}"
+      src="data:image/png;base64,{{ experience.image }}"
       class="experience-img"
     />
   </div>
@@ -25,9 +23,7 @@
         <div class="col-7">
           <img
             alt="{{ experience.name }}"
-            src="https://raw.githubusercontent.com/DiegoS3/ConoceElDestinoWeb/384bd13adac52dcf130108eea959d0e5aa7180b1/ConoceElDestino/src/assets/showcase/images/{{
-              experience.image
-            }}"
+            src="data:image/png;base64,{{ experience.image }}"
             class="experience-img__detail"
           />
           <div class="text-overlay">
@@ -37,9 +33,7 @@
         <div class="col-5">
           <img
             alt="{{ experience.name }}"
-            src="https://raw.githubusercontent.com/DiegoS3/ConoceElDestinoWeb/384bd13adac52dcf130108eea959d0e5aa7180b1/ConoceElDestino/src/assets/showcase/images/{{
-              experience.image
-            }}"
+            src="data:image/png;base64,{{ experience.image }}"
             class="experience-img__detail"
           />
           <div class="text-overlay">
@@ -51,9 +45,7 @@
         <div class="col-5">
           <img
             alt="{{ experience.name }}"
-            src="https://raw.githubusercontent.com/DiegoS3/ConoceElDestinoWeb/384bd13adac52dcf130108eea959d0e5aa7180b1/ConoceElDestino/src/assets/showcase/images/{{
-              experience.image
-            }}"
+            src="data:image/png;base64,{{ experience.image }}"
             class="experience-img__detail"
           />
           <div class="text-overlay">
@@ -63,9 +55,7 @@
         <div class="col-7">
           <img
             alt="{{ experience.name }}"
-            src="https://raw.githubusercontent.com/DiegoS3/ConoceElDestinoWeb/384bd13adac52dcf130108eea959d0e5aa7180b1/ConoceElDestino/src/assets/showcase/images/{{
-              experience.image
-            }}"
+            src="data:image/png;base64,{{ experience.image }}"
             class="experience-img__detail"
           />
           <div class="text-overlay">
@@ -77,6 +67,7 @@
     <div
       style="margin-top: 4rem; margin-bottom: -3rem"
       class="header header__title"
+      *ngIf="(productList$ | async).length > 0"
     >
       <label>
         <h1>{{ "sections.experiences.title" | translate | uppercase }}</h1>
@@ -84,8 +75,8 @@
       </label>
     </div>
     <div class="listCards">
-      <div style="padding: 1rem" *ngFor="let experience of experinces">
-        <app-card-experience [experience]="experience"></app-card-experience>
+      <div style="padding: 1rem" *ngFor="let product of productList$ | async">
+        <app-card-experience [experience]="product"></app-card-experience>
       </div>
     </div>
   </div>

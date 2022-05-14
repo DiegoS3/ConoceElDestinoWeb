@@ -1,6 +1,8 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Observable } from 'rxjs';
+import { GenericService } from 'src/app/services/generic.service';
 import { ServicesService } from 'src/app/services/services.service';
+import { endpoint } from 'src/environments/apis/apis';
 
 @Component({
   selector: 'app-experiences',
@@ -11,22 +13,21 @@ import { ServicesService } from 'src/app/services/services.service';
 export class ExperiencesComponent implements OnInit {
 
   experience$: Observable<any>;
+  productList$: Observable<any>;
 
-  experinces = [
-    { id: '1', name: 'Visitas Guiadas', image: '29366.jpg', description: 'Lorem ipsum dolor sit amet, consecteur adipiscing elit.', price: 20, rating: 4 },
-    { id: '2', name: 'Expncias', image: '29368.jpg', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: 20, rating: 3.7 },
-    { id: '3', name: 'Georutas', image: '29367.jpg', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: 20, rating: 5 },
-    { id: '4', name: 'Experiencias', image: '29368.jpg', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: 20, rating: 2.8 },
-    { id: '5', name: 'Viajes', image: '29369.jpg', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: 20, rating: 5 },
-  ]
+  private categoryName = '';
 
+  productList = [];
   constructor(
-    private servicesService: ServicesService
+    private servicesService: ServicesService,
+    private genericService: GenericService
   ) {
     this.experience$ = this.servicesService.selectedExperience$;
+    this.productList$ = this.servicesService.productList$;
   }
 
   ngOnInit(): void {
+
   }
 
 }

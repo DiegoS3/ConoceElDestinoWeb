@@ -10,12 +10,12 @@ import { GenericCarouselItemData } from '../../models/generic-carousel.model';
 })
 export class CarouselComponent implements OnInit {
 
-  products: GenericCarouselItemData[] = [
-    { id: '1', name: 'Visitas Guiadas', image: '29366.jpg', description: 'Lorem ipsum dolor sit amet, consecteur adipiscing elit.', price: 20, rating: 4 },
-    { id: '2', name: 'Expncias', image: '29368.jpg', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: 20, rating: 3.7 },
-    { id: '3', name: 'Georutas', image: '29367.jpg', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: 20, rating: 5 },
-    { id: '4', name: 'Experiencias', image: '29368.jpg', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: 20, rating: 2.8 },
-  ];
+  // products: GenericCarouselItemData[] = [
+  //   { id: '1', name: 'Visitas Guiadas', image: '29366.jpg', description: 'Lorem ipsum dolor sit amet, consecteur adipiscing elit.', price: 20, rating: 4 },
+  //   { id: '2', name: 'Expncias', image: '29368.jpg', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: 20, rating: 3.7 },
+  //   { id: '3', name: 'Georutas', image: '29367.jpg', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: 20, rating: 5 },
+  //   { id: '4', name: 'Experiencias', image: '29368.jpg', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: 20, rating: 2.8 },
+  // ];
   responsiveOptions;
 
   constructor(
