@@ -15,6 +15,8 @@ import { SocialNetworksComponent } from './components/social-networks/social-net
 import { GenericCarouselProductsComponent } from './components/generic-carousel-products/generic-carousel-products.component';
 import { CardExperienceComponent } from './components/card-experience/card-experience.component';
 import { CardCollaboratorComponent } from './components/card-collaborator/card-collaborator.component';
+import { HttpSpinnerComponent } from './components/http-spinner/http-spinner.component';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 
 const COMPONENTS = [
@@ -26,6 +28,7 @@ const COMPONENTS = [
   GenericCarouselProductsComponent,
   CardExperienceComponent,
   CardCollaboratorComponent,
+  HttpSpinnerComponent,
 ]
 
 @NgModule({
@@ -43,6 +46,7 @@ const COMPONENTS = [
     CardModule,
     ButtonModule,
     DividerModule,
+    ProgressSpinnerModule,
   ],
   providers: [DatePipe],
   exports: [...COMPONENTS]
