@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Observable } from 'rxjs';
 import { GenericService } from 'src/app/services/generic.service';
-import { ServicesService } from 'src/app/services/services.service';
+import { ProductsService } from 'src/app/services/products.service';
 import { endpoint } from 'src/environments/apis/apis';
 
 @Component({
@@ -19,11 +19,11 @@ export class ExperiencesComponent implements OnInit {
 
   productList = [];
   constructor(
-    private servicesService: ServicesService,
+    private productsService: ProductsService,
     private genericService: GenericService
   ) {
-    this.experience$ = this.servicesService.selectedExperience$;
-    this.productList$ = this.servicesService.productList$;
+    this.experience$ = this.productsService.selectedExperience$;
+    this.productList$ = this.productsService.productByCategoryList$;
   }
 
   ngOnInit(): void {

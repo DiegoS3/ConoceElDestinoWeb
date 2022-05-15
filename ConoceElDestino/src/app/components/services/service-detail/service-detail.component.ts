@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ServicesService } from 'src/app/services/services.service';
+import { ProductsService } from 'src/app/services/products.service';
 import { GenericCarouselItemData } from 'src/app/shared/models/generic-carousel.model';
 
 @Component({
@@ -15,9 +15,9 @@ export class ServiceDetailComponent implements OnInit {
   readOnly = true;
 
   constructor(
-    private servicesService: ServicesService
+    private productsService: ProductsService
   ) {
-    this.service$ = this.servicesService.selectedService$;
+    this.service$ = this.productsService.selectedService$;
   }
 
   ngOnInit(): void {

@@ -17,7 +17,7 @@ import { CardExperienceComponent } from './components/card-experience/card-exper
 import { CardCollaboratorComponent } from './components/card-collaborator/card-collaborator.component';
 import { HttpSpinnerComponent } from './components/http-spinner/http-spinner.component';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
-
+import { ToastModule } from 'primeng/toast';
 
 const COMPONENTS = [
   NavbarComponent,
@@ -47,6 +47,7 @@ const COMPONENTS = [
     ButtonModule,
     DividerModule,
     ProgressSpinnerModule,
+    ToastModule
   ],
   providers: [DatePipe],
   exports: [...COMPONENTS]

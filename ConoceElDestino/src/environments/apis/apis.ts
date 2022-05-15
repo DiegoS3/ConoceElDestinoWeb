@@ -9,6 +9,7 @@ export const endpoint = {
 
   //PRODUCT
   PRODUCT_BY_CATEGORY: `${api}/product/category/search`,
+  ALL_PRODUCTS: `${api}/product/search`,
 
 }
 
