@@ -34,16 +34,11 @@ export class CarouselComponent implements OnInit {
     private productsService: ProductsService,
     private router: Router
   ) {
-    this.productsCarousel$ = this.productsService.productsList$;
+    this.productsCarousel$ = this.productsService.productsCarouselList$;
   }
 
   ngOnInit(): void {
     this.productsService.getAllProducts();
-  }
-
-  private getProducts(): void {
-    // this.productsService.
-
   }
 
   onClick(content: GenericCarouselItemData) {

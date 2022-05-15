@@ -11,5 +11,8 @@ export const endpoint = {
   PRODUCT_BY_CATEGORY: `${api}/product/category/search`,
   ALL_PRODUCTS: `${api}/product/search`,
 
+  //IMAGES
+  IMAGE_BY_PRODUCT: `${api}/images/search`
+
 }
 

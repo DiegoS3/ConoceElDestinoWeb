@@ -64,8 +64,8 @@ export class ProductsService {
     this.genericService.httpPost(endpoint.ALL_PRODUCTS, {}).subscribe(
       {
         next: res => {
-          this.productsListSubject.next(res.body);
-          this.productsCarouselListSubject.next(res.body);
+          this.productsListSubject.next(res);
+          this.getRandomValues(res);
         },
         error: err => {
           this.productsListSubject.next([]);
@@ -75,10 +75,40 @@ export class ProductsService {
             detail: this.translate.instant('sections.contact.send_error'),
           };
           this.messageService.add(toast);
-        },
-        complete: () => this.productsListSubject.next([])
+        }
       }
     )
+  }
+
+  getImagesByProduct(id: string): void {
+    const params: Record<string, string> = {
+      name: id
+    }
+    this.genericService.httpGet(endpoint.IMAGE_BY_PRODUCT, params).subscribe(
+      {
+        next: res => {
+          console.log();
+
+        },
+        error: err => {
+          this.productsListSubject.next([]);
+          const toast: IToast = {
+            severity: ToastSeverity.info,
+            summary: err,
+            detail: this.translate.instant('sections.contact.send_error'),
+          };
+          this.messageService.add(toast);
+        }
+      }
+    )
+  }
+
+  private getRandomValues(list: GenericCarouselItemData[]): void {
+    // Shuffle array
+    const shuffled = list.sort(() => 0.5 - Math.random());
+    // Get sub-array of first n elements after shuffled
+    let selected = shuffled.slice(0, 4);
+    this.productsCarouselListSubject.next(selected);
   }
 
 }
