@@ -9,6 +9,10 @@ export class MinutesToHoursPipe implements PipeTransform {
     if (minutes === 0) {
       return hours + ' hrs ';
     }
+
+    if (hours === 0) {
+      return minutes + ' mins';
+    }
     return hours + ' hrs ' + minutes + ' mins';
   }
 }
