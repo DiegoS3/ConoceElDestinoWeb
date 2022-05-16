@@ -14,7 +14,7 @@
           <div class="container">
             <img
               height="640px"
-              src="data:image/png;base64,{{ product.images[0].image }}"
+              [src]="product.images![0].image | base64toimg"
               [alt]="product.name"
               class="product-image"
             />

@@ -2,7 +2,7 @@
   <div>
     <img
       alt="{{ experience.name }}"
-      src="data:image/png;base64,{{ experience.image }}"
+      [src]="experience.image | base64toimg"
       class="experience-img"
     />
   </div>
@@ -23,7 +23,7 @@
         <div class="col-7">
           <img
             alt="{{ experience.name }}"
-            src="data:image/png;base64,{{ experience.image }}"
+            [src]="experience.image | base64toimg"
             class="experience-img__detail"
           />
           <div class="text-overlay">
@@ -33,7 +33,7 @@
         <div class="col-5">
           <img
             alt="{{ experience.name }}"
-            src="data:image/png;base64,{{ experience.image }}"
+            [src]="experience.image | base64toimg"
             class="experience-img__detail"
           />
           <div class="text-overlay">
@@ -45,7 +45,7 @@
         <div class="col-5">
           <img
             alt="{{ experience.name }}"
-            src="data:image/png;base64,{{ experience.image }}"
+            [src]="experience.image | base64toimg"
             class="experience-img__detail"
           />
           <div class="text-overlay">
@@ -55,7 +55,7 @@
         <div class="col-7">
           <img
             alt="{{ experience.name }}"
-            src="data:image/png;base64,{{ experience.image }}"
+            [src]="experience.image | base64toimg"
             class="experience-img__detail"
           />
           <div class="text-overlay">

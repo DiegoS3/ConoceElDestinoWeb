@@ -1,6 +1,7 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { Observable } from 'rxjs';
-import { GenericService } from 'src/app/services/generic.service';
+import { Component, OnInit, ChangeDetectionStrategy, HostListener, OnDestroy } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable, pluck } from 'rxjs';
+import { CategoryService } from 'src/app/services/category.service';
 import { ProductsService } from 'src/app/services/products.service';
 import { endpoint } from 'src/environments/apis/apis';
 
@@ -10,23 +11,44 @@ import { endpoint } from 'src/environments/apis/apis';
   styleUrls: ['./experiences.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ExperiencesComponent implements OnInit {
+export class ExperiencesComponent implements OnInit, OnDestroy {
 
-  experience$: Observable<any>;
+  experience$?: Observable<any>;
   productList$: Observable<any>;
+  section = '';
 
-  private categoryName = '';
+  @HostListener('window:beforeunload', ['$event'])
+  unloadNotification($event: any) {
+    sessionStorage.setItem("section", this.route.snapshot.params['section']);
+  }
 
-  productList = [];
   constructor(
     private productsService: ProductsService,
-    private genericService: GenericService
+    private categoryService: CategoryService,
+    private route: ActivatedRoute
   ) {
-    this.experience$ = this.productsService.selectedExperience$;
+    this.getExperience();
     this.productList$ = this.productsService.productByCategoryList$;
+    this.section = this.route.snapshot.params['section'];
   }
 
   ngOnInit(): void {
+    this.getExperience();
+  }
+
+  ngOnDestroy(): void {
+    sessionStorage.clear();
+  }
+
+  private getExperience(): void {
+    const sectionCache = sessionStorage.getItem("section")
+    if (sectionCache) {
+      this.categoryService.getCategoryByName(sectionCache!);
+      this.experience$ = this.categoryService.category$;
+    }
+    else {
+      this.experience$ = this.productsService.selectedExperience$;
+    }
 
   }
 

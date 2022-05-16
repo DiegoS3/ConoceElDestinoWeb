@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { MessageService } from 'primeng/api';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, map, Observable, share } from 'rxjs';
 import { endpoint } from 'src/environments/apis/apis';
 import { IToast, ToastSeverity } from '../shared/models/custom-primeng-model';
 import { GenericCarouselItemData } from '../shared/models/generic-carousel.model';
@@ -55,9 +55,14 @@ export class ProductsService {
     const params: Record<string, string> = {
       name: name
     }
-    this.genericService.httpGet(endpoint.PRODUCT_BY_CATEGORY, params).subscribe(
-      response => this.productByCategoryListSubject.next(response.body)
-    );
+    this.genericService.httpGet(endpoint.PRODUCT_BY_CATEGORY, params)
+      .pipe(
+        map(res => res.body),
+        share()
+      )
+      .subscribe(
+        response => this.productByCategoryListSubject.next(response)
+      );
   }
 
   getAllProducts(): void {

@@ -18,6 +18,8 @@ import { CardCollaboratorComponent } from './components/card-collaborator/card-c
 import { HttpSpinnerComponent } from './components/http-spinner/http-spinner.component';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { ToastModule } from 'primeng/toast';
+import { MinutesToHoursPipe } from '../pipes/minutes-to-hours';
+import { Base64ToImage } from '../pipes/base64-to-image.pipe';
 
 const COMPONENTS = [
   NavbarComponent,
@@ -29,6 +31,8 @@ const COMPONENTS = [
   CardExperienceComponent,
   CardCollaboratorComponent,
   HttpSpinnerComponent,
+  MinutesToHoursPipe,
+  Base64ToImage
 ]
 
 @NgModule({

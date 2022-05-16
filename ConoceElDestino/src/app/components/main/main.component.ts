@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { GenericService } from 'src/app/services/generic.service';
-import { endpoint } from 'src/environments/apis/apis';
+import { Observable } from 'rxjs';
+import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
   selector: 'app-main',
@@ -12,18 +11,17 @@ export class MainComponent implements OnInit {
 
   products: any[] = [];
 
-  private categoryListSubject = new BehaviorSubject<any[]>([]);
   categoryList$: Observable<any>
 
-  constructor(private genericService: GenericService) {
 
-    this.categoryList$ = this.categoryListSubject.asObservable();
+  constructor(
+    private categoryService: CategoryService
+  ) {
+    this.categoryList$ = this.categoryService.categoryList$;
   }
 
   ngOnInit(): void {
-    this.genericService.httpPost(endpoint.CATEGORY_LIST, {}).subscribe(
-      list => this.categoryListSubject.next(list)
-    )
+    this.categoryService.getCategories();
   }
 
 }
