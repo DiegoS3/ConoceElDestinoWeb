@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, share } from 'rxjs';
+import { BehaviorSubject, map, Observable, share } from 'rxjs';
 import { endpoint } from 'src/environments/apis/apis';
 import { GenericService } from './generic.service';
 
@@ -35,10 +35,15 @@ export class CategoryService {
     }
     this.genericService.httpGet(endpoint.CATEGORY_BY_NAME, params)
       .pipe(
+        map(response => response.body),
         share()
       )
       .subscribe(
-        category => this.categorySubject.next(category)
+        category => {
+          console.log(category);
+
+          this.categorySubject.next(category)
+        }
       )
   }
 

@@ -15,11 +15,11 @@ export class ExperiencesComponent implements OnInit, OnDestroy {
 
   experience$?: Observable<any>;
   productList$: Observable<any>;
-  section = '';
+  section = this.route.snapshot.params['section'];
 
   @HostListener('window:beforeunload', ['$event'])
   unloadNotification($event: any) {
-    sessionStorage.setItem("section", this.route.snapshot.params['section']);
+    sessionStorage.setItem("section", this.section);
   }
 
   constructor(
@@ -27,9 +27,7 @@ export class ExperiencesComponent implements OnInit, OnDestroy {
     private categoryService: CategoryService,
     private route: ActivatedRoute
   ) {
-    this.getExperience();
     this.productList$ = this.productsService.productByCategoryList$;
-    this.section = this.route.snapshot.params['section'];
   }
 
   ngOnInit(): void {
@@ -41,10 +39,12 @@ export class ExperiencesComponent implements OnInit, OnDestroy {
   }
 
   private getExperience(): void {
-    const sectionCache = sessionStorage.getItem("section")
+    const sectionCache = sessionStorage.getItem("section");
+
     if (sectionCache) {
       this.categoryService.getCategoryByName(sectionCache!);
       this.experience$ = this.categoryService.category$;
+      this.productsService.getProductByCategory(this.section);
     }
     else {
       this.experience$ = this.productsService.selectedExperience$;
