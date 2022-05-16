@@ -40,8 +40,6 @@ export class CategoryService {
       )
       .subscribe(
         category => {
-          console.log(category);
-
           this.categorySubject.next(category)
         }
       )
