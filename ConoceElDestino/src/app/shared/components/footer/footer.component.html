@@ -8,7 +8,7 @@
     </h3>
     <app-social-networks></app-social-networks>
   </div>
-  <div class="info-footer__child" *ngFor="let section of footer">
+  <div class="info-footer__child" *ngFor="let section of footer$ | async">
     <h3 class="font-semibold uppercase">{{ section.title | translate }}</h3>
     <ul>
       <li *ngFor="let subsection of section.sections">

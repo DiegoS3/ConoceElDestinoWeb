@@ -25,10 +25,9 @@
           {{ "generic.whats_included" | translate }}
         </h3>
         <ul class="section__desc_section">
-          <li>
-            {{ service.included }}
+          <li *ngFor="let value of service.included">
+            {{ value }}
           </li>
-          <!-- <li>Fusce malesuada non sem sed ultrices</li> -->
         </ul>
       </section>
       <section class="section">
@@ -36,13 +35,9 @@
           {{ "generic.whats_not_included" | translate }}
         </h3>
         <ul class="section__desc_section">
-          <li>
-            {{ service.notIncluded }}
+          <li *ngFor="let value of service.notIncluded">
+            {{ value }}
           </li>
-          <!-- <li>Fusce malesuada non sem sed ultrices</li> -->
-          <!-- <li>
-            Sed dapibus elit magna, condimentum blandit quam eleifend luctus
-          </li> -->
         </ul>
       </section>
     </div>
