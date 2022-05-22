@@ -57,6 +57,7 @@ export class FooterComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.categoryService.getCategories();
     this.generateFooter();
   }
 
