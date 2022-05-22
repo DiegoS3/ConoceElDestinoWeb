@@ -84,6 +84,62 @@
         </div>
       </div>
       <hr />
+      <div class="details">
+        <h3 class="bold">{{ "generic.calendar" | translate }}</h3>
+        <div class="details__child">
+          <div style="min-width: 16rem; max-width: 16rem">
+            <span style="width: 7rem; padding-right: 0.5rem"
+              >{{ "generic.winter_month" | translate }}:</span
+            >
+            <span
+              >{{
+                "months." + service.horario.inviernoFechaInit + ".name"
+                  | translate
+              }}
+              /
+              {{
+                "months." + service.horario.inviernoFechaEnd + ".name"
+                  | translate
+              }}</span
+            >
+          </div>
+          <span style="width: 7rem; margin-left: 1rem"
+            >{{ "generic.winter_hours" | translate }}:</span
+          >
+          <span
+            >{{ service.horario.inviernoHoraInit }} /
+            {{ service.horario.inviernoHoraEnd }}</span
+          >
+        </div>
+        <div class="details__child">
+          <div style="min-width: 16rem; max-width: 16rem">
+            <span style="width: 7rem; padding-right: 0.5rem"
+              >{{ "generic.summer_month" | translate }}:</span
+            >
+            <span
+              >{{
+                "months." + service.horario.veranoFechaInit + ".name"
+                  | translate
+              }}
+              /
+              {{
+                "months." + service.horario.veranoFechaEnd + ".name" | translate
+              }}</span
+            >
+          </div>
+          <span style="width: 7rem; margin-left: 1rem"
+            >{{ "generic.summer_hours" | translate }}:</span
+          >
+          <span
+            >{{ service.horario.veranoHoraInit }} /
+            {{ service.horario.veranoHoraEnd }}</span
+          >
+        </div>
+        <div class="option">
+          <span>{{ "generic.option" | translate }}</span>
+        </div>
+      </div>
+      <hr />
     </div>
   </div>
 </div>

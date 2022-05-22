@@ -1,9 +1,8 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { BehaviorSubject, map, Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { CategoryService } from 'src/app/services/category.service';
-import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-footer',

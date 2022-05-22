@@ -52,7 +52,13 @@
       "clean": "Limpiar",
       "fullname": "Nombre completo",
       "know_more": "Conoce más",
-      "title": "Conoce el Destino"
+      "title": "Conoce el Destino",
+      "calendar": "Horario",
+      "winter_month": "Meses invierno",
+      "summer_month": "Meses verano",
+      "winter_hours": "Horas invierno",
+      "summer_hours": "Horas verano",
+      "option": "*Posibilidad de realizarlo en otros horarios previa consulta."
     },
     "footer": {
       "guided_visits": "Visitas Guiadas",
@@ -69,6 +75,80 @@
         "follow_us": "Siguenos",
         "services": "Servicios",
         "about_us": "Sobre nosotros"
+      }
+    },
+    "months": {
+      "JANUARY": {
+        "name": "Enero",
+        "short": "En",
+        "number": 1,
+        "days": 31
+      },
+      "FEBRUARY": {
+        "name": "Febrero",
+        "short": "Feb",
+        "number": 2,
+        "days": 28
+      },
+      "MARCH": {
+        "name": "Marzo",
+        "short": "Mar",
+        "number": 3,
+        "days": 31
+      },
+      "APRIL": {
+        "name": "Abril",
+        "short": "Abr",
+        "number": 4,
+        "days": 30
+      },
+      "MAY": {
+        "name": "Mayo",
+        "short": "May",
+        "number": 5,
+        "days": 31
+      },
+      "JUNE": {
+        "name": "Junio",
+        "short": "Jun",
+        "number": 6,
+        "days": 30
+      },
+      "JULY": {
+        "name": "Julio",
+        "short": "Jul",
+        "number": 7,
+        "days": 31
+      },
+      "AUGUST": {
+        "name": "Agosto",
+        "short": "Ago",
+        "number": 8,
+        "days": 31
+      },
+      "SEPTEMBER": {
+        "name": "Septiembre",
+        "short": "Sep",
+        "number": 9,
+        "days": 30
+      },
+      "OCTOBER": {
+        "name": "Octubre",
+        "short": "Oct",
+        "number": 10,
+        "days": 31
+      },
+      "NOVEMBER": {
+        "name": "Noviembre",
+        "short": "Nov",
+        "number": 11,
+        "days": 30
+      },
+      "DECEMBER": {
+        "name": "Diciembre",
+        "short": "Dic",
+        "number": 12,
+        "days": 31
       }
     }
 }
