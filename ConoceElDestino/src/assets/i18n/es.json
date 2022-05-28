@@ -35,7 +35,8 @@
           "know_about":"¿Cualquier otra cosa que debamos saber?",
           "select_hour": "Selecciona una hora",
           "date": "Fecha",
-          "hour": "Hora"
+          "hour": "Hora",
+          "send_success": "¡Gracias por tu reserva! ¡Me pondré en contacto contigo pronto!"
         }
     },
     "carousel": {
