@@ -1,1 +1,189 @@
-<p>book-product works!</p>
+<div class="header header__title">
+  <label>
+    <h1>
+      <i class="pi pi-calendar"></i
+      >{{ "titles.booking" | translate | uppercase }}
+    </h1>
+    <hr />
+  </label>
+</div>
+<form [formGroup]="bookingForm">
+  <div class="form">
+    <label class="field">
+      <span class="form__field">{{ "generic.fullname" | translate }}</span>
+      <span
+        appMarkAsterisk
+        [formGroup]="bookingForm"
+        [controlName]="'fullname'"
+      ></span>
+      <input
+        class="form__field"
+        type="text"
+        pInputText
+        formControlName="fullname"
+      />
+    </label>
+
+    <label class="field_composite">
+      <div class="fields_container">
+        <span class="field__left"
+          >{{ "sections.booking.phone" | translate }}
+          <span
+            appMarkAsterisk
+            [formGroup]="bookingForm"
+            [controlName]="'phone'"
+          ></span>
+        </span>
+
+        <span class="field__right"
+          >{{ "generic.email" | translate }}
+          <span
+            appMarkAsterisk
+            [formGroup]="bookingForm"
+            [controlName]="'email'"
+          ></span>
+        </span>
+      </div>
+      <div style="display: flex">
+        <p-inputMask
+          mask="(+34) 999-99-99-99"
+          class="field__left"
+          type="text"
+          formControlName="phone"
+        >
+        </p-inputMask>
+        <input
+          class="field__right"
+          type="email"
+          pInputText
+          formControlName="email"
+        />
+      </div>
+    </label>
+
+    <label class="field_composite">
+      <div class="fields_container">
+        <span class="field__left"
+          >{{ "sections.booking.adults" | translate }}
+          <span
+            appMarkAsterisk
+            [formGroup]="bookingForm"
+            [controlName]="'adults'"
+          ></span>
+        </span>
+
+        <span class="field__right"
+          >{{ "sections.booking.childs" | translate }}
+          <span
+            appMarkAsterisk
+            [formGroup]="bookingForm"
+            [controlName]="'childs'"
+          ></span>
+        </span>
+      </div>
+      <div style="display: flex">
+        <p-inputNumber
+          [showButtons]="true"
+          buttonLayout="horizontal"
+          spinnerMode="horizontal"
+          [step]="1"
+          [min]="0"
+          incrementButtonIcon="pi pi-plus"
+          decrementButtonIcon="pi pi-minus"
+          decrementButtonClass="p-button-danger"
+          incrementButtonClass="p-button-success"
+          class="field__left"
+          formControlName="adults"
+        >
+        </p-inputNumber>
+        <p-inputNumber
+          [showButtons]="true"
+          buttonLayout="horizontal"
+          spinnerMode="horizontal"
+          [step]="1"
+          [min]="0"
+          incrementButtonIcon="pi pi-plus"
+          decrementButtonIcon="pi pi-minus"
+          decrementButtonClass="p-button-danger"
+          incrementButtonClass="p-button-success"
+          class="field__right"
+          formControlName="childs"
+        >
+        </p-inputNumber>
+      </div>
+    </label>
+
+    <label class="field_composite">
+      <div class="fields_container">
+        <span class="field__left"
+          >{{ "sections.booking.date" | translate }}
+          <span
+            appMarkAsterisk
+            [formGroup]="bookingForm"
+            [controlName]="'date'"
+          ></span>
+        </span>
+
+        <span class="field__right"
+          >{{ "sections.booking.hour" | translate }}
+          <span
+            appMarkAsterisk
+            [formGroup]="bookingForm"
+            [controlName]="'hour'"
+          ></span>
+        </span>
+      </div>
+      <div style="display: flex">
+        <p-calendar
+          [minDate]="minDate!"
+          [maxDate]="maxDate!"
+          [readonlyInput]="true"
+          class="field__left"
+          formControlName="date"
+          [inputStyle]="{ width: '100%' }"
+        ></p-calendar>
+        <p-dropdown
+          class="dropdown"
+          formControlName="hour"
+          placeholder="{{ 'sections.booking.select_hour' | translate }}"
+          appendTo="body"
+          class="field__right"
+        ></p-dropdown>
+      </div>
+    </label>
+    <hr />
+    <label>
+      <span class="form__field">{{
+        "sections.booking.know_about" | translate
+      }}</span>
+      <span
+        appMarkAsterisk
+        [formGroup]="bookingForm"
+        [controlName]="'knowabout'"
+      ></span>
+      <textarea pInputTextarea formControlName="knowabout"></textarea>
+    </label>
+    <div
+      [ngClass]="!submitted ? 'hidden' : 'visible'"
+      class="center-text robotopo"
+    >
+      <span [ngClass]="!error ? 'success' : 'error'">{{
+        responseMessage
+      }}</span>
+    </div>
+    <div class="actions">
+      <button
+        class="secondary-btn"
+        type="submit"
+        [disabled]="isLoading"
+        (click)="onSubmit()"
+      >
+        {{ "generic.send" | translate | uppercase }}
+      </button>
+      <button class="ternary-btn" (click)="bookingForm.reset()">
+        {{ "generic.clean" | translate | uppercase }}
+      </button>
+      <input formControlName="honeypot" class="hidden" type="text" />
+    </div>
+  </div>
+</form>

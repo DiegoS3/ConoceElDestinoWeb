@@ -2,7 +2,8 @@
     "titles": {
         "find_experience": "Encuentra tu experiencia",
         "contact": "Contacta con nuestro equipo",
-        "web": "Conoce El Destino"
+        "web": "Conoce El Destino",
+        "booking": "Haga la reserva de su experiencia en minutos"
     },
     "sections": {
         "services": {
@@ -26,6 +27,15 @@
         },
         "collaborators": {
           "title": "Colaboradores"
+        },
+        "booking": {
+          "phone": "Teléfono",
+          "childs": "Número niños",
+          "adults": "Número adultos",
+          "know_about":"¿Cualquier otra cosa que debamos saber?",
+          "select_hour": "Selecciona una hora",
+          "date": "Fecha",
+          "hour": "Hora"
         }
     },
     "carousel": {
