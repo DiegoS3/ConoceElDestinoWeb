@@ -32,6 +32,7 @@ import { MarkAsteriskDirective } from './directive/mark-asterisk.directive';
 import { ExperiencesComponent } from './components/experiences/experiences.component';
 import { CoreModule } from './core/core.module';
 import { MessageService } from 'primeng/api';
+import { BookProductComponent } from './components/book-product/book-product.component';
 
 
 registerLocaleData(localeEs, 'es');
@@ -45,7 +46,8 @@ registerLocaleData(localeEs, 'es');
     MainComponent,
     ServiceDetailComponent,
     MarkAsteriskDirective,
-    ExperiencesComponent
+    ExperiencesComponent,
+    BookProductComponent
   ],
   imports: [
     BrowserModule,
