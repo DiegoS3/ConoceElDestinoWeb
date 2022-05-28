@@ -1,42 +1,42 @@
-<p-carousel
-  [value]="[]"
-  [numVisible]="1"
-  [numScroll]="1"
-  [circular]="true"
-  [autoplayInterval]="6000"
-  [responsiveOptions]="responsiveOptions"
-  [showNavigators]="false"
->
-  <ng-template let-product pTemplate="item">
-    <div class="product-item">
-      <div class="product-item-content">
-        <div class="container">
-          <img
-            height="640px"
-            src="https://raw.githubusercontent.com/DiegoS3/ConoceElDestinoWeb/384bd13adac52dcf130108eea959d0e5aa7180b1/ConoceElDestino/src/assets/showcase/images/{{
-              product.image
-            }}"
-            [alt]="product.name"
-            class="product-image"
-          />
-          <div class="text-overlay">
-            <p>
-              {{ product.description }}
-            </p>
-            <button
-              pButton
-              type="button"
-              class="btn-carousel"
-              (click)="onClick(product)"
-            >
-              <span class="jsx-724418216 block type-xs font-semibold">
-                {{ "generic.know_more" | translate }}
-              </span>
-              <i class="pi pi-angle-right"></i>
-            </button>
+<div *ngIf="productsCarousel$ | async as products">
+  <p-carousel
+    [value]="products"
+    [numVisible]="1"
+    [numScroll]="1"
+    [circular]="true"
+    [autoplayInterval]="6000"
+    [responsiveOptions]="responsiveOptions"
+    [showNavigators]="false"
+  >
+    <ng-template let-product pTemplate="item">
+      <div class="product-item">
+        <div class="product-item-content">
+          <div class="container">
+            <img
+              height="640px"
+              [src]="product.images![0].image | base64toimg"
+              [alt]="product.name"
+              class="product-image"
+            />
+            <div class="text-overlay">
+              <p>
+                {{ product.shortDescription }}
+              </p>
+              <button
+                pButton
+                type="button"
+                class="btn-carousel"
+                (click)="onClick(product)"
+              >
+                <span class="jsx-724418216 block type-xs font-semibold">
+                  {{ "generic.know_more" | translate }}
+                </span>
+                <i class="pi pi-angle-right"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </ng-template>
-</p-carousel>
+    </ng-template>
+  </p-carousel>
+</div>

@@ -30,8 +30,9 @@ import { EditorModule } from 'primeng/editor';
 import { CaptchaModule } from 'primeng/captcha';
 import { MarkAsteriskDirective } from './directive/mark-asterisk.directive';
 import { ExperiencesComponent } from './components/experiences/experiences.component';
-import { MinutesToHoursPipe } from './pipes/minutes-to-hours';
 import { CoreModule } from './core/core.module';
+import { MessageService } from 'primeng/api';
+
 
 registerLocaleData(localeEs, 'es');
 @NgModule({
@@ -44,8 +45,7 @@ registerLocaleData(localeEs, 'es');
     MainComponent,
     ServiceDetailComponent,
     MarkAsteriskDirective,
-    ExperiencesComponent,
-    MinutesToHoursPipe
+    ExperiencesComponent
   ],
   imports: [
     BrowserModule,
@@ -76,6 +76,7 @@ registerLocaleData(localeEs, 'es');
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'es' },
+    MessageService,
   ],
   bootstrap: [AppComponent]
 })

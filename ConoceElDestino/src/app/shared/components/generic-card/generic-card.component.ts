@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ServicesService } from 'src/app/services/services.service';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-generic-card',
@@ -13,7 +13,7 @@ export class GenericCardComponent implements OnInit {
   @Input() header: any;
 
   constructor(
-    private servicesService: ServicesService,
+    private productsService: ProductsService,
     private router: Router
   ) { }
 
@@ -21,8 +21,8 @@ export class GenericCardComponent implements OnInit {
   }
 
   onAccess(): void {
-    this.servicesService.setSelectedExperience(this.product);
-    this.servicesService.getProductByCategory(this.product.name);
+    this.productsService.setSelectedExperience(this.product);
+    this.productsService.getProductByCategory(this.product.name);
     this.router.navigate([`${this.header}/details`]);
   }
 

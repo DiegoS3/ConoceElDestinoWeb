@@ -1,3 +1,5 @@
+import { Calendar, ProductImage } from "./product.model";
+
 export interface GenericCarouselData {
   header?: string;
   content: GenericCarouselItemData | GenericCarouselItemData[];
@@ -6,7 +8,8 @@ export interface GenericCarouselData {
 export interface GenericCarouselItemData {
   id: string;
   name: string;
-  image: string;
+  images: ProductImage[];
+  horario: Calendar;
   longDescription: string;
   shortDescription: string;
   price: number;

@@ -1,6 +1,6 @@
 @import "../../../shared/styles/theme/vars.scss";
 
-.content {
+.contents {
   margin-top: 2rem;
   margin-left: auto;
   margin-right: auto;
@@ -55,6 +55,15 @@ li {
   font-weight: 300;
   font-style: italic;
   margin: 0.5rem 0;
+}
+
+.option {
+  margin-top: 1rem;
+  margin-right: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .availability-btn {

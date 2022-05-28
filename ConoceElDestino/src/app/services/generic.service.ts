@@ -12,7 +12,7 @@ export class GenericService {
 
   httpGet(
     url: string,
-    params: { [key: string]: string } = {},
+    params: { [key: string]: string | number } = {},
     additionalOptions = {}
   ): Observable<any> {
     let options: HttpParams = new HttpParams();

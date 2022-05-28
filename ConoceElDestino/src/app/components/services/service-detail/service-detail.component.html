@@ -1,4 +1,4 @@
-<div *ngIf="service$ | async as service" class="content">
+<div *ngIf="service$ | async as service" class="contents">
   <div class="header">
     <h1>{{ service.name }}</h1>
     <h3 class="italic">
@@ -8,7 +8,7 @@
   <div class="body">
     <div style="width: 66%">
       <img
-        src="data:image/png;base64,{{ service.image }}"
+        [src]="service.images![0].image | base64toimg"
         [alt]="service.name"
         class="service-image"
       />
@@ -25,10 +25,9 @@
           {{ "generic.whats_included" | translate }}
         </h3>
         <ul class="section__desc_section">
-          <li>
-            {{ service.included }}
+          <li *ngFor="let value of service.included">
+            {{ value }}
           </li>
-          <!-- <li>Fusce malesuada non sem sed ultrices</li> -->
         </ul>
       </section>
       <section class="section">
@@ -36,13 +35,9 @@
           {{ "generic.whats_not_included" | translate }}
         </h3>
         <ul class="section__desc_section">
-          <li>
-            {{ service.notIncluded }}
+          <li *ngFor="let value of service.notIncluded">
+            {{ value }}
           </li>
-          <!-- <li>Fusce malesuada non sem sed ultrices</li> -->
-          <!-- <li>
-            Sed dapibus elit magna, condimentum blandit quam eleifend luctus
-          </li> -->
         </ul>
       </section>
     </div>
@@ -86,6 +81,62 @@
           <span *ngIf="service.departure != service.arrival">{{
             service.arrival
           }}</span>
+        </div>
+      </div>
+      <hr />
+      <div class="details">
+        <h3 class="bold">{{ "generic.calendar" | translate }}</h3>
+        <div class="details__child">
+          <div style="min-width: 16rem; max-width: 16rem">
+            <span style="width: 7rem; padding-right: 0.5rem"
+              >{{ "generic.winter_month" | translate }}:</span
+            >
+            <span
+              >{{
+                "months." + service.horario.inviernoFechaInit + ".name"
+                  | translate
+              }}
+              /
+              {{
+                "months." + service.horario.inviernoFechaEnd + ".name"
+                  | translate
+              }}</span
+            >
+          </div>
+          <span style="width: 7rem; margin-left: 1rem"
+            >{{ "generic.winter_hours" | translate }}:</span
+          >
+          <span
+            >{{ service.horario.inviernoHoraInit }} /
+            {{ service.horario.inviernoHoraEnd }}</span
+          >
+        </div>
+        <div class="details__child">
+          <div style="min-width: 16rem; max-width: 16rem">
+            <span style="width: 7rem; padding-right: 0.5rem"
+              >{{ "generic.summer_month" | translate }}:</span
+            >
+            <span
+              >{{
+                "months." + service.horario.veranoFechaInit + ".name"
+                  | translate
+              }}
+              /
+              {{
+                "months." + service.horario.veranoFechaEnd + ".name" | translate
+              }}</span
+            >
+          </div>
+          <span style="width: 7rem; margin-left: 1rem"
+            >{{ "generic.summer_hours" | translate }}:</span
+          >
+          <span
+            >{{ service.horario.veranoHoraInit }} /
+            {{ service.horario.veranoHoraEnd }}</span
+          >
+        </div>
+        <div class="option">
+          <span>{{ "generic.option" | translate }}</span>
         </div>
       </div>
       <hr />

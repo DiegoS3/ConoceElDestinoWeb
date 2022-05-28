@@ -6,9 +6,14 @@ export const endpoint = {
 
   //CATEGORY
   CATEGORY_LIST: `${api}/category/search`,
+  CATEGORY_BY_NAME: `${api}/category`,
 
   //PRODUCT
   PRODUCT_BY_CATEGORY: `${api}/product/category/search`,
+  ALL_PRODUCTS: `${api}/product/search`,
+
+  //IMAGES
+  IMAGE_BY_PRODUCT: `${api}/images/search`
 
 }
 

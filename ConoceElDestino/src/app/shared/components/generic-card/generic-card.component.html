@@ -1,7 +1,7 @@
 <div class="card">
   <p-card header="{{ header }}">
     <ng-template pTemplate="header">
-      <img alt="{{ header }}" src="data:image/png;base64,{{ product.image }}" />
+      <img alt="{{ header }}" [src]="product.image | base64toimg" />
     </ng-template>
     <p>
       {{ product.shortDescription }}

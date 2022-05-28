@@ -2,7 +2,7 @@
   <div class="image-content">
     <img
       alt="{{ experience.name }}"
-      src="data:image/png;base64,{{ experience.image }}"
+      [src]="experience.images![0].image | base64toimg"
       class="image"
     />
   </div>
@@ -18,7 +18,7 @@
           experience.price | currency: "EUR":"symbol":"1.0":"es"
         }}</span>
         <!-- <span>{{ experience.duration }}</span> -->
-        <p style="margin-top: 0.3rem">{{ experience.duration }}</p>
+        <p style="margin-top: 0.3rem">{{ experience.duration | m2h }}</p>
       </div>
     </div>
   </div>

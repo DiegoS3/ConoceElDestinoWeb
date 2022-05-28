@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { ServicesService } from 'src/app/services/services.service';
+import { ProductsService } from 'src/app/services/products.service';
 import { GenericCarouselItemData } from '../../models/generic-carousel.model';
 
 @Component({
@@ -17,7 +17,7 @@ export class CardExperienceComponent implements OnInit {
   header: string = '';
 
   constructor(
-    private servicesService: ServicesService,
+    private productsService: ProductsService,
     private router: Router,
     private translate: TranslateService) { }
 
@@ -26,7 +26,7 @@ export class CardExperienceComponent implements OnInit {
   }
 
   onClick(content: GenericCarouselItemData) {
-    this.servicesService.setSelectedService(content);
+    this.productsService.setSelectedService(content);
     this.router.navigate([`services/${content.name}/${content.id}`]);
   }
 
