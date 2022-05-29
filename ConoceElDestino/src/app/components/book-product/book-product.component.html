@@ -116,15 +116,6 @@
     <label class="field_composite">
       <div class="fields_container">
         <span class="field__left"
-          >{{ "sections.booking.date" | translate }}
-          <span
-            appMarkAsterisk
-            [formGroup]="bookingForm"
-            [controlName]="'date'"
-          ></span>
-        </span>
-
-        <span class="field__right"
           >{{ "sections.booking.hour" | translate }}
           <span
             appMarkAsterisk
@@ -132,23 +123,33 @@
             [controlName]="'hour'"
           ></span>
         </span>
+        <span class="field__right"
+          >{{ "sections.booking.date" | translate }}
+          <span
+            appMarkAsterisk
+            [formGroup]="bookingForm"
+            [controlName]="'date'"
+          ></span>
+        </span>
       </div>
       <div style="display: flex">
+        <p-dropdown
+          [options]="fillHoursDropdown((service$ | async)!)"
+          class="dropdown"
+          formControlName="hour"
+          placeholder="{{ 'sections.booking.select_hour' | translate }}"
+          appendTo="body"
+          class="field__left"
+        ></p-dropdown>
+
         <p-calendar
           [minDate]="minDate!"
           [maxDate]="maxDate!"
           [readonlyInput]="true"
           dateFormat="dd/mm/yy"
-          class="field__left"
+          class="field__right"
           formControlName="date"
         ></p-calendar>
-        <p-dropdown
-          class="dropdown"
-          formControlName="hour"
-          placeholder="{{ 'sections.booking.select_hour' | translate }}"
-          appendTo="body"
-          class="field__right"
-        ></p-dropdown>
       </div>
     </label>
     <hr />

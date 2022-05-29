@@ -44,7 +44,8 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       this.productsService.setSelectedService(productCache)
   }
 
-  checkAvailability(): void {
+  checkAvailability(product: GenericCarouselItemData): void {
+    this.productsService.setSelectedService(product)
     this.router.navigate(['book']);
   }
 

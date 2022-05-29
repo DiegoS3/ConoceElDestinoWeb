@@ -36,14 +36,13 @@ export class BookProductComponent implements OnInit, OnDestroy {
   maxDate?: Date;
 
   productName = '';
+  initHour = 0;
+  endHour = 0;
 
 
   @HostListener('window:beforeunload', ['$event'])
   unloadNotification($event: any) {
-    this.service$.subscribe(
-      product =>
-        sessionStorage.setItem("productName", JSON.stringify(product.name))
-    )
+    this.saveDataInSession();
   }
 
   constructor(
@@ -76,9 +75,31 @@ export class BookProductComponent implements OnInit, OnDestroy {
   }
 
   private manageSession(): void {
-    const productCache = JSON.parse(sessionStorage.getItem("productName")!);
-    if (productCache)
-      this.productName = productCache;
+    const productNameCache = JSON.parse(sessionStorage.getItem("productName")!);
+    const productCache = JSON.parse(sessionStorage.getItem("product")!);
+    const initHourCache = JSON.parse(sessionStorage.getItem("initHour")!);
+    const endHourCache = JSON.parse(sessionStorage.getItem("endHour")!);
+
+    if (productCache) {
+      this.productsService.setSelectedService(productCache);
+      this.productName = productNameCache;
+      this.initHour = +initHourCache.slice(0, 2);
+      this.endHour = +endHourCache.slice(0, 2);
+    }
+    else {
+      this.service$.subscribe(
+        product => {
+          if (this.getSeason() === "Winter") {
+            this.initHour = +product.horario.inviernoHoraEnd.slice(0, 2);
+            this.endHour = +product.horario.inviernoHoraInit.slice(0, 2);
+          } else {
+            this.initHour = +product.horario.veranoHoraEnd.slice(0, 2);
+            this.endHour = +product.horario.veranoHoraInit.slice(0, 2);
+          }
+        }
+      )
+    }
+
   }
 
   private limitDates(): void {
@@ -138,6 +159,68 @@ export class BookProductComponent implements OnInit, OnDestroy {
       this.submitted = true;
       this.error = true;
     }
+  }
+
+  fillHoursDropdown(product: GenericCarouselItemData): string[] {
+    let times = [];
+    let quarterHours = ["00", "30"];
+    const hours = this.getHours(product);
+
+
+    for (let i = +hours[0].slice(0, 2); i < +hours[1].slice(0, 2) + 1; i++) {
+      for (let j = 0; j < quarterHours.length; j++) {
+        times.push(i + ":" + quarterHours[j]);
+      }
+    }
+
+    const indexInit = times.indexOf(hours[0]);
+    const indexEnd = times.indexOf(hours[1]);
+    if (indexInit != 0 && indexEnd != times.length)
+      times = times.slice(indexInit, indexEnd + 1);
+
+    return times;
+  }
+
+  private saveDataInSession(): void {
+    this.service$.subscribe(
+      product => {
+        sessionStorage.setItem("product", JSON.stringify(product));
+        sessionStorage.setItem("productName", JSON.stringify(product.name));
+        if (this.getSeason() === "Winter") {
+          sessionStorage.setItem("endHour", JSON.stringify(product.horario.inviernoHoraEnd));
+          sessionStorage.setItem("initHour", JSON.stringify(product.horario.inviernoHoraInit));
+        } else {
+          sessionStorage.setItem("endHour", JSON.stringify(product.horario.veranoHoraEnd));
+          sessionStorage.setItem("initHour", JSON.stringify(product.horario.veranoHoraInit));
+        }
+      }
+    )
+  }
+
+  private getHours(product: GenericCarouselItemData): string[] {
+    const hours = [];
+    if (this.getSeason() === "Winter") {
+      hours.push(product.horario.inviernoHoraInit);
+      hours.push(product.horario.inviernoHoraEnd);
+    } else {
+      hours.push(product.horario.veranoHoraInit);
+      hours.push(product.horario.veranoHoraEnd);
+    }
+    return hours;
+  }
+
+  private getActualMonth(): string {
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"];
+    const today = new Date();
+    const month = today.getMonth();
+    return monthNames[month];
+  }
+
+  private getSeason(): string {
+    const monthCheck = this.getActualMonth();
+    const monthWinter = ["January", "February", "March", "October", "November", "December"];
+    return monthWinter.includes(monthCheck) ? "Winter" : "Summer";
   }
 
 }
