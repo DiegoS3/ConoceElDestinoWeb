@@ -41,12 +41,48 @@
       <div style="margin-bottom: 2.5rem; margin-top: 2.5rem">
         <div class="content-right">
           <div class="text-price">
-            <span class="mr-1 text-size-1">
-              {{ "generic.from" | translate }}
-            </span>
-            <span class="text-green text-size-2 weight-500 robotopo-bold"
-              >{{ service.price | currency: "EUR":"symbol":"1.2-2":"es" }}
-            </span>
+            <div
+              class="text-price__icon"
+              pTooltip="{{ 'generic.priceIndi' | translate }}"
+            >
+              <i class="pi pi-user" style="margin-right: 0.5rem"></i>
+            </div>
+            <div>
+              <span class="mr-1 text-size-1">
+                {{ "generic.from" | translate }}
+              </span>
+            </div>
+            <div
+              class="text-price__price"
+              pTooltip="{{ 'generic.priceIndi' | translate }}"
+            >
+              <span class="text-green text-size-2 weight-500 robotopo-bold"
+                >{{ service.priceIndi | currency: "EUR":"symbol":"1.2-2":"es" }}
+              </span>
+            </div>
+          </div>
+          <div class="text-price">
+            <div
+              class="text-price__icon"
+              pTooltip="{{ 'generic.priceGroup' | translate }}"
+            >
+              <i class="pi pi-users" style="margin-right: 0.5rem"></i>
+            </div>
+            <div>
+              <span class="mr-1 text-size-1">
+                {{ "generic.from" | translate }}
+              </span>
+            </div>
+            <div
+              class="text-price__price"
+              pTooltip="{{ 'generic.priceGroup' | translate }}"
+            >
+              <span class="text-green text-size-2 weight-500 robotopo-bold"
+                >{{
+                  service.priceGroup | currency: "EUR":"symbol":"1.2-2":"es"
+                }}
+              </span>
+            </div>
           </div>
           <button
             class="secondary-btn availability-btn"

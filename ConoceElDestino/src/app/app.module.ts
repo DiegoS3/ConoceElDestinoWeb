@@ -37,6 +37,7 @@ import { InputMaskModule } from 'primeng/inputmask';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { CalendarModule } from 'primeng/calendar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TooltipModule } from 'primeng/tooltip';
 
 
 registerLocaleData(localeEs, 'es');
@@ -61,6 +62,7 @@ registerLocaleData(localeEs, 'es');
     CalendarModule,
     RatingModule,
     FormsModule,
+    TooltipModule,
     DividerModule,
     HttpClientModule,
     InputTextModule,

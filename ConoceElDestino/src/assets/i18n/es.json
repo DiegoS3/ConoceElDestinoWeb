@@ -69,7 +69,9 @@
       "summer_month": "Meses verano",
       "winter_hours": "Horas invierno",
       "summer_hours": "Horas verano",
-      "option": "*Posibilidad de realizarlo en otros horarios previa consulta."
+      "option": "*Posibilidad de realizarlo en otros horarios previa consulta.",
+      "priceIndi": "Precio por persona",
+      "priceGroup": "Precio para grupos a partir de 7 personas"
     },
     "footer": {
       "guided_visits": "Visitas Guiadas",

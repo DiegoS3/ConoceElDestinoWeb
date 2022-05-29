@@ -12,7 +12,8 @@ export interface GenericCarouselItemData {
   horario: Calendar;
   longDescription: string;
   shortDescription: string;
-  price: number;
+  priceIndi: number;
+  priceGroup: number;
   rating: number;
   duration: number;
   arrival: string,
