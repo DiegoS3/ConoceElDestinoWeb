@@ -2,7 +2,8 @@
     "titles": {
         "find_experience": "Encuentra tu experiencia",
         "contact": "Contacta con nuestro equipo",
-        "web": "Conoce El Destino"
+        "web": "Conoce El Destino",
+        "booking": "Haga la reserva de su experiencia en minutos"
     },
     "sections": {
         "services": {
@@ -26,6 +27,16 @@
         },
         "collaborators": {
           "title": "Colaboradores"
+        },
+        "booking": {
+          "phone": "Teléfono",
+          "childs": "Número niños",
+          "adults": "Número adultos",
+          "know_about":"¿Cualquier otra cosa que debamos saber?",
+          "select_hour": "Selecciona una hora",
+          "date": "Fecha",
+          "hour": "Hora",
+          "send_success": "¡Gracias por tu reserva! ¡Me pondré en contacto contigo pronto!"
         }
     },
     "carousel": {
@@ -58,7 +69,9 @@
       "summer_month": "Meses verano",
       "winter_hours": "Horas invierno",
       "summer_hours": "Horas verano",
-      "option": "*Posibilidad de realizarlo en otros horarios previa consulta."
+      "option": "*Posibilidad de realizarlo en otros horarios previa consulta.",
+      "priceIndi": "Precio por persona",
+      "priceGroup": "Precio para grupos a partir de 7 personas"
     },
     "footer": {
       "guided_visits": "Visitas Guiadas",

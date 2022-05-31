@@ -42,7 +42,6 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.contactForm.status);
 
     if ("VALID" == this.contactForm.status && "" == this.honeypot.value) {
       this.contactForm.disable(); //disable the form if it's valid to disable multiple submissions
@@ -68,7 +67,6 @@ export class ContactComponent implements OnInit {
           this.submitted = true; //show the response message
           this.isLoading = false; // re enable the submit button
           this.error = false;
-          console.log(response);
 
         },
         (error) => {
@@ -77,13 +75,11 @@ export class ContactComponent implements OnInit {
           this.submitted = true; //show the response message
           this.isLoading = false; // re enable the submit button
           this.error = true;
-          console.log(error);
         }
       )
     }
     else {
       this.responseMessage = this.translate.instant('sections.contact.form_not_valid');
-      console.log("🚀 ~ file: contact.component.ts ~ line 84 ~ ContactComponent ~ onSubmit ~ responseMessage", this.responseMessage);
       this.submitted = true;
       this.error = true;
     }

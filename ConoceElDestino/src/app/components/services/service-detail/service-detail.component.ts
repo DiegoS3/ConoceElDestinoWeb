@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, HostListener, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ProductsService } from 'src/app/services/products.service';
 import { GenericCarouselItemData } from 'src/app/shared/models/generic-carousel.model';
@@ -23,7 +24,8 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
   }
 
   constructor(
-    private productsService: ProductsService
+    private productsService: ProductsService,
+    private router: Router
   ) {
     this.service$ = this.productsService.selectedService$;
   }
@@ -40,6 +42,11 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
     const productCache = JSON.parse(sessionStorage.getItem("product")!);
     if (productCache)
       this.productsService.setSelectedService(productCache)
+  }
+
+  checkAvailability(product: GenericCarouselItemData): void {
+    this.productsService.setSelectedService(product)
+    this.router.navigate(['book']);
   }
 
 }

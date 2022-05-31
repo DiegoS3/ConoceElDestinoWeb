@@ -32,6 +32,13 @@ import { MarkAsteriskDirective } from './directive/mark-asterisk.directive';
 import { ExperiencesComponent } from './components/experiences/experiences.component';
 import { CoreModule } from './core/core.module';
 import { MessageService } from 'primeng/api';
+import { BookProductComponent } from './components/book-product/book-product.component';
+import { InputMaskModule } from 'primeng/inputmask';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { CalendarModule } from 'primeng/calendar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TooltipModule } from 'primeng/tooltip';
+import { TotalPeopleDirective } from './directive/total-people.directive';
 
 
 registerLocaleData(localeEs, 'es');
@@ -45,14 +52,19 @@ registerLocaleData(localeEs, 'es');
     MainComponent,
     ServiceDetailComponent,
     MarkAsteriskDirective,
-    ExperiencesComponent
+    TotalPeopleDirective,
+    ExperiencesComponent,
+    BookProductComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     SharedModule,
     CarouselModule,
+    CalendarModule,
     RatingModule,
     FormsModule,
+    TooltipModule,
     DividerModule,
     HttpClientModule,
     InputTextModule,
@@ -63,6 +75,8 @@ registerLocaleData(localeEs, 'es');
     InputTextareaModule,
     DropdownModule,
     CoreModule,
+    InputMaskModule,
+    InputNumberModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

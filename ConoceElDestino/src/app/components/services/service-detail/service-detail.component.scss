@@ -85,9 +85,24 @@ li {
 }
 
 .text-price {
-  display: flex;
+  display: grid;
   justify-content: center;
+  grid-template-columns: 30px 40px 120px;
   align-items: baseline;
+  margin-top: 1rem;
+
+  &__icon {
+    display: flex;
+    min-width: 20px;
+
+    .pi.pi-users {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__price {
+    justify-self: flex-end;
+  }
 }
 
 .bold {
