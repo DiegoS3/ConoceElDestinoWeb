@@ -23,7 +23,7 @@ export class BookProductComponent implements OnInit, OnDestroy {
   adults = new FormControl('',);
   childs = new FormControl('',);
   date = new FormControl('', Validators.required);
-  hour = new FormControl('',);
+  hour = new FormControl('', Validators.required);
   knowabout = new FormControl('');
   honeypot = new FormControl('');
 
@@ -36,6 +36,7 @@ export class BookProductComponent implements OnInit, OnDestroy {
   maxDate?: Date;
 
   productName = '';
+  product?: GenericCarouselItemData;
   initHour = 0;
   endHour = 0;
 
@@ -82,6 +83,7 @@ export class BookProductComponent implements OnInit, OnDestroy {
 
     if (productCache) {
       this.productsService.setSelectedService(productCache);
+      this.product = productCache;
       this.productName = productNameCache;
       this.initHour = +initHourCache.slice(0, 2);
       this.endHour = +endHourCache.slice(0, 2);
@@ -89,6 +91,7 @@ export class BookProductComponent implements OnInit, OnDestroy {
     else {
       this.service$.subscribe(
         product => {
+          this.product = product;
           if (this.getSeason() === "Winter") {
             this.initHour = +product.horario.inviernoHoraEnd.slice(0, 2);
             this.endHour = +product.horario.inviernoHoraInit.slice(0, 2);
@@ -221,6 +224,14 @@ export class BookProductComponent implements OnInit, OnDestroy {
     const monthCheck = this.getActualMonth();
     const monthWinter = ["January", "February", "March", "October", "November", "December"];
     return monthWinter.includes(monthCheck) ? "Winter" : "Summer";
+  }
+
+  getPrice(): number {
+    const childs = this.bookingForm.controls['childs'].value;
+    const adults = this.bookingForm.controls['adults'].value;
+    const total = childs + adults
+
+    return total > 7 ? this.product!.priceGroup : total * this.product!.priceIndi;
   }
 
 }

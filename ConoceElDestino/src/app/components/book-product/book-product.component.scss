@@ -125,6 +125,28 @@ button {
   margin-top: 1rem;
 }
 
+.total {
+  justify-content: center;
+  padding: 1rem 0rem;
+  display: grid;
+  grid-template-columns: 4rem 5.5rem;
+  align-items: baseline;
+
+  > span {
+    font-family: $roboto-bold;
+  }
+
+  &__label {
+    font-size: 1.5rem;
+  }
+
+  &__value {
+    font-size: 1.3rem;
+    color: $green-color;
+    justify-self: flex-end;
+  }
+}
+
 ::ng-deep body .p-inputnumber {
   width: 100%;
 }

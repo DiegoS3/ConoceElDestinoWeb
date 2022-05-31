@@ -172,6 +172,13 @@
         responseMessage
       }}</span>
     </div>
+    <hr />
+    <div class="total">
+      <span class="total__label"> {{ "carousel.prize" | translate }}</span>
+      <span class="total__value">
+        {{ getPrice() | currency: "EUR":"symbol":"1.2-2":"es" }}</span
+      >
+    </div>
     <div class="actions">
       <button
         class="secondary-btn"
@@ -179,7 +186,7 @@
         [disabled]="isLoading"
         (click)="onSubmit()"
       >
-        {{ "generic.send" | translate | uppercase }}
+        {{ "button.reserve" | translate | uppercase }}
       </button>
       <button class="ternary-btn" (click)="bookingForm.reset()">
         {{ "generic.clean" | translate | uppercase }}
