@@ -38,6 +38,7 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { CalendarModule } from 'primeng/calendar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TooltipModule } from 'primeng/tooltip';
+import { TotalPeopleDirective } from './directive/total-people.directive';
 
 
 registerLocaleData(localeEs, 'es');
@@ -51,6 +52,7 @@ registerLocaleData(localeEs, 'es');
     MainComponent,
     ServiceDetailComponent,
     MarkAsteriskDirective,
+    TotalPeopleDirective,
     ExperiencesComponent,
     BookProductComponent
   ],

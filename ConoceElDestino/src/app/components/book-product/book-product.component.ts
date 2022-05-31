@@ -20,8 +20,8 @@ export class BookProductComponent implements OnInit, OnDestroy {
   fullname = new FormControl('', Validators.required);
   email = new FormControl('', [Validators.required, Validators.email]);
   phone = new FormControl('', Validators.required);
-  adults = new FormControl('',);
-  childs = new FormControl('',);
+  adults = new FormControl(0,);
+  childs = new FormControl(0,);
   date = new FormControl('', Validators.required);
   hour = new FormControl('', Validators.required);
   knowabout = new FormControl('');
