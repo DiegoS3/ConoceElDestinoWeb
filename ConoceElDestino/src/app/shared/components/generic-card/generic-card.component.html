@@ -1,0 +1,15 @@
+<div class="card">
+  <p-card header="{{ header }}">
+    <ng-template pTemplate="header">
+      <img alt="{{ header }}" [src]="product.image | base64toimg" />
+    </ng-template>
+    <p>
+      {{ product.shortDescription }}
+    </p>
+    <ng-template pTemplate="footer">
+      <button class="prime-btn" (click)="onAccess()">
+        {{ "button.access" | translate }}
+      </button>
+    </ng-template>
+  </p-card>
+</div>

@@ -1,0 +1,53 @@
+@import "vars";
+::ng-deep
+  .p-menubar
+  .p-menubar-root-list
+  > .p-menuitem
+  > .p-menuitem-link:not(.p-disabled):hover {
+  background: none !important;
+  border-bottom: solid;
+  border-bottom-color: $lima-color;
+  border-radius: 0.5em;
+}
+
+::ng-deep
+  .p-menubar
+  .p-menubar-root-list
+  > .p-menuitem
+  > .p-menuitem-link:focus {
+  box-shadow: none;
+}
+/* stylelint-enable */
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding: 0 1em;
+  justify-content: center;
+  color: $white-color;
+  background-color: $purple-color;
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    padding-left: 1.5em;
+  }
+}
+
+.app {
+  padding: 0 0.5em;
+}
+
+@media screen and (max-width: 960px) {
+  .header {
+    justify-content: start;
+  }
+
+  ::ng-deep .p-menubar .p-menubar-root-list {
+    background: $purple-color;
+    padding: 0.25rem 0.5rem;
+    width: fit-content;
+  }
+}

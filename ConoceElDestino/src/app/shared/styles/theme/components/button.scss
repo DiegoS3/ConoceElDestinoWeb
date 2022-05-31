@@ -1,0 +1,110 @@
+@import "../colors";
+@import "../fonts";
+
+button {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.prime-btn {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: $lightgray-color;
+  background-color: transparent;
+}
+
+.prime-btn {
+  border: 2px solid $green-color;
+  border-radius: 2em;
+  padding: 0.75em 3em;
+
+  .counter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    color: $white-color;
+    font-size: 0.9rem;
+    background-color: $green-color;
+    border-radius: 50%;
+  }
+}
+
+.secondary-btn,
+.secondary-btn:hover:disabled {
+  border-radius: 0.9rem;
+  width: 100px;
+  height: 40px;
+  font-size: 15px;
+  color: $white-color;
+  font-family: $roboto-bold;
+  background-color: $purple-color;
+}
+
+.ternary-btn,
+.ternary-btn:hover:disabled {
+  border-radius: 0.9rem;
+  width: 100px;
+  height: 40px;
+  font-size: 15px;
+  color: $white-color;
+  font-family: $roboto-bold;
+  background-color: $lightgreen-color;
+}
+
+.default-btn {
+  background-color: $gray-color;
+}
+
+.prime-btn:hover {
+  color: $white-color;
+  background-color: $green-color;
+}
+
+.secondary-btn:hover {
+  background-color: $purple-opacity-color;
+  color: $white-color;
+  border-color: none;
+}
+
+.ternary-btn:hover {
+  background-color: $lightgreen-opacity-color;
+  color: $white-color;
+  border-color: none;
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 0.5;
+  &:hover {
+    background-color: initial;
+  }
+}
+
+::-webkit-file-upload-button {
+  display: inline-block;
+  padding: 0.75em;
+  color: $darkblue-color;
+  font-size: $text-font-size;
+  white-space: nowrap;
+  background-color: $gray-color;
+  border: 0;
+  cursor: pointer;
+}
+
+.icon-btn {
+  width: 32px;
+  height: 32px;
+  background-color: $gray-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--selected {
+    background-color: $darkblue-color;
+  }
+}

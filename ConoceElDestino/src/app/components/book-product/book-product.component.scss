@@ -1,0 +1,165 @@
+@import "../../shared/styles/theme/vars.scss";
+
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
+.center-text {
+  text-align: center;
+}
+
+.robotopo {
+  font-family: $roboto-bold;
+  font-weight: bold;
+}
+
+hr {
+  border-top: 3px solid $separator-color;
+  width: 100px;
+  border-radius: 5px;
+  margin-top: 0.8rem;
+}
+
+.header {
+  text-align: center;
+
+  &__title {
+    margin: 1rem 0;
+  }
+
+  &__description {
+    width: calc(100% - 1100px);
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    margin-bottom: 3rem;
+  }
+
+  > p {
+    font-size: 20px;
+  }
+}
+
+.form {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  padding: 2rem;
+
+  &__field {
+    font-family: $roboto-regular;
+    color: $darkgray-color;
+  }
+}
+
+.error {
+  color: $error-color;
+}
+.success {
+  color: $success-color;
+}
+
+.actions {
+  display: flex;
+  padding: 3rem 0;
+  justify-content: center;
+}
+
+textarea {
+  resize: none;
+  min-height: 200px;
+}
+
+button {
+  margin-right: 1rem;
+}
+
+.pi.pi-calendar {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.field_composite {
+  .p-inputtext,
+  .p-inputtext:enabled:hover,
+  .p-inputtext:enabled:focus {
+    width: 40%;
+    margin: 0.5em 0;
+    color: $darkblue-color;
+    border: 2px solid $gray-color;
+    border-radius: 0;
+    box-shadow: none;
+    transition: none;
+  }
+
+  .p-inputtext:disabled {
+    background-color: $transparentgray-color;
+  }
+
+  .p-inputtext.ng-invalid.ng-touched {
+    &,
+    &:hover,
+    &:focus {
+      padding: calc(0.5em + 1px);
+      border: 1px solid $error-color;
+    }
+  }
+
+  .field {
+    &__left {
+      width: 50%;
+      margin-right: 1rem;
+    }
+
+    &__right {
+      width: 50%;
+      margin-left: 1rem;
+    }
+  }
+}
+
+.fields_container {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.total {
+  justify-content: center;
+  padding: 1rem 0rem;
+  display: grid;
+  grid-template-columns: 4rem 5.5rem;
+  align-items: baseline;
+
+  > span {
+    font-family: $roboto-bold;
+  }
+
+  &__label {
+    font-size: 1.5rem;
+  }
+
+  &__value {
+    font-size: 1.3rem;
+    color: $green-color;
+    justify-self: flex-end;
+  }
+}
+
+::ng-deep body .p-inputnumber {
+  width: 100%;
+}
+
+::ng-deep body .p-button.p-button-icon-only {
+  margin: 0.5em 0;
+}
+
+::ng-deep body .p-dropdown {
+  max-width: 1000px;
+  height: 39px;
+}
+
+::ng-deep body .p-calendar {
+  display: flex;
+}

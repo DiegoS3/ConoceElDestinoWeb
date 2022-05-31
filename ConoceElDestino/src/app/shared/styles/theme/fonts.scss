@@ -1,0 +1,32 @@
+@import 'colors';
+
+$text-font-size: 12px;
+
+$roboto-regular: "RobotoCondensed-Regular";
+$roboto-bold: "RobotoCondensed-Bold";
+$neosans-medium: "NeoSansStd-Medium";
+$primary-font: arial, helvetica, sans-serif;
+
+.mr-1 {
+  margin-right: 1rem;
+}
+
+.text-size-1 {
+  font-size: 1rem;
+}
+
+.text-size-2 {
+  font-size: 2rem;
+}
+
+.weight-500 {
+  font-weight: 500;
+}
+
+.text-green {
+  color: $lightgreen-color;
+}
+
+.robotopo-bold {
+  font-family: $roboto-bold;
+}

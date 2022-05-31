@@ -1,0 +1,27 @@
+@import '../colors';
+
+/* stylelint-disable */
+body .p-inputswitch {
+  &.p-inputswitch-checked,
+  &.p-inputswitch-checked:not(.p-disabled):hover {
+    .p-inputswitch-slider {
+      background: $darkblue-color;
+    }
+  }
+
+  .p-inputswitch-slider::before {
+    height: 20px;
+    width: 20px;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 1.5px solid $darkblue-color;
+    margin-top: 0;
+  }
+
+  &.p-inputswitch-checked .p-inputswitch-slider::before {
+    transform: translateX(1.35rem);
+  }
+}
+/* stylelint-enable */

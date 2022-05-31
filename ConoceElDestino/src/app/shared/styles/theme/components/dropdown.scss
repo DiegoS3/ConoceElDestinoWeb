@@ -1,0 +1,94 @@
+@import '../colors';
+
+/* stylelint-enabled */
+
+body .p-dropdown {
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+  max-width: 300px;
+  height: 32px;
+  margin: 0.5em 0;
+  border-color: $gray-color;
+  border-width: 2px;
+  border-radius: 0;
+  transition: none;
+
+  .p-inputtext {
+    color: $darkblue-color;
+  }
+
+  .p-dropdown-panel {
+    border-radius: 0;
+  }
+
+  .p-dropdown-label {
+    margin: 0;
+  }
+
+  /* stylelint-disable-next-line */
+  .p-dropdown-items .p-dropdown-item.p-highlight {
+    background-color: $gray-color;
+  }
+
+  .p-dropdown-filter {
+    border-color: $gray-color;
+    border-width: 2px;
+    border-radius: 0;
+  }
+
+  .p-dropdown-filter:focus {
+    border-color: $gray-color;
+    box-shadow: none;
+  }
+
+  /* stylelint-disable-next-line */
+  .p-dropdown-trigger .p-dropdown-trigger-icon {
+    color: $darkblue-color;
+    font-size: 10px;
+  }
+
+  /* stylelint-disable-next-line */
+  &.p-disabled {
+    background-color: $transparentgray-color;
+  }
+}
+
+body .p-dropdown:not(.p-disabled):hover,
+body .p-dropdown:not(.p-disabled).p-focus {
+  border-color: $gray-color;
+}
+
+body p-dropdown.ng-invalid.ng-touched {
+  .p-dropdown,
+  .p-dropdown:not(.p-disabled).p-focus,
+  .p-dropdown:not(.p-disabled):hover {
+    border-color: $error-color;
+    border-width: 1px;
+  }
+}
+
+body .p-dropdown-panel {
+  border-radius: 0;
+  max-width: 300px;
+  .p-dropdown-header {
+    border-radius: 0;
+  }
+
+  .p-dropdown-item span {
+    width: 100%;
+    display: block;
+    white-space: normal;
+  }
+
+  .p-dropdown-items .p-dropdown-item-group {
+    color: $darkblue-color;
+    text-transform: uppercase;
+  }
+
+  .p-dropdown-item-group ~ p-dropdownitem .p-dropdown-item {
+    margin-left: 10px;
+  }
+}
+
+/* stylelint-disabled */

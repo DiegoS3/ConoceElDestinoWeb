@@ -1,0 +1,47 @@
+@import '../vars';
+
+/* stylelint-enable */
+body .p-paginator {
+  justify-content: flex-end;
+  padding-top: 1.5rem;
+}
+
+body .p-paginator .p-paginator-pages .p-paginator-page {
+  font-family: $primary-font;
+  color: $darkblue-color;
+  border-radius: 0;
+  min-width: 0;
+  padding: 0 0.2rem;
+  margin: 0.143rem 0.3rem;
+
+  &:not(.p-highlight):hover {
+    background-color: transparent;
+  }
+
+  &.p-highlight {
+    background-color: transparent;
+    font-weight: bold;
+    border-top: 4px solid $yellow-color;
+  }
+
+  &.p-link:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+body .p-paginator .p-paginator-element {
+  border-radius: 0;
+  color: $darkblue-color;
+
+  &:not(.p-disabled):not(.p-highlight):hover {
+    background-color: transparent;
+  }
+
+  &.p-link:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+/* stylelint-disable */

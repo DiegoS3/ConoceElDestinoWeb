@@ -1,0 +1,14 @@
+<div class="header header__title">
+  <label>
+    <h1>{{ "sections.collaborators.title" | translate | uppercase }}</h1>
+    <hr />
+  </label>
+</div>
+
+<div class="collaborator-list">
+  <div *ngFor="let collaborator of collaborators">
+    <app-card-collaborator
+      [collaborator]="collaborator"
+    ></app-card-collaborator>
+  </div>
+</div>

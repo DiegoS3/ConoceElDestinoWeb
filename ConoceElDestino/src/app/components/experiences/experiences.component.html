@@ -1,0 +1,83 @@
+<div *ngIf="experience$ | async as experience">
+  <div>
+    <img
+      alt="{{ experience.name }}"
+      [src]="experience.image | base64toimg"
+      class="experience-img"
+    />
+  </div>
+  <div>
+    <div class="header header__title">
+      <label>
+        <h1>{{ experience.name | uppercase }}</h1>
+        <hr />
+      </label>
+    </div>
+    <div class="header header__description">
+      <p>
+        {{ experience.longDescription }}
+      </p>
+    </div>
+    <!-- <div class="grid justify-content-center">
+      <div class="flex col-8 block-image">
+        <div class="col-7">
+          <img
+            alt="{{ experience.name }}"
+            [src]="experience.image | base64toimg"
+            class="experience-img__detail"
+          />
+          <div class="text-overlay">
+            <p>Image by Pedro Picapiedra</p>
+          </div>
+        </div>
+        <div class="col-5">
+          <img
+            alt="{{ experience.name }}"
+            [src]="experience.image | base64toimg"
+            class="experience-img__detail"
+          />
+          <div class="text-overlay">
+            <p>Image by Pedro Picapiedra</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex col-8 block-image">
+        <div class="col-5">
+          <img
+            alt="{{ experience.name }}"
+            [src]="experience.image | base64toimg"
+            class="experience-img__detail"
+          />
+          <div class="text-overlay">
+            <p>Image by Pedro Picapiedra</p>
+          </div>
+        </div>
+        <div class="col-7">
+          <img
+            alt="{{ experience.name }}"
+            [src]="experience.image | base64toimg"
+            class="experience-img__detail"
+          />
+          <div class="text-overlay">
+            <p>Image by Pedro Picapiedra</p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div
+      style="margin-top: 4rem; margin-bottom: -3rem"
+      class="header header__title"
+      *ngIf="(productList$ | async).length > 0"
+    >
+      <label>
+        <h1>{{ "sections.experiences.title" | translate | uppercase }}</h1>
+        <hr />
+      </label>
+    </div>
+    <div class="listCards">
+      <div style="padding: 1rem" *ngFor="let product of productList$ | async">
+        <app-card-experience [experience]="product"></app-card-experience>
+      </div>
+    </div>
+  </div>
+</div>

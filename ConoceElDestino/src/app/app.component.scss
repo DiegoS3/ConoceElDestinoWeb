@@ -1,0 +1,26 @@
+@import "vars";
+
+.separator {
+  background-color: $separator-color;
+  height: $separator-height;
+}
+
+.footer {
+  --tw-bg-opacity: 1;
+  background-color: rgb(18 18 18 / var(--tw-bg-opacity));
+  height: $footer-height;
+  line-height: $footer-height;
+  text-align: center;
+  vertical-align: middle;
+
+  > p {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    text-align: center;
+    margin: 10px auto 5px;
+
+    @media (max-width: 500px) {
+      line-height: 2rem;
+    }
+  }
+}

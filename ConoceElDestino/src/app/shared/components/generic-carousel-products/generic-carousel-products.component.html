@@ -1,0 +1,47 @@
+<p-carousel
+  [value]="carouselData.content"
+  [numVisible]="5"
+  [numScroll]="1"
+  [circular]="true"
+  [showIndicators]="false"
+  [responsiveOptions]="responsiveOptions"
+  styleClass="carousel"
+>
+  <ng-template pTemplate="header">
+    <h5>{{ carouselData.header | translate }}</h5>
+  </ng-template>
+  <ng-template let-content pTemplate="item">
+    <div class="product-item">
+      <div class="product-item-content">
+        <div class="container">
+          <img
+            [src]="content.images![0].image | base64toimg"
+            [alt]="content.name"
+            class="product-image"
+          />
+          <div class="text-data">
+            <h5 class="text-data__title">{{ content.name | uppercase }}</h5>
+            <p class="text-data__description">{{ content.shortDescription }}</p>
+          </div>
+        </div>
+        <div class="footer-section">
+          <span>
+            <span class="footer-section__title">{{
+              "carousel.prize" | translate
+            }}</span>
+            <span class="footer-section__price">{{
+              content.price | currency: "EUR":"symbol":"1.2-2":"es"
+            }}</span>
+          </span>
+          <button
+            class="secondary-btn"
+            style="margin-right: 1rem"
+            (click)="onClick(content)"
+          >
+            {{ "button.reserve" | translate | uppercase }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>

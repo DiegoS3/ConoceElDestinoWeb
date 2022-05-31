@@ -1,0 +1,91 @@
+@import "../../styles/theme/vars.scss";
+
+.product-item {
+  // width: 100%;
+  max-width: 450px;
+  min-width: 350px;
+  .product-item-content {
+    min-height: 325px;
+    max-height: 325px;
+    border-radius: 15px;
+    --tw-shadow: 0px 4px 15px 2px rgba(70, 70, 70, 0.4);
+    box-shadow: 0 0 transparent, 0 0 transparent, var(--tw-shadow);
+    height: 100%;
+    margin: 1rem;
+  }
+
+  .product-image {
+    width: 100%;
+    height: 150px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+}
+
+.text-data {
+  margin: 0.7rem 0.2rem 0 0.4rem;
+
+  &__title {
+    font-size: 14px;
+    color: $font-gray-color;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-size: 20px;
+    color: $font-dark-color;
+    font-family: $roboto-bold;
+  }
+}
+
+::ng-deep .p-carousel .p-carousel-header {
+  padding-left: 125px;
+  font-size: 20px;
+  font-family: $roboto-bold;
+  color: $black-color;
+}
+
+::ng-deep .p-carousel .p-carousel-content .p-carousel-prev {
+  margin-left: 70px;
+}
+
+::ng-deep .p-carousel .p-carousel-content .p-carousel-next {
+  margin-right: 70px;
+}
+
+::ng-deep .p-carousel .p-carousel-content .p-carousel-prev:focus,
+::ng-deep .p-carousel .p-carousel-content .p-carousel-next:focus {
+  box-shadow: none;
+}
+
+::ng-deep .p-carousel .p-carousel-content .p-carousel-prev:enabled:hover,
+::ng-deep .p-carousel .p-carousel-content .p-carousel-next:enabled:hover {
+  color: $white-color;
+  border-color: transparent;
+  background: $light-purple-opacity-color;
+}
+
+.footer-section {
+  margin-top: 2rem;
+  height: 60px;
+  padding-left: 0.4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    color: $font-dark-color;
+    font-family: $roboto-bold;
+    font-size: 14px;
+  }
+
+  &__price {
+    color: $lima-color;
+    font-family: $roboto-bold;
+    font-size: 20px;
+    margin-left: 0.8rem;
+    vertical-align: middle;
+  }
+}

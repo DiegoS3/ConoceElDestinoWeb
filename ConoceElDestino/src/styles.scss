@@ -1,1 +1,94 @@
-/* You can add global styles to this file, and also import other style files */
+@import "theme";
+@import "vars";
+
+.content {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 56px);
+  background-color: #fafafa;
+
+  &__section {
+    width: 100%;
+    overflow: auto;
+  }
+}
+
+.font-semibold {
+  font-weight: 700;
+}
+
+.flex {
+  display: flex;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+body {
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: $darkgray-color;
+    font-family: $roboto-bold;
+  }
+  h2,
+  h3,
+  h4 {
+    margin: 1em 0;
+    color: $darkgray-color;
+    font-family: $roboto-regular;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 14px;
+  }
+
+  b,
+  p,
+  a {
+    font-family: $roboto-regular;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  a {
+    text-decoration: inherit;
+  }
+
+  span {
+    font-family: $roboto-regular;
+    color: $darkgray-color;
+  }
+
+  ::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #d8d8d8;
+    border-radius: 8px;
+  }
+}
+
+.center-content {
+  justify-content: center;
+}
+
+@font-face {
+  font-family: "RobotoCondensed-Regular";
+  src: url("./assets/fonts/RobotoCondensed-Regular.ttf");
+}
+
+@font-face {
+  font-family: "RobotoCondensed-Bold";
+  src: url("./assets/fonts/RobotoCondensed-Bold.ttf");
+}

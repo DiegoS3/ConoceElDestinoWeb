@@ -1,0 +1,167 @@
+{
+    "titles": {
+        "find_experience": "Encuentra tu experiencia",
+        "contact": "Contacta con nuestro equipo",
+        "web": "Conoce El Destino",
+        "booking": "Haga la reserva de su experiencia en minutos"
+    },
+    "sections": {
+        "services": {
+            "headers_carousel": {
+                "new": "Nuevas",
+                "more_choosen": "Más elegidas"
+            }
+        },
+        "contact": {
+          "case": "Asunto",
+          "reason": "Razón del contacto",
+          "description": "Descripción",
+          "select_reason": "Selecciona una razón",
+          "send_success": "¡Gracias por el mensaje! ¡Me pondré en contacto contigo pronto!",
+          "send_error": "¡UPS! Algo salió mal... Vuelve a cargar la página e inténtalo de nuevo.",
+          "form_not_valid": "Debes rellenar todos los campos obligatorios."
+        },
+        "experiences": {
+          "conoce_experience": "Experiencias Conoce el Destino",
+          "title": "Experiencias"
+        },
+        "collaborators": {
+          "title": "Colaboradores"
+        },
+        "booking": {
+          "phone": "Teléfono",
+          "childs": "Número niños",
+          "adults": "Número adultos",
+          "know_about":"¿Cualquier otra cosa que debamos saber?",
+          "select_hour": "Selecciona una hora",
+          "date": "Fecha",
+          "hour": "Hora",
+          "send_success": "¡Gracias por tu reserva! ¡Me pondré en contacto contigo pronto!"
+        }
+    },
+    "carousel": {
+        "prize": "Precio"
+    },
+    "button": {
+        "reserve": "Reservar",
+        "access": "Acceder",
+        "check_availability": "Comprobar precio y disponibilidad"
+    },
+    "generic": {
+      "from": "Desde",
+      "details": "Detalles",
+      "duration": "Duración",
+      "departs": "Salida",
+      "returns": "Vuelta",
+      "same_return": "Vuelta al lugar original de salida",
+      "tour_description": "Descripción visita",
+      "whats_included": "¿Qué incluye?",
+      "whats_not_included": "¿Qué no incluye?",
+      "email": "Email",
+      "send": "Enviar",
+      "cancel": "Cancelar",
+      "clean": "Limpiar",
+      "fullname": "Nombre completo",
+      "know_more": "Conoce más",
+      "title": "Conoce el Destino",
+      "calendar": "Horario",
+      "winter_month": "Meses invierno",
+      "summer_month": "Meses verano",
+      "winter_hours": "Horas invierno",
+      "summer_hours": "Horas verano",
+      "option": "*Posibilidad de realizarlo en otros horarios previa consulta.",
+      "priceIndi": "Precio por persona",
+      "priceGroup": "Precio para grupos a partir de 7 personas"
+    },
+    "footer": {
+      "guided_visits": "Visitas Guiadas",
+      "georoutes": "Georutas",
+      "experiences": "Experiencias",
+      "travels": "Viajes",
+      "about": "Sobre Conoce El Destino",
+      "contact_us": "Contactanos",
+      "privacy_policy": "Politica Privacidad",
+      "terms_conditions": "Términos y Condiciones",
+      "work_us": "Trabaja Con Nosotros",
+      "rights_reserved": "Todos los derechos reservados. Ninguna parte de este sitio puede ser reproducido sin nuestro permiso por escrito",
+      "titles": {
+        "follow_us": "Siguenos",
+        "services": "Servicios",
+        "about_us": "Sobre nosotros"
+      }
+    },
+    "months": {
+      "JANUARY": {
+        "name": "Enero",
+        "short": "En",
+        "number": 1,
+        "days": 31
+      },
+      "FEBRUARY": {
+        "name": "Febrero",
+        "short": "Feb",
+        "number": 2,
+        "days": 28
+      },
+      "MARCH": {
+        "name": "Marzo",
+        "short": "Mar",
+        "number": 3,
+        "days": 31
+      },
+      "APRIL": {
+        "name": "Abril",
+        "short": "Abr",
+        "number": 4,
+        "days": 30
+      },
+      "MAY": {
+        "name": "Mayo",
+        "short": "May",
+        "number": 5,
+        "days": 31
+      },
+      "JUNE": {
+        "name": "Junio",
+        "short": "Jun",
+        "number": 6,
+        "days": 30
+      },
+      "JULY": {
+        "name": "Julio",
+        "short": "Jul",
+        "number": 7,
+        "days": 31
+      },
+      "AUGUST": {
+        "name": "Agosto",
+        "short": "Ago",
+        "number": 8,
+        "days": 31
+      },
+      "SEPTEMBER": {
+        "name": "Septiembre",
+        "short": "Sep",
+        "number": 9,
+        "days": 30
+      },
+      "OCTOBER": {
+        "name": "Octubre",
+        "short": "Oct",
+        "number": 10,
+        "days": 31
+      },
+      "NOVEMBER": {
+        "name": "Noviembre",
+        "short": "Nov",
+        "number": 11,
+        "days": 30
+      },
+      "DECEMBER": {
+        "name": "Diciembre",
+        "short": "Dic",
+        "number": 12,
+        "days": 31
+      }
+    }
+}

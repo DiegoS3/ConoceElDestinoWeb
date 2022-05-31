@@ -1,0 +1,48 @@
+@import '../fonts';
+@import '../colors';
+
+/* stylelint-disable */
+body .p-datepicker {
+  .p-datepicker-header {
+    border-bottom: 0;
+  }
+  .p-datepicker-title {
+    color: $darkblue-color;
+    font-family: $roboto-regular;
+  }
+
+  .p-datepicker-calendar span {
+    color: $lightblue-color;
+    font-family: $primary-font;
+  }
+
+  .p-datepicker-calendar td > span.p-highlight {
+    color: $white-color;
+    background-color: $darkblue-color;
+  }
+
+  .p-datepicker-calendar thead th {
+    text-align: center;
+  }
+
+  &.p-datepicker-multiple-month .p-datepicker-group {
+    padding-right: 3.5em;
+    border-right: 0;
+  }
+
+  .p-monthpicker .p-monthpicker-month.p-highlight {
+    color: $white-color;
+    background-color: $darkblue-color;
+  }
+}
+
+body p-calendar.ng-invalid.ng-touched {
+  .p-inputtext,
+  .p-inputtext:hover,
+  .p-inputtext:focus {
+    border: 1px solid $error-color;
+    padding: 7px;
+  }
+}
+
+/* stylelint-enable */

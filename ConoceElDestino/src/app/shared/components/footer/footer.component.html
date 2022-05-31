@@ -1,0 +1,24 @@
+<div class="info-footer">
+  <div>
+    <img
+      src="https://github.com/DiegoS3/ConoceElDestinoWeb/blob/feature/footer/ConoceElDestino/src/assets/showcase/images/logo.jpeg?raw=true"
+    />
+    <h3 class="font-semibold uppercase">
+      {{ "footer.titles.follow_us" | translate }}
+    </h3>
+    <app-social-networks></app-social-networks>
+  </div>
+  <div class="info-footer__child" *ngFor="let section of footer$ | async">
+    <h3 class="font-semibold uppercase">{{ section.title | translate }}</h3>
+    <ul>
+      <li *ngFor="let subsection of section.sections">
+        <span
+          (click)="
+            navigate(subsection.label, section.navigate, subsection.navigate)
+          "
+          >{{ subsection.label | translate }}</span
+        >
+      </li>
+    </ul>
+  </div>
+</div>

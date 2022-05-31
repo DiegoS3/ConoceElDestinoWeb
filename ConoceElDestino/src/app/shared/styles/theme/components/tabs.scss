@@ -1,0 +1,48 @@
+@import '../fonts';
+@import '../colors';
+
+body .p-tabview .p-tabview-nav {
+  background-color: inherit;
+  border-color: $gray-color;
+  border-width: 0 0 1px;
+
+  /* stylelint-disable-next-line */
+  li.p-highlight .p-tabview-nav-link {
+    background-color: inherit;
+    border-color: $yellow-color;
+    border-style: solid;
+    border-width: 0 0 2px !important;
+  }
+  /* stylelint-disable-next-line */
+  li.p-highlight .p-tabview-nav-link .p-tabview-title {
+    color: $lightblue-color;
+  }
+
+  /* stylelint-disable-next-line */
+  li .p-tabview-nav-link:not(.p-disabled):focus {
+    box-shadow: none;
+  }
+
+  /* stylelint-disable-next-line */
+  li .p-tabview-nav-link {
+    margin-right: 4em;
+    background-color: inherit;
+    border: 0;
+  }
+
+  li:not(.p-highlight):not(.p-disabled):hover .p-tabview-nav-link {
+    background-color: transparent;
+  }
+
+  /* stylelint-disable-next-line */
+  .p-tabview-title {
+    color: $darkblue-color;
+    font-family: $roboto-regular;
+  }
+}
+
+body .p-tabview .p-tabview-panels {
+  padding: 2em 0;
+  background-color: inherit;
+  border-radius: 0;
+}
