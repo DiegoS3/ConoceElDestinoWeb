@@ -8,6 +8,7 @@ import { MainComponent } from './components/main/main.component';
 import { OpinionsComponent } from './components/opinions/opinions.component';
 import { ServiceDetailComponent } from './components/services/service-detail/service-detail.component';
 import { ServicesComponent } from './components/services/services.component';
+import { PrivacyPolicyComponent } from './shared/components/privacy-policy/privacy-policy.component';
 
 const scrollPositionRestoration = true;
 
@@ -40,6 +41,10 @@ const routes: Routes = [
   {
     path: 'book',
     component: BookProductComponent
+  },
+  {
+    path: 'legal',
+    component: PrivacyPolicyComponent
   },
   {
     path: '',

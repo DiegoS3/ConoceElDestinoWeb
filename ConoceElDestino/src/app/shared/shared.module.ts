@@ -20,6 +20,7 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { ToastModule } from 'primeng/toast';
 import { MinutesToHoursPipe } from '../pipes/minutes-to-hours';
 import { Base64ToImage } from '../pipes/base64-to-image.pipe';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 
 const COMPONENTS = [
   NavbarComponent,
@@ -32,7 +33,8 @@ const COMPONENTS = [
   CardCollaboratorComponent,
   HttpSpinnerComponent,
   MinutesToHoursPipe,
-  Base64ToImage
+  Base64ToImage,
+  PrivacyPolicyComponent,
 ]
 
 @NgModule({
