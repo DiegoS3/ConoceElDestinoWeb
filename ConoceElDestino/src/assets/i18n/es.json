@@ -3,9 +3,14 @@
         "find_experience": "Encuentra tu experiencia",
         "contact": "Contacta con nuestro equipo",
         "web": "Conoce El Destino",
-        "booking": "Haga la reserva de su experiencia en minutos"
+        "booking": "Haga la reserva de su experiencia en minutos",
+        "main": "¿Quienes somos?"
     },
     "sections": {
+        "main": {
+          "description": "Mi nombre es Blanca de Burgos. Con una amplia experiencia dentro del mundo de las excursiones, viajes y visitas guiadas. En 2021 comencé a trabajar en un proyecto movido por la unión y el compromiso con mi territorio, Ciudad Real. El proyecto vio la luz, y desde entonces trabajamos para poner en valor la zona. Nuestros servicios pretenden dar a conocer al turista el patrimonio y lugares de interes con que cuenta la provincia y divulgar para la población local, intentando crear un impacto positivo y un desarrollo sostenible de los diferentes municipios que conforman Ciudad Real.",
+          "offers": "¿Que ofrecemos?"
+        },
         "services": {
             "headers_carousel": {
                 "new": "Nuevas",
