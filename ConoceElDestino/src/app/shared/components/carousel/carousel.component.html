@@ -20,17 +20,15 @@
             <p class="label">
               {{ product.shortDescription }}
             </p>
-            <div class="btn">
-              <button
-                pButton
-                type="button"
-                class="btn-carousel"
-                (click)="onClick(product)"
-              >
-                {{ "generic.know_more" | translate }}
-                <i class="pi pi-angle-right"></i>
-              </button>
-            </div>
+            <button
+              pButton
+              type="button"
+              class="btn-carousel"
+              (click)="onClick(product)"
+            >
+              {{ "generic.know_more" | translate }}
+              <i class="pi pi-angle-right"></i>
+            </button>
           </div>
         </div>
       </div>
