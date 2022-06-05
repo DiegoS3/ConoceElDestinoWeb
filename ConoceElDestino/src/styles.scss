@@ -91,6 +91,15 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .header {
+    &__description {
+      max-width: fit-content;
+      min-width: calc(100vh - 500px);
+    }
+  }
+}
+
 .center-content {
   justify-content: center;
 }

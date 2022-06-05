@@ -54,6 +54,7 @@
     "check_availability": "Comprobar precio y disponibilidad"
   },
   "generic": {
+    "accept": "Aceptar",
     "from": "Desde",
     "details": "Detalles",
     "duration": "Duración",
@@ -77,7 +78,9 @@
     "summer_hours": "Horas verano",
     "option": "*Posibilidad de realizarlo en otros horarios previa consulta.",
     "priceIndi": "Precio por persona",
-    "priceGroup": "Precio para grupos a partir de 7 personas"
+    "priceGroup": "Precio para grupos a partir de 7 personas",
+    "login_error": "Se ha producido un error al acceder a la apliación. Por favor, contacte con el administrador.",
+    "error_dialog": "Se ha producido un error"
   },
   "footer": {
     "guided_visits": "Visitas Guiadas",

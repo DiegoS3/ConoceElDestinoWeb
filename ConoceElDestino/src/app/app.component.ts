@@ -26,4 +26,8 @@ export class AppComponent {
     this.vps.getScrollPosition();
   }
 
+  close(): void {
+    window.close()
+  }
+
 }

@@ -32,6 +32,7 @@ import { MarkAsteriskDirective } from './directive/mark-asterisk.directive';
 import { ExperiencesComponent } from './components/experiences/experiences.component';
 import { CoreModule } from './core/core.module';
 import { MessageService } from 'primeng/api';
+import { ConfirmationService } from 'primeng/api';
 import { BookProductComponent } from './components/book-product/book-product.component';
 import { InputMaskModule } from 'primeng/inputmask';
 import { InputNumberModule } from 'primeng/inputnumber';
@@ -39,6 +40,7 @@ import { CalendarModule } from 'primeng/calendar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TooltipModule } from 'primeng/tooltip';
 import { TotalPeopleDirective } from './directive/total-people.directive';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 
 
 registerLocaleData(localeEs, 'es');
@@ -71,6 +73,7 @@ registerLocaleData(localeEs, 'es');
     AppRoutingModule,
     EditorModule,
     CaptchaModule,
+    ConfirmDialogModule,
     ReactiveFormsModule,
     InputTextareaModule,
     DropdownModule,
@@ -91,6 +94,7 @@ registerLocaleData(localeEs, 'es');
   providers: [
     { provide: LOCALE_ID, useValue: 'es' },
     MessageService,
+    ConfirmationService
   ],
   bootstrap: [AppComponent]
 })
