@@ -3,14 +3,21 @@
 
 .content {
   display: flex;
-  width: 100%;
+  max-width: 100%;
   height: calc(100vh - 56px);
   background-color: #fafafa;
+  margin: 0 auto;
+  pad: 0 1em;
+  justify-content: center;
 
   &__section {
     width: 100%;
     overflow: auto;
   }
+}
+
+header {
+  min-height: 300px;
 }
 
 .font-semibold {
@@ -23,6 +30,11 @@
 
 .uppercase {
   text-transform: uppercase;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 body {
@@ -91,4 +103,9 @@ body {
 @font-face {
   font-family: "RobotoCondensed-Bold";
   src: url("./assets/fonts/RobotoCondensed-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf");
 }
