@@ -25,7 +25,7 @@ export class FooterComponent implements OnInit {
       [
         {
           label: 'footer.about',
-          navigate: 'about'
+          navigate: 'main'
         },
         {
           label: 'footer.contact_us',
@@ -37,12 +37,12 @@ export class FooterComponent implements OnInit {
         },
         {
           label: 'footer.privacy_policy',
-          navigate: ''
+          navigate: 'legal'
         },
-        {
-          label: 'footer.terms_conditions',
-          navigate: ''
-        },
+        // {
+        //   label: 'footer.terms_conditions',
+        //   navigate: ''
+        // },
       ]
   }
 

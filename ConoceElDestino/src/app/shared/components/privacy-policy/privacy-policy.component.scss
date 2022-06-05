@@ -1,12 +1,4 @@
-@import "../../shared/styles/theme/colors.scss";
-
-.cards {
-  display: flex;
-  // margin: 30px;
-  justify-content: center;
-  // justify-items: center;
-  flex-wrap: wrap;
-}
+@import "src/app/shared/styles/theme/colors.scss";
 
 .header {
   text-align: center;
@@ -23,8 +15,9 @@
     margin-bottom: 3rem;
   }
 
-  > p {
+  > span {
     font-size: 20px;
+    line-height: 1.6;
   }
 }
 
@@ -53,7 +46,7 @@ hr {
     text-align: center;
 
     &__description {
-      width: calc(576px + 100vh - 576px);
+      width: calc(576px + 100vh);
       margin-left: auto;
       margin-right: auto;
       box-sizing: border-box;

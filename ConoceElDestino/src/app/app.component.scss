@@ -19,8 +19,17 @@
     text-align: center;
     margin: 10px auto 5px;
 
-    @media (max-width: 500px) {
-      line-height: 2rem;
+    @media screen and (max-width: 500px) {
+      line-height: 1.5rem;
     }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer {
+    min-height: fit-content;
+    max-height: fit-content;
+    display: flex;
+    align-items: center;
   }
 }

@@ -1,4 +1,21 @@
 <app-carousel></app-carousel>
+<div class="header header__title">
+  <label>
+    <h1>{{ "titles.main" | translate | uppercase }}</h1>
+    <hr />
+  </label>
+</div>
+<div class="header header__description">
+  <p>
+    {{ "sections.main.description" | translate }}
+  </p>
+</div>
+<div class="header header__title">
+  <label>
+    <h1>{{ "sections.main.offers" | translate | uppercase }}</h1>
+    <hr />
+  </label>
+</div>
 <div class="cards">
   <ng-container *ngFor="let product of categoryList$ | async">
     <app-generic-card

@@ -30,31 +30,39 @@
   width: 100%;
 }
 
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-  display: flex;
-}
-
-.text-overlay {
+.label {
+  font-size: 2.5rem;
   position: absolute;
-  bottom: 38px;
-  left: 22px;
+  bottom: 60px;
   text-align: start;
-
-  p {
-    font-size: 2.5rem;
-    width: calc(100vm - 25em);
-    max-width: 25em;
-    font-weight: 700;
-    padding-bottom: 0.25rem;
-    line-height: 1;
-  }
+  color: $white-color;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: start;
+  font-weight: 700;
+  padding: 0 1rem;
 }
 
-.chevronIcon.jsx-724418216 {
-  transition: transform 200ms ease-out 0s, -webkit-transform 200ms ease-out 0s;
+.btn-carousel {
+  align-items: center;
+  position: absolute;
+  display: flex;
+  bottom: 25px;
+  text-align: start;
+  width: fit-content;
+  padding: 0 1rem;
+  color: $white-color;
+  margin-left: 20px;
+}
+
+.btn-carousel,
+.pi.pi-angle-right {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.pi.pi-angle-right {
+  margin-top: auto;
 }
 
 .p-button {
@@ -77,22 +85,11 @@
   flex: 1 1;
 }
 
-.type-xs {
-  font-size: 1.5rem;
-  line-height: 1.5;
-  color: $white-color;
-}
-
 .font-semibold {
   font-weight: 600;
 }
 .block {
   display: block;
-}
-
-.btn-carousel {
-  align-items: center;
-  display: flex;
 }
 
 .pi.pi-angle-right {
@@ -117,5 +114,54 @@
     outline: 0 none;
     outline-offset: 0;
     box-shadow: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  .product-item {
+    max-height: 20rem;
+    .product-item-content {
+      text-align: center;
+      height: auto;
+    }
+
+    .product-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .responsive {
+    width: 100%;
+    height: auto;
+  }
+
+  .label {
+    font-size: 1rem;
+    bottom: 50px;
+  }
+
+  .btn-carousel,
+  .pi.pi-angle-right {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .pi.pi-angle-right {
+    margin-top: auto;
+  }
+
+  .btn-carousel {
+    align-items: center;
+    position: absolute;
+    width: fit-content;
+    display: flex;
+    bottom: 23px;
+    padding: 0 1rem;
+    margin-left: 0px;
   }
 }

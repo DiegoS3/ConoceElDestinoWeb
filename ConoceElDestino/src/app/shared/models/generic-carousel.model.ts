@@ -2,12 +2,13 @@ import { Calendar, ProductImage } from "./product.model";
 
 export interface GenericCarouselData {
   header?: string;
-  content: GenericCarouselItemData | GenericCarouselItemData[];
+  content: GenericCarouselItemData[];
 }
 
 export interface GenericCarouselItemData {
   id: string;
   name: string;
+  category: string;
   images: ProductImage[];
   horario: Calendar;
   longDescription: string;

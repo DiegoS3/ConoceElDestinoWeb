@@ -8,6 +8,9 @@
   .card {
     flex: 0 1 calc(25% - 1em);
     min-height: 450px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     // max-width: calc(50% -  1em);
   }
 }
