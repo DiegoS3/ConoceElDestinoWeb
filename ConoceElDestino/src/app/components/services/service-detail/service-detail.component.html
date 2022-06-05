@@ -6,7 +6,7 @@
     </h3>
   </div>
   <div class="body">
-    <div style="width: 66%">
+    <div class="body-left">
       <img
         [src]="service.images![0].image | base64toimg"
         [alt]="service.name"
@@ -37,7 +37,7 @@
         </ul>
       </section>
     </div>
-    <div style="width: 33%">
+    <div class="body-right">
       <div style="margin-bottom: 2.5rem; margin-top: 2.5rem">
         <div class="content-right">
           <div class="text-price">
@@ -122,8 +122,8 @@
       <div class="details">
         <h3 class="bold">{{ "generic.calendar" | translate }}</h3>
         <div class="details__child">
-          <div style="min-width: 16rem; max-width: 16rem">
-            <span style="width: 7rem; padding-right: 0.5rem"
+          <div class="months">
+            <span class="months__season"
               >{{ "generic.winter_month" | translate }}:</span
             >
             <span
@@ -138,17 +138,19 @@
               }}</span
             >
           </div>
-          <span style="width: 7rem; margin-left: 1rem"
-            >{{ "generic.winter_hours" | translate }}:</span
-          >
-          <span
-            >{{ service.horario.inviernoHoraInit }} /
-            {{ service.horario.inviernoHoraEnd }}</span
-          >
+          <div class="months">
+            <span class="months__season"
+              >{{ "generic.winter_hours" | translate }}:</span
+            >
+            <span
+              >{{ service.horario.inviernoHoraInit }} /
+              {{ service.horario.inviernoHoraEnd }}</span
+            >
+          </div>
         </div>
         <div class="details__child">
-          <div style="min-width: 16rem; max-width: 16rem">
-            <span style="width: 7rem; padding-right: 0.5rem"
+          <div class="months">
+            <span class="months__season"
               >{{ "generic.summer_month" | translate }}:</span
             >
             <span
@@ -162,13 +164,15 @@
               }}</span
             >
           </div>
-          <span style="width: 7rem; margin-left: 1rem"
-            >{{ "generic.summer_hours" | translate }}:</span
-          >
-          <span
-            >{{ service.horario.veranoHoraInit }} /
-            {{ service.horario.veranoHoraEnd }}</span
-          >
+          <div class="months">
+            <span class="months__season"
+              >{{ "generic.summer_hours" | translate }}:</span
+            >
+            <span
+              >{{ service.horario.veranoHoraInit }} /
+              {{ service.horario.veranoHoraEnd }}</span
+            >
+          </div>
         </div>
         <div class="option">
           <span>{{ "generic.option" | translate }}</span>
