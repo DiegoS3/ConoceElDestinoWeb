@@ -1,4 +1,4 @@
-<div class="card">
+<!-- <div class="card">
   <p-card header="{{ header }}">
     <ng-template pTemplate="header">
       <img alt="{{ header }}" [src]="product.image | base64toimg" />
@@ -12,4 +12,22 @@
       </button>
     </ng-template>
   </p-card>
+</div> -->
+
+<div class="product-card">
+  <!-- <div class="badge"></div> -->
+  <div class="product-tumb">
+    <img alt="{{ header }}" [src]="product.image | base64toimg" />
+  </div>
+  <div class="product-details">
+    <span class="product-category">{{ header }}</span>
+    <p>{{ product.shortDescription }}</p>
+    <div class="product-bottom-details">
+      <div class="product-links">
+        <button class="prime-btn" (click)="onAccess()">
+          {{ "button.access" | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

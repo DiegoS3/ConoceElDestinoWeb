@@ -6,16 +6,16 @@
       class="image"
     />
   </div>
-  <div>
+  <div class="experience-details">
     <h3>{{ "generic.title" | translate }}</h3>
     <h2>{{ header }}</h2>
     <div class="experience-content">
-      <div style="width: 75%">
+      <div class="exp-desc" style="width: 75%">
         <p style="font-size: 1rem">{{ experience.shortDescription }}</p>
       </div>
       <div style="text-align: center">
         <span class="price">{{
-          experience.price | currency: "EUR":"symbol":"1.0":"es"
+          experience.priceIndi | currency: "EUR":"symbol":"1.0":"es"
         }}</span>
         <!-- <span>{{ experience.duration }}</span> -->
         <p style="margin-top: 0.3rem">{{ experience.duration | m2h }}</p>
