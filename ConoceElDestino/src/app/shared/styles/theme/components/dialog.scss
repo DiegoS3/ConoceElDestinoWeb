@@ -1,5 +1,5 @@
-@import '../colors';
-@import '../fonts';
+@import "../colors";
+@import "../fonts";
 /* stylelint-disable */
 body .p-dialog {
   min-width: 300px;
@@ -10,20 +10,19 @@ body .p-dialog {
   .p-dialog-header {
     height: 54px;
     color: $white-color;
-    background-color: $lightblue-color;
+    background-color: $lightgray-color;
     border-radius: 0;
   }
 
   .p-dialog-header .p-dialog-title {
     font-size: 16px;
-    font-family: $neosans-medium;
+    font-family: $roboto-regular;
   }
 
   .p-dialog-header .p-dialog-header-close-icon::before {
     display: inline-block;
     width: 15px;
     height: 15px;
-    background-image: url("../../../../../assets/icons/close.svg");
     background-size: 15px;
     content: "";
   }

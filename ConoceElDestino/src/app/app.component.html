@@ -20,3 +20,10 @@
 <ng-template #spinner>
   <app-http-spinner></app-http-spinner>
 </ng-template>
+<p-confirmDialog styleClass="error" key="errorDialog" #errorDialog>
+  <p-footer>
+    <button class="prime-btn" (click)="errorDialog.accept()">
+      {{ "generic.accept" | translate }}
+    </button>
+  </p-footer>
+</p-confirmDialog>

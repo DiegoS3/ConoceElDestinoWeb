@@ -22,17 +22,17 @@ export class GenericCarouselProductsComponent implements OnInit {
     this.responsiveOptions = [
       {
         breakpoint: '1920px',
-        numVisible: 5,
-        numScroll: 1
-      },
-      {
-        breakpoint: '1520px',
         numVisible: 4,
         numScroll: 1
       },
       {
-        breakpoint: '1400px',
+        breakpoint: '1520px',
         numVisible: 3,
+        numScroll: 1
+      },
+      {
+        breakpoint: '1400px',
+        numVisible: 2,
         numScroll: 1
       },
       {

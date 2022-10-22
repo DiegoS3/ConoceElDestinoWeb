@@ -105,10 +105,28 @@ li {
   }
 }
 
+.body-left {
+  width: 66%;
+}
+
+.body-right {
+  width: 33%;
+}
+
 .bold {
   font-family: $roboto-bold;
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+.months {
+  min-width: 16rem;
+  max-width: 16rem;
+
+  &__season {
+    width: 7rem;
+    padding-right: 0.5rem;
+  }
 }
 
 ::ng-deep .p-rating .p-rating-icon {
@@ -127,16 +145,65 @@ li {
   color: $light-purple-opacity-color;
 }
 
-@media (min-width: 960px) {
-  .content {
-    padding-left: 12rem;
-    padding-right: 12rem;
-  }
+// Responsive smartphone
+@media screen and (max-width:767px) {
 }
 
-@media (min-width: 480px) {
-  .content {
-    padding-left: 12rem;
-    padding-right: 12rem;
-  }
+// Responsive tablet
+@media screen and (min-width:767px) and (max-width:1023px) {
 }
+
+// @media screen and (max-width: 500px) {
+//   .contents {
+//     padding: 0 1rem;
+//   }
+
+//   .service-image {
+//     max-height: 360px;
+//     max-width: 350px;
+//   }
+
+//   .body {
+//     display: grid;
+//   }
+
+//   .section {
+//     max-width: 350px;
+//   }
+
+//   .content-right,
+//   .details {
+//     min-width: 350px;
+//     max-width: 350px;
+//   }
+
+//   .details {
+//     justify-content: center;
+//     > h3 {
+//       text-align: center;
+//     }
+//   }
+
+//   hr {
+//     min-width: 350px;
+//     max-width: 350px;
+//   }
+
+//   .months {
+//     display: grid;
+//     justify-content: center;
+//     min-width: 10rem;
+//     max-width: 10rem;
+
+//     &__season {
+//       width: 7rem;
+//       padding-right: 0.5rem;
+//       padding-bottom: 0.5rem;
+//     }
+//   }
+
+//   .option {
+//     display: flex;
+//     justify-content: center;
+//   }
+// }
