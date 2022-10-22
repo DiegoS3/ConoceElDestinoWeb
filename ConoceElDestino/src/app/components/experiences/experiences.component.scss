@@ -77,6 +77,25 @@ hr {
   padding: 3rem;
 }
 
+// Responsive smartphone
+@media screen and (max-width:767px) {
+  .header {
+    &__description {
+      max-width: calc(100vh - 100px);
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    > p {
+      font-size: 14px;
+    }
+  }
+}
+
+// Responsive tablet
+@media screen and (min-width:767px) and (max-width:1023px) {
+}
+
 @media (min-width: 1024px) {
   .header {
     text-align: center;

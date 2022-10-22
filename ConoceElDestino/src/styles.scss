@@ -91,18 +91,28 @@ body {
   }
 }
 
-@media screen and (max-width: 500px) {
-  .header {
-    &__description {
-      max-width: fit-content;
-      min-width: calc(100vh - 500px);
+.center-content {
+  justify-content: center;
+}
+
+// Responsive smartphone
+@media screen and (max-width:767px) {
+  body {
+    h1 {
+      font-size: 25px;
     }
   }
 }
 
-.center-content {
-  justify-content: center;
+// Responsive tablet
+@media screen and (min-width:767px) and (max-width:1023px) {
+  body {
+    h1 {
+      font-size: 30px;
+    }
+  }
 }
+
 
 @font-face {
   font-family: "RobotoCondensed-Regular";
