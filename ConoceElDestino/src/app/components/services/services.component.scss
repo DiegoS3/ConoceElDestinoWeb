@@ -39,11 +39,28 @@ hr {
   margin-bottom: 3rem;
 }
 
-@media screen and (max-width: 500px) {
+// Responsive smartphone
+@media screen and (max-width:767px) {
+  .header {
+    &__title {
+      margin: 0.5rem 0;
+    }
+
+    &__description {
+      max-width: calc(100vh - 500px);
+    }
+
+    > p {
+      font-size: 14px;
+    }
+  }
+}
+
+// Responsive tablet
+@media screen and (min-width:767px) and (max-width:1023px) {
   .header {
     &__description {
-      max-width: fit-content;
-      min-width: calc(100vh - 500px);
+      max-width: calc(100vh - 450px);
     }
   }
 }

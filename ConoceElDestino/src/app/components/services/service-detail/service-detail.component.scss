@@ -73,9 +73,13 @@ li {
   font-size: 1rem;
 }
 
-.service-image {
+.img-container{
   height: 560px;
   width: 840px;
+}
+
+.service-image {
+  max-height: 100%;
   border-radius: 0.5rem;
 }
 
@@ -147,63 +151,96 @@ li {
 
 // Responsive smartphone
 @media screen and (max-width:767px) {
+  .contents {
+    padding: 0 1rem;
+  }
+
+  .body-left{
+    width: 100%;
+  }
+
+  .img-container {
+    height: fit-content;
+    width: 100%;
+  }
+
+  .body {
+    display: grid;
+    margin: 1rem 0rem;
+  }
+
+  .section {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    // max-width: 350px;
+  }
+
+  .content-right,
+  .details {
+    min-width: 350px;
+    max-width: 350px;
+  }
+
+  .details {
+    justify-content: center;
+    > h3 {
+      text-align: center;
+    }
+  }
+
+  hr {
+    min-width: 350px;
+    max-width: 350px;
+  }
+
+  .months {
+    display: grid;
+    justify-content: center;
+    min-width: 10rem;
+    max-width: 10rem;
+
+    &__season {
+      width: 7rem;
+      padding-right: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .option {
+    display: flex;
+    justify-content: center;
+  }
+
 }
 
 // Responsive tablet
 @media screen and (min-width:767px) and (max-width:1023px) {
+  .contents {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .img-container {
+    height: fit-content;
+    width: 470px;
+  }
+
+  .section {
+    width: calc(100% - 3em);
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .monthys {
+      display: grid;
+  }
+
+  .months:last-child {
+    padding-top: 1em;
+  }
+
+  .section_tablet {
+    display: flex;
+  }
 }
-
-// @media screen and (max-width: 500px) {
-//   .contents {
-//     padding: 0 1rem;
-//   }
-
-//   .service-image {
-//     max-height: 360px;
-//     max-width: 350px;
-//   }
-
-//   .body {
-//     display: grid;
-//   }
-
-//   .section {
-//     max-width: 350px;
-//   }
-
-//   .content-right,
-//   .details {
-//     min-width: 350px;
-//     max-width: 350px;
-//   }
-
-//   .details {
-//     justify-content: center;
-//     > h3 {
-//       text-align: center;
-//     }
-//   }
-
-//   hr {
-//     min-width: 350px;
-//     max-width: 350px;
-//   }
-
-//   .months {
-//     display: grid;
-//     justify-content: center;
-//     min-width: 10rem;
-//     max-width: 10rem;
-
-//     &__season {
-//       width: 7rem;
-//       padding-right: 0.5rem;
-//       padding-bottom: 0.5rem;
-//     }
-//   }
-
-//   .option {
-//     display: flex;
-//     justify-content: center;
-//   }
-// }

@@ -8,6 +8,7 @@
 @media screen and (max-width: 767px) {
   .product-card {
     max-width: 250px !important;
+    margin: 20px 30px !important;
   }
 
   .product-tumb img {
@@ -30,6 +31,11 @@
 
 // Responsive tablet
 @media screen and (min-width: 767px) and (max-width: 1023px) {
+
+  .p-carousel .p-carousel-header {
+    padding-left: 40px !important;
+  }
+
   .product-card {
     max-width: 250px !important;
   }

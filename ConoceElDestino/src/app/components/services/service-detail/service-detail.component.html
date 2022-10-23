@@ -7,11 +7,13 @@
   </div>
   <div class="body">
     <div class="body-left">
-      <img
-        [src]="service.images![0].image | base64toimg"
-        [alt]="service.name"
-        class="service-image"
-      />
+      <div class="img-container">
+        <img
+          [src]="service.images![0].image | base64toimg"
+          [alt]="service.name"
+          class="service-image"
+        />
+      </div>
       <section class="section">
         <h3 class="section__title_section">
           {{ "generic.tour_description" | translate }}
@@ -20,22 +22,28 @@
           {{ service.longDescription }}
         </p>
       </section>
-      <section class="section">
-        <h3 class="section__title_section">
-          {{ "generic.whats_included" | translate }}
-        </h3>
-        <ul class="section__desc_section">
-          <li *ngFor="let value of service.included">{{ value }}.</li>
-        </ul>
-      </section>
-      <section class="section">
-        <h3 class="section__title_section">
-          {{ "generic.whats_not_included" | translate }}
-        </h3>
-        <ul class="section__desc_section">
-          <li *ngFor="let value of service.notIncluded">{{ value }}.</li>
-        </ul>
-      </section>
+      <div class="section_tablet">
+        <section class="section">
+          <h3 class="section__title_section">
+            {{ "generic.whats_included" | translate }}
+          </h3>
+          <ul class="section__desc_section">
+            <li *ngFor="let value of service.included">
+              <span *ngIf="value !== ''">{{ value }}.</span>
+            </li>
+          </ul>
+        </section>
+        <section class="section">
+          <h3 class="section__title_section">
+            {{ "generic.whats_not_included" | translate }}
+          </h3>
+          <ul class="section__desc_section">
+            <li *ngFor="let value of service.notIncluded">
+              <span *ngIf="value !== ''">{{ value }}.</span>
+            </li>
+          </ul>
+        </section>
+      </div>
     </div>
     <div class="body-right">
       <div style="margin-bottom: 2.5rem; margin-top: 2.5rem">
@@ -121,7 +129,7 @@
       <hr />
       <div class="details">
         <h3 class="bold">{{ "generic.calendar" | translate }}</h3>
-        <div class="details__child">
+        <div class="details__child monthys">
           <div class="months">
             <span class="months__season"
               >{{ "generic.winter_month" | translate }}:</span
@@ -148,7 +156,7 @@
             >
           </div>
         </div>
-        <div class="details__child">
+        <div class="details__child monthys">
           <div class="months">
             <span class="months__season"
               >{{ "generic.summer_month" | translate }}:</span
