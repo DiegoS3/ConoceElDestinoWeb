@@ -26,7 +26,7 @@
   padding: 0 1em;
   justify-content: center;
   color: $white-color;
-  background-color: $purple-color;
+  background-color: $white-color;
 
   &__actions {
     display: flex;
@@ -47,7 +47,7 @@
   }
 
   ::ng-deep .p-menubar .p-menubar-root-list {
-    background: $purple-color;
+    background: $white-color;
     padding: 0.25rem 0.5rem;
     width: fit-content;
   }
@@ -59,7 +59,7 @@
     justify-content: start;
   }
   ::ng-deep .p-menubar .p-menubar-root-list {
-    background: $purple-color;
+    background: $white-color;
     padding: 0.25rem 0.5rem;
     width: fit-content;
   }
